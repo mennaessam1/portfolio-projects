@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            @media print {
+        body * {
+            visibility: hidden; 
+            -webkit-print-color-adjust: exact !important;        
+               
+        }
+
+        #printBtn {
+            visibility: hidden !important; 
+        }
+
+        #page-wrapper * {
+            visibility: visible; 
+            text-align: left;
+            -webkit-print-color-adjust: exact !important;
+        }
+    }
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            
+            .btn {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #FDBE33;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+            
+            .btn:hover {
+                background-color: #FDBE33;
+            }
+            </style>
+        <meta charset="utf-8">
+        <title>HELPZ - Free Charity Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Top Bar Start -->
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="fa fa-phone-alt"></i>
+                                <p>+123 456 7890</p>
+                            </div>
+                            <div class="text">
+                                <i class="fa fa-envelope"></i>
+                                <p>Helpz@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <div class="social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a href="index.html">
+                    <img src="img/myLogo3.png" style="height: 70px !important;" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="causes.html" class="nav-item nav-link">Causes</a>
+                        <a href="event.html" class="nav-item nav-link">Events</a>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu">
+                                <a href="single.html" class="dropdown-item">Detail Page</a>
+                                <a href="service.html" class="dropdown-item">What We Do</a>
+                                <a href="team.html" class="dropdown-item">Meet The Team</a>
+                                <a href="donate.html" class="dropdown-item">Donate Now</a>
+                                <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Detail Page</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-thumbnail img-circle" id="uploadButton">
+            <!--input type="file" id="imageUploadInput" accept="image/*" style="display: none;"-->
+            <!--label for="imageUploadInput"-->
+                <a href="single copy.html"> 
+                <img class="img-circle" style="width: 160px; height: 160px;" id="uploadedImage" src="img/logo.jpg" alt="Uploaded Image">
+            </a>
+                <!--span class="uploadText">UPLOAD</span-->
+            <!--/label-->
+        </div>
+        
+        
+        
+        </div>
+        
+       <!-- Page Header End -->
+
+<div class="singleprod">
+    <!-- Single Post Start-->
+    <div class="single">
+        <div class="container">
+            <div class="row">
+                <!--kann hena-->
+                
+                <div id="mapo" style="width: 50px; height: 700px; margin-top: 110px;"></div>
+                   
+                
+                <div class="col-lg-4">
+                    
+                    <div class="sidebar" style="width: 600px;">
+                       
+
+                        <div class="sidebar-widget">
+                            <!-- <button class="btn" onclick="readData()">Click to listen to the requested organization details</button> -->
+                            <br><br>
+                            <h2 class="widget-title">Unregistered organization request details:</h2>
+                            <div class="item-details" style="width: 500px;">
+                                
+                                <ul id="data-list">
+                                    
+                                    <li><strong>First Name:</strong> Omar</li> 
+                                    <li><strong>Last Name:</strong> Ali </li> 
+                                    <li><strong>Gender:</strong> Male </li> 
+                                    <li><strong>Email:</strong> omar26@gmail.com </li> 
+                                    <!-- <li><strong>Password:</strong> <span class="password">OmarAli</span></li> Visible Password -->
+                                    <li><strong>Contact Number:</strong> 012221683 </li> 
+                                    <li><strong>Organization Name:</strong> Foundation of Magdy Yacoub</li>
+                                    <li><strong>Organization type:</strong> Non-profit Organization</li> 
+                                    <li><strong>Organization address:</strong> St. off, 7 Aziz Abaza, 26 July St, Zamalek, Cairo Governorate</li> 
+                                    <li><strong>Area:</strong> Zamalek</li>      
+                                    <li><strong>Governorate:</strong> Cairo</li> 
+                                    <img src="img/MYC.png" alt="Company Logo" style="max-width: 200px; margin-left: 10px;">
+                                </ul>
+                                
+                            </div>
+                        </div>
+                        <style>
+                            /* Popup container */
+                            /* Popup container */
+                            .popup {
+                                display: none;
+                                position: fixed;
+                                z-index: 9999;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%; /* Set to cover the entire viewport height */
+                                overflow: auto;
+                                background-color: rgba(0,0,0,0.4);
+                            }
+
+                            /* Popup content */
+                            .popup-content {
+                                background-color: #fefefe;
+                                margin: 5% auto;
+                                padding: 20px;
+                                border: 1px solid #888;
+                                width: 80%;
+                                height: 90%; /* Set to cover most of the popup container's height */
+                                overflow: auto; /* Enable scrolling within the popup content */
+                            }
+
+                        
+                            /* Close button */
+                            .close {
+                                color: #aaa;
+                                float: right;
+                                font-size: 28px;
+                                font-weight: bold;
+                            }
+                        
+                            .close:hover,
+                            .close:focus {
+                                color: black;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+                        </style>
+                        
+                        <div class="sidebar-widget">
+                            <div class="causes-item">
+                                <div class="causes-btn" style="text-align: left;"> <!-- Align buttons to the left -->
+                                    <!-- <a class="btn btn-custom" style="margin-left: 50px;" onclick="openDocumentPopup()"><i class="fas fa-eye"></i> View document</a>
+                                    <div id="documentPopup" class="popup">
+                                        <div class="popup-content">
+                                            <span class="close" onclick="closeDocumentPopup()">&times;</span>
+                                            < Embed the document here >
+                                            <iframe src="MYCaff.pdf" width="100%" height="100%"></iframe>
+                                        </div> -->
+                                    </div>
+                                    <a href="https://drive.google.com/file/d/1Rf-AIyDONSBpZs6Q-skgtJYUkv4v9DIz/view?usp=sharing" download="newfilename.pdf" class="btn btn-custom"><i class="fas fa-download"></i> View and Download document</a>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    
+                      
+
+                    
+
+                        <!-- <div class="sidebar-widget">
+                            <div class="causes-item">
+                                <div class="button-group">
+                                    <button class="btn" onclick="readData()">
+                                        <i class="fas fa-volume-up"></i> Font Awesome icon for speakers -->
+                                   <!---- </button>
+                                  </div>
+                                  
+                            </div>
+                        </div> -->
+                       
+                        
+                        
+                        
+
+                   
+
+
+
+                </div>
+              
+
+                        <!-- <div class="sidebar-widget">
+                            <div class="image-widget">
+                                <a href="#"><img src="#" alt="Image"></a> 
+                            </div>
+                        </div--> 
+
+                        
+
+                   
+                    
+                </div>
+            </div>
+        </div>
+        
+
+            <!-- Button container -->
+            <div class="button-container text-center">
+                <button class="btn btn-accept" style="width: 200px;" onclick="setAccept()"><i class="fas fa-thumbs-up"></i> Accept</button>
+                <button class="btn btn-reject" style="width: 200px;" onclick="setReject()"><i class="fas fa-thumbs-down"></i> Reject</button>
+            </div>
+
+        
+    </div>
+    <!-- Single Post End-->
+</div>
+<!-- Singleprod Post End-->
+  
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        
+                      
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>Egypt</p>
+                            <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                            <p><i class="fa fa-envelope"></i>Helpz@gmail.com</p>
+                            <div class="footer-social">
+                                <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="">About Us</a>
+                            <a href="">Contact Us</a>
+                            <a href="">Popular Causes</a>
+                            <a href="">Upcoming Events</a>
+                            <a href="">Latest Blog</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Useful Links</h2>
+                            <a href="">Terms of use</a>
+                            <a href="">Privacy policy</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-newsletter">
+                            <h2>Newsletter</h2>
+                            <form>
+                                <input class="form-control" placeholder="Email goes here">
+                                <button class="btn btn-custom">Submit</button>
+                                <label>Don't worry, we don't spam!</label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">HELPZ</a>, All Right Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Designed By <a href="https://htmlcodex.com">US</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+        <!-- Back to top button -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <button class="btn speaker-btn" onclick="readData()"><i class="fas fa-volume-up"></i></button>
+
+        
+
+      <!-- Replace the text "Read Data" with an icon -->
+
+        
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/parallax/parallax.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+        
+        <!-- Google Maps JavaScript API -->
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUAcaNsoXwgBMK9KjETvpPVaamDHOImHo&libraries=places&callback=initMapo"></script>
+        <!-- <script src="https://code.responsivevoice.org/responsivevoice.js?key=YOUR_API_KEY"></script> -->
+<!-- Custom Script -->
+<script>        
+var map;
+var marker;
+
+function initMapo() {
+        var initialCoordinates = { lat: 29.9792, lng: 31.1342 };
+
+        map = new google.maps.Map(document.getElementById('mapo'), {
+            zoom: 15,
+            center: initialCoordinates
+        });
+
+        marker = new google.maps.Marker({
+            position: initialCoordinates,
+            map: map,
+            draggable: false
+        });
+
+        // Call the function to update location on map
+        updateLocationOnMap("Magdi Yacoub Heart Foundation مؤسسة مجدى يعقوب للقلب, St. off, 7 Aziz Abaza, 26 July St, Zamalek, Cairo Governorate");
+    }
+
+    function updateLocationOnMap(address) {
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({ 'address': address }, function (results, status) {
+            if (status === 'OK' && results[0]) {
+                var newLatLng = results[0].geometry.location;
+                marker.setPosition(newLatLng);
+                map.setCenter(newLatLng);
+                
+            } else {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
+        });
+    }
+  
+
+
+    var utterance = null; // Variable to store the utterance object
+
+function readData() {
+    var dataList = document.getElementById('data-list');
+    var textToRead = '';
+
+    // Loop through each list item and concatenate text content
+    for (var i = 0; i < dataList.children.length; i++) {
+        var listItem = dataList.children[i];
+        textToRead += listItem.textContent.trim() + '. '; // Add period for better speech synthesis
+    }
+
+    // Use the Web Speech API to read the concatenated text
+    if ('speechSynthesis' in window) {
+        // Pause the current utterance if it exists
+        if (utterance && speechSynthesis.speaking) {
+            speechSynthesis.pause();
+            return; // Return to prevent creating a new utterance
+        }
+
+        // Create a new utterance object
+        utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.lang = 'en-US'; // Set the language to English (United States)
+        
+        // Handle end of playback
+        utterance.onend = function(event) {
+            utterance = null; // Reset the utterance object
+        };
+
+        speechSynthesis.speak(utterance);
+    } else {
+        console.error('Speech synthesis not supported in this browser.');
+    }
+}
+function openDocumentPopup() {
+        document.getElementById("documentPopup").style.display = "block";
+    }
+
+    function closeDocumentPopup() {
+        document.getElementById("documentPopup").style.display = "none";
+    }
+
+    function SaveToDisk(fileURL, fileName) {
+    // for non-IE
+    if (!window.ActiveXObject) {
+        var save = document.createElement('a');
+        save.href = fileURL;
+        save.target = '_blank';
+        save.download = fileName || 'unknown';
+
+        var evt = new MouseEvent('click', {
+            'view': window,
+            'bubbles': true,
+            'cancelable': false
+        });
+        save.dispatchEvent(evt);
+
+        (window.URL || window.webkitURL).revokeObjectURL(save.href);
+    }
+
+    // for IE < 11
+    else if ( !! window.ActiveXObject && document.execCommand)     {
+        var _window = window.open(fileURL, '_blank');
+        _window.document.close();
+        _window.document.execCommand('SaveAs', true, fileName || fileURL)
+        _window.close();
+    }
+}
+
+// function downloadPDF() {
+//                                             // URL of the PDF file
+//                                             var pdfURL = '/Users/mennaessam/Desktop/SE_MS2/Elhaaona-bgd/MYCaff.pdf';
+                                    
+//                                             // Fetch the PDF file as a blob
+//                                             fetch(pdfURL)
+//                                                 .then(response => response.blob())
+//                                                 .then(blob => {
+//                                                     // Create a URL for the blob
+//                                                     var url = window.URL.createObjectURL(blob);
+                                    
+//                                                     // Create an anchor element
+//                                                     var link = document.createElement('a');
+//                                                     link.href = url;
+                                    
+//                                                     // Set the download attribute and filename
+//                                                     link.download = 'document.pdf';
+                                    
+//                                                     // Programmatically trigger a click event on the anchor element
+//                                                     link.click();
+                                    
+//                                                     // Clean up: revoke the URL
+//                                                     window.URL.revokeObjectURL(url);
+//                                                 })
+//                                                 .catch(error => console.error('Error downloading PDF:', error));
+//                                         }
+
+ // Function to show/hide the sound button based on scroll position
+            window.onscroll = function() {scrollFunction()};
+        
+            function scrollFunction() {
+                var soundButton = document.querySelector('.speaker-btn');
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    soundButton.classList.add('show');
+                } else {
+                    soundButton.classList.remove('show');
+                }
+            }
+
+    function downloadPDF(pdfUrl, fileName) {
+  // Create a temporary anchor element
+  var a = document.createElement('a');
+  a.style.display = 'none';
+  a.href = pdfUrl;
+  a.download = fileName;
+
+  // Append the anchor to the body and click it to trigger the download
+  document.body.appendChild(a);
+  a.click();
+
+  // Clean up
+  document.body.removeChild(a);
+}
+
+function setAccept(){
+    sessionStorage.setItem('s1', 'acc');
+    alert('Accepted the Organization request successfully');
+
+// Redirect to index.html after a short delay (e.g., 2 seconds)
+setTimeout(function () {
+    window.location.href = 'viewreqor.html';
+}, 500); // Adjust the delay time as needed (in milliseconds)
+}
+
+function setReject(){
+    sessionStorage.setItem('s1', 'rej');
+    alert('Rejected the Organization request successfully');
+
+// Redirect to index.html after a short delay (e.g., 2 seconds)
+setTimeout(function () {
+    window.location.href = 'viewreqor.html';
+}, 200); // Adjust the delay time as needed (in milliseconds)
+}
+
+</script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+</html>

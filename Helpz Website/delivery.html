@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HELPZ - Free Charity Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body onload="makeVisibleOrNot();">
+        <!-- Top Bar Start -->
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="fa fa-phone-alt"></i>
+                                <p>+123 456 7890</p>
+                            </div>
+                            <div class="text">
+                                <i class="fa fa-envelope"></i>
+                                <p>Helpz@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <div class="social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+       
+<div id="reg" style="display: none;">
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html">
+                    <img src="img/myLogo3.png" style="height: 70px !important;" alt="Logo">
+                </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="single.html" class="nav-item nav-link">Homepage</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <div class="dropdown">
+                        <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html" onclick="ding()">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">3</span> <!-- Add the badge here -->
+                        </a>
+    
+                        
+                        
+                        <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel">
+                          
+                          <div class="notification-heading"><h4 class="menu-title">Notifications</h4><h4 class="menu-title pull-right"><i class="glyphicon glyphicon-circle-arrow-right"></i></h4>
+                          </div>
+                          <li class="divider"></li>
+                         <div class="notifications-wrapper">
+                           <a class="content" href="#">
+                             <div class="notification-item">
+                              <h4 class="item-title">The driver has arrived</h4>
+                              <p class="item-info">1 min ago</p>
+                            </div>     
+                          </a>
+                           <a class="content" href="#">
+                            <div class="notification-item">
+                              <h4 class="item-title">The driver will arrive in 5 mins</h4>
+                              <p class="item-info">6 min ago</p>
+                            </div>
+                          </a>     
+                         </div>
+                          <li class="divider"></li>    
+                        </ul>     
+                      </div>
+                    <a href="delivery copy.html" class="nav-item nav-link">Track the pickup of your donations</a>
+                    <a href="orgg.html" class="nav-item nav-link">view orgaizations list</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+    </div>
+    
+    
+    
+    <div id="doc" style="display: none;">
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html">
+                    <img src="img/myLogo3.png" style="height: 70px !important;" alt="Logo">
+                </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="singleDoc.html" class="nav-item nav-link">Homepage</a>
+                    <a href="about doc.html" class="nav-item nav-link">About</a>
+                    <div class="dropdown">
+                        <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html" onclick="ding()">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">3</span> <!-- Add the badge here -->
+                        </a>
+    
+                        
+                        
+                        <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel">
+                          
+                          <div class="notification-heading"><h4 class="menu-title">Notifications</h4><h4 class="menu-title pull-right"><i class="glyphicon glyphicon-circle-arrow-right"></i></h4>
+                          </div>
+                          <li class="divider"></li>
+                         <div class="notifications-wrapper">
+                           <a class="content" href="#">
+                             <div class="notification-item">
+                              <h4 class="item-title">The driver has arrived</h4>
+                              <p class="item-info">1 min ago</p>
+                            </div>     
+                          </a>
+                           <a class="content" href="#">
+                            <div class="notification-item">
+                              <h4 class="item-title">The driver will arrive in 5 mins</h4>
+                              <p class="item-info">6 min ago</p>
+                            </div>
+                          </a>     
+                         </div>
+                          <li class="divider"></li>    
+                        </ul>     
+                      </div>
+                    <a href="delivery copy doc.html" class="nav-item nav-link">Track the pickup of your donations</a>
+                    <a href="orgg doc.html" class="nav-item nav-link">view orgaizations list</a>
+                    <a href="contact doc.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+    </div>
+    
+    <div id="tech" style="display: none;">
+     <!-- Nav Bar Start -->
+     <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html">
+                    <img src="img/myLogo3.png" style="height: 70px !important;" alt="Logo">
+                </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="singleTech.html" class="nav-item nav-link">Homepage</a>
+                    <a href="about tech.html" class="nav-item nav-link">About</a>
+                    <div class="dropdown">
+                        <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html" onclick="ding()">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">3</span> <!-- Add the badge here -->
+                        </a>
+    
+                        
+                        
+                        <ul class="dropdown-menu notifications" role="menu" aria-labelledby="dLabel">
+                          
+                          <div class="notification-heading"><h4 class="menu-title">Notifications</h4><h4 class="menu-title pull-right"><i class="glyphicon glyphicon-circle-arrow-right"></i></h4>
+                          </div>
+                          <li class="divider"></li>
+                         <div class="notifications-wrapper">
+                           <a class="content" href="#">
+                             <div class="notification-item">
+                              <h4 class="item-title">The driver has arrived</h4>
+                              <p class="item-info">1 min ago</p>
+                            </div>     
+                          </a>
+                           <a class="content" href="#">
+                            <div class="notification-item">
+                              <h4 class="item-title">The driver will arrive in 5 mins</h4>
+                              <p class="item-info">6 min ago</p>
+                            </div>
+                          </a>     
+                         </div>
+                          <li class="divider"></li>    
+                        </ul>     
+                      </div>
+                    <a href="delivery copy tech.html" class="nav-item nav-link">Track the pickup of your donations</a>
+                    <a href="orgg tech.html" class="nav-item nav-link">view orgaizations list</a>
+                    <a href="contact tech.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+    </div>
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Pick up</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-thumbnail img-circle" id="uploadButton">
+            <!--input type="file" id="imageUploadInput" accept="image/*" style="display: none;"-->
+            <!--label for="imageUploadInput"-->
+                <a href="single copy.html"> 
+                <img class="img-circle" style="width: 160px; height: 160px;" id="uploadedImage" src="img/logo.jpg" alt="Uploaded Image">
+            </a>
+                <!--span class="uploadText">UPLOAD</span-->
+            <!--/label-->
+        </div>
+        
+        
+        
+        </div>
+        
+       <!-- Page Header End -->
+
+<div class="delivery">
+    <!-- Single Post Start-->
+    <div class="single">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <br>
+                    <div class="product" style="display: block; position: relative; margin-bottom: 45px; margin-top: 45px; margin-left: 10px; margin-right: 10px;">
+                        <div class="c-img" style="position: relative; overflow: hidden;">
+                            <img src="img\delivery.gif.gif" alt="Image" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                    <br><br><br><br><br><br><br><br>
+                    <br><br>
+
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="sidebar">
+                       
+
+                        <div class="sidebar-widget">
+                            <br>
+                            <h2 class="widget-title">Please select what suits you</h2>
+                            
+                        </div>
+                        <h2 class="widget-title" style="font-size: 16px;">Please select the type of tranportation you need</h2>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            
+                            <label class="btn btn-custom" onclick="selectOption(this)">Truck</label>
+                            <label class="btn btn-custom" onclick="selectOption(this)">Car</label>
+                            <label class="btn btn-custom" onclick="selectOption(this)">Motorcycle</label>
+                            
+                        </div>
+                       
+                       
+
+                        <div>
+                            <br>
+                            <h2 class="widget-title" style="font-size: 16px;">Please a day and month </h2>
+
+                        
+
+                            <div class="time-slot-container" style="height:200px; width: 500px; overflow: scroll; border: 1px solid #ddd;">
+                                
+
+                        
+
+
+
+    <div class="days">
+    <div class="day">
+      <div class="datelabel"><strong>Friday</strong><br/>May 24</div>
+      <div class="timeslot"  onclick="selectTime(this)">9:00am</div>
+      <div class="timeslot"  onclick="selectTime(this)">9:30am</div>
+      <div class="timeslot"   onclick="selectTime(this)">10:00am</div>
+    </div>
+    <div class="day">
+      <div class="datelabel"><strong>Saturday</strong><br/>May 24</div>
+      <div class="timeslot"  onclick="selectTime(this)">10:30pm</div>
+    </div>  
+    <div class="day">
+      <div class="datelabel"><strong>Sunday</strong><br/>May 24</div>
+      <div class="timeslot"  onclick="selectTime(this)">10:30pm</div>
+    </div>
+    <div class="day">
+      <div class="datelabel"><strong>Monday</strong><br/>May 24</div>
+      <div class="timeslot" onclick="selectTime(this)">10:30pm</div>
+    </div>
+    <div class="day">
+      <div class="datelabel"><strong>Tuesday</strong><br/>May 24</div>
+      <div class="timeslot" onclick="selectTime(this)">10:30pm</div>
+    </div>
+    </div>
+  </div><div id="selectedTime" style="display: none;">
+    <span id="chosenDayAndTime"></span>
+    <i class="fas fa-pencil-alt" onclick="editTime()"></i>
+</div>
+</div>                    
+                        
+
+<div style="display: none;" id="selectedTime">
+    <span id="chosenTime"></span>
+    <i class="fas fa-pencil-alt" onclick="editTime()"></i>
+</div>
+
+
+              
+
+                        <!-- <div class="sidebar-widget">
+                            <div class="image-widget">
+                                <a href="#"><img src="#" alt="Image"></a> 
+                            </div>
+                        </div--> 
+<br><br>
+                        <!-- Button to trigger the popup -->
+<div class="sidebar-widget">
+    <div class="causes-item">
+        <div class="causes-btn">
+            <a class="btn btn-custom" onclick="openPopup()">Send to Drivers</a>
+        </div>
+    </div>
+</div>
+
+<!-- Popup content -->
+<div class="popup" id="popup">
+    <!-- Close button -->
+    <button type="button" class="close" onclick="closePopup()">×</button>
+    <!-- Success message -->
+    <h2>Successfully sent to drivers</h2>
+    <div class="button-container">
+        <button onclick="closePopup()" class="btns">Ok</button>
+    </div>
+</div>
+
+<!-- Overlay -->
+<div id="overlay" class="overlay"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <!-- Single Post End-->
+    
+</div>
+<!-- Singleprod Post End-->
+  
+<style> 
+    .popup {
+       position: fixed;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       background-color: white;
+       padding: 60px;
+       border: 1px solid black;
+       z-index: 9999;
+       display: none;
+   }
+   
+   .close {
+       color: #fff;
+       background: linear-gradient(to right, #eeb711, #eeb711, #eeb711);
+       font-size: 25px;
+       font-weight: 400;
+       text-shadow: none;
+       line-height: 27px;
+       height: 25px;
+       width: 25px;
+       border-radius: 50%;
+       overflow: hidden;
+       opacity: 1;
+       position: absolute;
+       right: 8px;
+       top: 8px;
+       z-index: 1;
+       transition: all 0.3s;
+   }
+   
+   .close:hover {
+       color: white;
+       box-shadow: 0 0 5px rgba(0,0,0,0.5);
+   }
+   
+   .close:focus {
+       outline: none;
+   }
+   
+   .button-container {
+       display: flex;
+       justify-content: center;
+       margin-top: 20px;
+   }
+   
+   .btns {
+       color: #fff;
+       background: linear-gradient(to right, #eeb711, #eeb711, #eeb711);
+       font-size: 16px;
+       font-weight: 500;
+       line-height: 38px;
+       width: 120px;
+       height: 40px;
+       padding: 0;
+       border: none;
+       border-radius: 5px;
+       margin: 0 5px;
+       transition: all 0.6s ease 0s;
+   }
+   
+   .btns:hover {
+       color: #fff;
+       letter-spacing: 2px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+   }
+   
+   .btns:focus {
+       outline: none;
+   }
+   .overlay {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+       z-index: 999; /* Ensure it's above other content */
+       display: none; /* Initially hidden */
+       backdrop-filter: blur(5px); /* Apply blur to the overlay */
+   }
+   </style>
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>Egypt</p>
+                            <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                            <p><i class="fa fa-envelope"></i>Helpz@gmail.com</p>
+                            <div class="footer-social">
+                                <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="">About Us</a>
+                            <a href="">Contact Us</a>
+                            <a href="">Popular Causes</a>
+                            <a href="">Upcoming Events</a>
+                            <a href="">Latest Blog</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Useful Links</h2>
+                            <a href="">Terms of use</a>
+                            <a href="">Privacy policy</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-newsletter">
+                            <h2>Newsletter</h2>
+                            <form>
+                                <input class="form-control" placeholder="Email goes here">
+                                <button class="btn btn-custom">Submit</button>
+                                <label>Don't worry, we don't spam!</label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">HELPZ</a>, All Right Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Designed By <a href="https://htmlcodex.com">US</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script>
+
+          function makeVisibleOrNot() { 
+        var viewer = sessionStorage.getItem('viewer');
+        let reg = document.getElementById('reg');
+        let tech = document.getElementById('tech');
+        let doc = document.getElementById('doc');
+        
+
+        if (viewer === 'regdonor') {
+            reg.style.display="block";
+        }
+        else if (viewer === 'techdonor') {
+            tech.style.display="block";
+        }
+        else if (viewer === 'docdonor') {
+            doc.style.display="block";
+        }
+     
+
+         }
+
+
+            </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/parallax/parallax.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script>
+        function selectOption(element) {
+    // Remove 'btn-selected' class from all buttons
+    var buttons = document.querySelectorAll('.btn-custom');
+    buttons.forEach(function(btn) {
+        btn.classList.remove('btn-selected');
+    });
+
+    // Add 'btn-selected' class to the clicked button
+    element.classList.add('btn-selected');
+}
+function toggleTimeSlot(element) {
+    element.classList.toggle('chosen');
+}
+function selectTime(element) {
+    var selectedTime = element.textContent;
+    var selectedDay = element.parentNode.querySelector('.datelabel').textContent;
+
+    // Determine if it's AM or PM
+    var isAM = selectedTime.includes('am');
+    var amPmIndicator = isAM ? ' 🌞' : '🌜';
+
+    // Construct the selected day and time string
+    var selectedDayAndTime = selectedDay + ', ' + selectedTime + ' ' + amPmIndicator;
+
+    // Hide the container of time slots
+    var container = document.querySelector('.time-slot-container');
+    container.style.display = 'none';
+
+    // Display selected day and time, along with the edit option
+    var chosenDayAndTimeElement = document.getElementById('chosenDayAndTime');
+    chosenDayAndTimeElement.textContent = selectedDayAndTime;
+    chosenDayAndTimeElement.parentElement.style.display = 'inline-block'; // Show the pencil icon
+}
+
+
+
+
+function editTime() {
+    // Show the container of time slots
+    var container = document.querySelector('.time-slot-container');
+    container.style.display = 'block';
+
+    // Hide the selected time
+    var selectedTimeElement = document.getElementById('selectedTime');
+    selectedTimeElement.style.display = 'none';
+    selectedTimeElement.previousElementSibling.style.display = 'inline-block'; // Show the pencil icon
+}
+
+
+
+// Function to automatically scroll the container to the next box
+function autoScrollToNextBox() {
+    var container = document.querySelector('.time-slot-container');
+    var boxWidth = 120 + 7; // Width of each box plus its margin-right
+    var currentScrollLeft = container.scrollLeft;
+    var totalWidth = container.scrollWidth;
+    var viewportWidth = container.clientWidth;
+
+    // Calculate the position of the next box
+    var nextScrollLeft = currentScrollLeft + boxWidth;
+
+    // Check if we have reached the end
+    if (nextScrollLeft >= totalWidth - viewportWidth) {
+        // Reset scroll position to the beginning
+        container.scrollLeft = 0;
+    } else {
+        // Scroll to the next box
+        container.scrollLeft = nextScrollLeft;
+    }
+}
+
+// Set interval to call the autoScrollToNextBox function every 3 seconds
+setInterval(autoScrollToNextBox, 3000);
+
+const timeInput = document.getElementById('appt');
+  const emojiContainer = document.getElementById('emoji');
+
+  timeInput.addEventListener('change', function() {
+    const selectedTime = timeInput.value;
+    const hours = parseInt(selectedTime.split(':')[0]);
+
+    if (hours >= 0 && hours < 12) {
+      emojiContainer.innerHTML = '🌞'; // AM emoji
+    } else {
+      emojiContainer.innerHTML = '🌜'; // PM emoji
+    }
+  });
+  // Function to open the popup
+function openPopup() {
+    var popup = document.getElementById('popup');
+    var overlay = document.getElementById('overlay');
+    if (popup && overlay) {
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+    }
+}
+
+// Function to close the popup
+function closePopup() {
+    var popup = document.getElementById('popup');
+    var overlay = document.getElementById('overlay');
+    if (popup && overlay) {
+        popup.style.display = 'none';
+        overlay.style.display = 'none';
+    }
+}
+
+    </script>
+    </body>
+</html>

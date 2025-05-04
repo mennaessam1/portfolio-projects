@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HELPZ - Free Charity Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <style>
+
+       
+.causes .f .progress-bar span::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 23px;
+    left: calc(50%);
+    border: 6px solid;
+    border-color: green transparent transparent transparent; 
+}
+        
+        .causes-item {
+            width: calc(100% / 3); /* Set each item to occupy 1/3 of the width */
+            min-width: 300px; /* Set a minimum width for each item */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            float: left; /* Float the items left so they align horizontally */
+            padding: 0 15px; /* Add some horizontal spacing between items */
+            margin-bottom: 20px; /* Add margin at the bottom to create space between rows */
+            padding-bottom: 20px;
+        }
+    
+        /* Clear floats after every third item */
+        .causes-item:nth-child(3n+1) {
+            clear: both;
+        }
+        
+
+.fulfilled   a:hover,
+a:active,
+a:focus {
+    color: green;
+    outline: none;
+    text-decoration: none;
+}
+
+
+.fulfilled .btn.btn-custom {
+    padding: 12px 20px;
+    text-align: center; 
+   font-size: 16px;
+    font-weight: 500;
+    color: #777777;
+    border-radius: 0;
+    border: 2px solid green;
+    box-shadow: inset 0 0 0 0 green;
+    transition: ease-out 0.3s;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+}
+
+.fulfilled .btn.btn-custom:hover {
+    color: #f3f3f4;
+    box-shadow: inset 0 0 0 30px green;
+}
+.fulfilled .causes .causes-btn .btn:last-child {
+    color: white;
+    background: green;
+}
+    </style>
+    
+    
+
+    <body onload="resetAllFilters()">
+        <!-- Top Bar Start -->
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="fa fa-phone-alt"></i>
+                                <p>+123 456 7890</p>
+                            </div>
+                            <div class="text">
+                                <i class="fa fa-envelope"></i>
+                                <p>Helpz@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <div class="social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a href="index.html">
+                    <img src="img/myLogo3.png" style="height: 70px !important;" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="causes.html" class="nav-item nav-link">Causes</a>
+                        <a href="event.html" class="nav-item nav-link">Events</a>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">View</a>
+                            <div class="dropdown-menu">
+                                <a href="orgAdmin.html" class="dropdown-item">Registered Organizations</a>
+                                <a href="viewreqor.html" class="dropdown-item">Unregistered Organizations</a>
+                                <a href="team.html" class="dropdown-item">Meet The Team</a>
+                                <a href="donate.html" class="dropdown-item">Donate Now</a>
+                                <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Detail Page</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-thumbnail img-circle" id="uploadButton">
+            <!--input type="file" id="imageUploadInput" accept="image/*" style="display: none;"-->
+            <!--label for="imageUploadInput"-->
+                <a href="single copy.html"> 
+                <img class="img-circle" style="width: 160px; height: 160px;" id="uploadedImage" src="img/logo.jpg" alt="Uploaded Image">
+            </a>
+                <!--span class="uploadText">UPLOAD</span-->
+            <!--/label-->
+        </div>
+        
+        
+        
+        </div>
+        
+        <!-- Page Header End -->
+
+
+        <!-- Single Post Start-->
+        <div class="single">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        
+                        <!--div class="single-tags">
+                            <a href="">National</a>
+                            <a href="">International</a>
+                            <a href="">Economics</a>
+                            <a href="">Politics</a>
+                            <a href="">Lifestyle</a>
+                            <a href="">Technology</a>
+                            <a href="">Trades</a>
+                        </div-->
+         
+                        <!-- post type was here -->
+        <!---random-->
+        
+
+
+
+
+        <style>
+            .modal-box{ font-family: 'Poppins', sans-serif; }
+     .show-modal{
+         color: #fff;
+         background: linear-gradient(to right, #eeb711, #eeb711, #eeb711);
+         font-size: 18px;
+         font-weight: 600;
+         text-transform: capitalize;
+         padding: 10px 15px;
+         margin: 200px auto 0;
+         border: none;
+         outline: none;
+         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+         display: block;
+         transition: all 0.3s ease 0s;
+     }
+     .show-modal:hover,
+     .show-modal:focus{
+         color: #fff;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+         outline: none;
+     }
+     .modal-dialog{
+         width: 800px;
+         margin: 70px auto 0;
+     }
+     .modal-dialog{ transform: scale(0.5); }
+     .modal-dialog{ transform: scale(1); }
+     .modal-dialog .modal-content{
+         text-align: center;
+         border: none;
+     }
+     .modal-content .close{
+         color: #fff;
+         background: linear-gradient(to right, #eeb711, #eeb711, #eeb711);
+         font-size: 25px;
+         font-weight: 400;
+         text-shadow: none;
+         line-height: 27px;
+         height: 25px;
+         width: 25px;
+         border-radius: 50%;
+         overflow: hidden;
+         opacity: 1;
+         position: absolute;
+         left: auto;
+         right: 8px;
+         top: 8px;
+         z-index: 1;
+         transition: all 0.3s;
+     }
+     .modal-content .close:hover{
+         color: #fff;
+         box-shadow: 0 0 5px rgba(0,0,0,0.5);
+     }
+     .close:focus{ outline: none; }
+     .modal-body{ padding: 60px 40px 40px !important; }
+     .modal-body .title{
+         color: #eeb711;
+         font-size: 33px;
+         font-weight: 700;
+         letter-spacing: 1px;
+         margin: 0 0 10px;
+     }
+     .modal-body .description{
+         color: #9A9EA9;
+         font-size: 16px;
+         margin: 0 0 20px;
+     }
+     .modal-body .form-group{
+         text-align: left;
+         margin-bottom: 20px;
+         position: relative;
+     }
+     .modal-body .input-icon{
+         color: #777;
+         font-size: 18px;
+         transform: translateY(-50%);
+         position: absolute;
+         top: 50%;
+         left: 20px;
+     }
+     .modal-body .form-control{
+         font-size: 17px;
+         height: 45px;
+         width: 100%;
+         padding: 6px 0 6px 50px;
+         margin: 0 auto;
+         border: 2px solid #eeb711;
+         border-radius: 5px;
+         box-shadow: none;
+         outline: none;
+     }
+     .form-control::placeholder{
+         color: #AEAFB1;
+     }
+     .form-group.checkbox{
+         width: 130px;
+         margin-top: 0;
+         display: inline-block;
+     }
+     .form-group.checkbox label{
+         color: #9A9EA9;
+         font-weight: normal;
+     }
+     .form-group.checkbox input[type=checkbox]{
+         margin-left: 0;
+     }
+     .modal-body .forgot-pass{
+         color: #7F7FD5;
+         font-size: 13px;
+         text-align: right;
+         width: calc(100% - 135px);
+         margin: 2px 0;
+         display: inline-block;
+         vertical-align: top;
+         transition: all 0.3s ease 0s;
+     }
+     .forgot-pass:hover{
+         color: #9A9EA9;
+         text-decoration: underline;
+     }
+     .modal-content .modal-body .btn{
+         color: #fff;
+         background: linear-gradient(to right, #eeb711, #eeb711, #eeb711);
+         font-size: 16px;
+         font-weight: 500;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         line-height: 38px;
+         width: 100%;
+         height: 40px;
+         padding: 0;
+         border: none;
+         border-radius: 5px;
+         border: none;
+         display: inline-block;
+         transition: all 0.6s ease 0s;
+     }
+     .modal-content .modal-body .btn:hover{
+         color: #fff;
+         letter-spacing: 2px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+     }
+     .modal-content .modal-body .btn:focus{ outline: none; }
+     @media only screen and (max-width: 480px){
+         .modal-dialog{ width: 95% !important; }
+         .modal-content .modal-body{
+             padding: 60px 20px 40px !important;
+         }
+     }
+     /* Add styles for the overlay */
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+backdrop-filter: blur(5px); /* Apply blur to the overlay */
+z-index: 999; /* Ensure it's above other content */
+display: none; /* Initially hidden */
+}
+
+/* Add a class to adjust the z-index when modal is opened */
+.modal-open .overlay {
+display: block;
+}
+#mapo {
+height: 200px;
+width: 100%;
+}
+
+.autocomplete-dropdown {
+position: absolute;
+background-color: #fff;
+border: 1px solid #ccc;
+max-height: 200px;
+overflow-y: auto;
+z-index: 1000;
+width: 200px;
+}
+
+.autocomplete-dropdown-item {
+padding: 5px 10px;
+cursor: pointer;
+}
+
+.autocomplete-dropdown-item:hover {
+background-color: #f0f0f0;
+}
+
+
+       </style>
+     </head>
+     <body>
+       <div class="container">
+         <div class="row">
+             <div class="col-md-12">
+                 <div class="modal-box">
+                     <!-- Button trigger modal -->
+                     <button type="button" class="btn btn-primary btn-lg show-modal" data-toggle="modal" data-target="#myModal">
+                      Post <i style='font-size:24px' class='fas'>&#xf044;</i>
+                     </button>
+      
+                     <!-- Modal -->
+                     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                         <div class="modal-dialog" role="document">
+                             <div class="modal-content clearfix">
+                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                 <div class="modal-body">
+                                     <h3 class="title">Writing a post  <i class="fa fa-spinner fa-spin" style="font-size:24px"></i></h3>
+                                     <p class="description">please choose a category</p>
+                                     <div class="form-group">
+                                        <label for="cars">Please Choose a category:</label>
+                                        <select name="cars" id="cars" onchange="toggleFields()">
+                                            
+                                            <option value="categ">Categories</option>
+                                            <option value="clothes">Clothes&nbsp;&#x1F455;</option>
+                                            <option value="toys">Toys&#x1F9F8;</option>
+                                            <option value="food">Food&#x1F355;</option> 
+                                            <option value="medical supplies">Medical supplies🩺</option>
+                                            <option value="school supplies">School supplies📚✏️</option>
+                                            <option value="blood donations">Blood donations🩸</option>  
+                                            <option value="teaching posts">Teaching posts👩‍🏫</option>
+                                            <option value="medical cases">Medical cases 👩‍⚕️</option>  
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group" id="clothesGroup" style="display:none;">
+                                        <input type="text" class="form-control" placeholder="type of clothing" required>
+                                        <input type="number" class="form-control" placeholder="age"required min="0">
+                                        <label for="gender">Gender:</label>
+                                     <select class="form-control" id="gender" name="gender" required>
+                                      <option value="">Select gender</option>
+                                       <option value="male">Male</option>
+                                       <option value="female">Female</option>
+                                          </select>
+                                        <label for="season">Season:</label>
+                                        <select class="form-control" id="season" name="season" required>
+                                        <option value="spring/summer">Spring/Summer</option>
+                                        <option value="autumn/winter">Autumn/Winter</option>
+                                         </select>
+                                        <input type="text" class="form-control" placeholder="material"required>
+                                        <input type="number" class="form-control" placeholder="quantity requested"required min="1">
+                                        <textarea class="form-control" placeholder="Extra Description"></textarea>
+                                        <label for="photo">Upload Photo:</label>
+                                        <input type="file" class="form-control-file" id="photo" name="photo"  onchange="validateFileType(this)">
+                                        <p id="file-error-message" style="color: red;"></p>
+                                    </div>
+                                    
+                                    <div class="form-group" id="toysGroup" style="display:none;">
+                                        <input type="text" class="form-control" placeholder="type " required>
+                                        <input type="number" class="form-control" placeholder="age"required min="0" >
+                                        <label for="gender">Gender:</label>
+                                     <select class="form-control" id="gender" name="gender" required>
+                                      <option value="">Select gender</option>
+                                       <option value="male">Male</option>
+                                       <option value="female">Female</option>
+                                          </select>
+                                        <label for="cat">Category:</label>
+                                        <select class="form-control" id="cat" name="cat" required>
+                                        <option value="cars">Cars</option>
+                                        <option value="board games">Board games</option>
+                                        <option value="stuffed toys">Stuffed toys</option>
+                                         </select>
+                                        <input type="number" class="form-control" placeholder="quantity requested"required min="1" >
+                                        <textarea class="form-control" placeholder="Extra Description"></textarea>
+                                        <label for="photo">Upload Photo:</label>
+                                        <input type="file" class="form-control-file" id="photo" name="photo"  onchange="validateFileType(this)" required>
+                                        <p id="file-error-message" style="color: red;"></p>
+                                    </div>
+                                    <div class="form-group" id="foodGroup" style="display:none;">
+                                        <input type="text" class="form-control" placeholder="name " required>
+                                     <select class="form-control" id="type" name="type" required>
+                                      <option value="">Select type</option>
+                                       <option value="fruits">Fruits</option>
+                                       <option value="vegetables">Vegetables</option>
+                                       <option value="other">Other</option>
+                                          </select>
+                                          <div class="form-group" id="quantityGroup" style="display:none;">
+                                            <label for="quantity" id="quantityLabel">Quantity (Kg):</label>
+                                            <input type="number" class="form-control" id="quantity" name="quantity" placeholder="Enter quantity in Kg" min="1" required>
+                                        </div>
+                                        
+                                        
+                                        
+                                        <textarea class="form-control" placeholder="Extra Description"></textarea>
+                                        <label for="photo">Upload Photo:</label>
+                                        <input type="file" class="form-control-file" id="photo" name="photo"  onchange="validateFileType(this)">
+                                        <p id="file-error-message" style="color: red;"></p>
+                                    </div>
+                                    <div class="form-group" id="medsGroup" style="display:none;">
+                                        <label for="dev">Device type:</label>
+                                        <select class="form-control" id="dev" name="dev" required>
+                                        <option value="medication">Medication</option>
+                                        <option value="medical equipment">Medical equipment</option>
+                                        <option value="medical device">Medical device</option>
+                                         </select>
+                                         <input type="number" class="form-control" placeholder="quantity requested"required min="1">
+                                        <textarea class="form-control" placeholder="Extra Description"></textarea>
+                                        <label for="photo">Upload Photo:</label>
+                                        <input type="file" class="form-control-file" id="photo" name="photo"  onchange="validateFileType(this)"required>
+                                        <p id="file-error-message" style="color: red;"></p>
+                                    </div>
+                                    <div class="form-group" id="schoolGroup" style="display:none;">
+                                        <label for="typ">category:</label>
+                                        <select class="form-control" id="typ" name="typ" required>
+                                        <option value="choose">Please Choose</option>
+                                        <option value="stationary Items">Stationary Items</option>
+                                        <option value="books">Books</option>
+                                         </select>
+                                         <div class="form-group" id="stationaryGroup" style="display:none;">
+                                            <label for="stationaryType">Type of Item:</label>
+                                            <input type="text" class="form-control" id="stationaryType" name="stationaryType" placeholder="Enter type of item" required>
+                                            <label for="stationaryQuantity">Quantity:</label>
+                                            <input type="number" class="form-control" id="stationaryQuantity" name="stationaryQuantity" placeholder="Enter quantity" required>
+                                        </div>
+                                        
+                                        <div class="form-group" id="booksGroup" style="display:none;">
+                                            <label for="bookName">Book Name:</label>
+                                            <input type="text" class="form-control" id="bookName" name="bookName" placeholder="Enter book name" required>
+                                            <label for="author">Author:</label>
+                                            <input type="text" class="form-control" id="author" name="author" placeholder="Enter author" required>
+                                            <label for="language">Language:</label>
+                                            <input type="text" class="form-control" id="language" name="language" placeholder="Enter language" required>
+                                            <label for="edition">Edition:</label>
+                                            <input type="text" class="form-control" id="edition" name="edition" placeholder="Enter edition" required>
+                                            <label for="summary">Short Summary:</label>
+                                            <textarea class="form-control" id="summary" name="summary" placeholder="Enter short summary" required></textarea>
+                                            <label for="bookQuantity">Quantity:</label>
+                                            <input type="number" class="form-control" id="bookQuantity" name="bookQuantity" placeholder="Enter quantity" required min="1">
+                                        </div>
+                                        
+                                        <textarea class="form-control" placeholder="Extra Description"></textarea>
+                                        <label for="photo">Upload Photo:</label>
+                                        <input type="file" class="form-control-file" id="photo" name="photo"  onchange="validateFileType(this)"required>
+                                        <p id="file-error-message" style="color: red;"></p>
+                                    </div>
+                                    <div class="form-group" id="bloodGroup" style="display:none;">
+                                        <input type="text" class="form-control" placeholder="name of patient" required>
+                                        <label for="blood type">Blood type:</label>
+                                     <select class="form-control" id="blood type" name="blood type" required>
+                                      <option value="">Select type</option>
+                                       <option value="a negative (A-)">A positive (A+)</option>
+                                       <option value="a negative (A-)">A negative (A-)</option>
+                                       <option value="b positive (B+)">B positive (B+)</option>
+                                       <option value="b negative (B-)">B negative (B-)</option>
+                                       <option value="aB positive (AB+)">AB positive (AB+)</option>
+                                       <option value="aB negative (AB-)">AB negative (AB-)</option>
+                                       <option value="o positive (O+)">O positive (O+)</option>
+                                       <option value="o negative (O-)">O negative (O-)</option>
+                                          </select>
+                                          <input type="text" class="form-control" placeholder="hospital name" required>
+                                          <input type="text" class="form-control" placeholder="hospital area" required>
+                                          <input type="text" class="form-control" placeholder="governorate" required>
+                                        
+                                        <textarea class="form-control" placeholder="Extra Description"></textarea>
+                                        
+                                        </div>
+
+                                        <div class="form-group" id="techGroup" style="display:none;">
+                                            <input type="number" class="form-control" placeholder="number of students" required min="1">
+                                            <label for="subjects">Subjects:</label>
+                                         <select class="form-control" id="subjects" name="subjects" required>
+                                          <option value="">Select subject</option>
+                                           <option value="math">Math</option>
+                                           <option value="arabic">Arabic</option>
+                                           <option value="english">English</option>
+                                           <option value="physics">Physics</option>
+                                           <option value="geography">Geography</option>
+                                           <option value="history">History</option>
+                                           <option value="science">science</option>
+                                              </select>
+                                             
+                                            <textarea class="form-control" placeholder="Extra Description"></textarea>
+                                            </div>
+                                            <div class="form-group" id="docGroup" style="display:none;">
+                                                <input type="text" class="form-control" placeholder="patient name" required >
+                                                <input type="number" class="form-control" placeholder="patient age" required min="0">
+                                                <label for="gender">Gender:</label>
+                                     <select class="form-control" id="gender" name="gender" required>
+                                      <option value="">Select gender</option>
+                                       <option value="male">Male</option>
+                                       <option value="female">Female</option>
+                                          </select>
+                                                <input type="number" class="form-control" placeholder="weight" required min="1">
+                                                <input type="text" class="form-control" placeholder="Organization name" required>
+                                                <input type="text" class="form-control" placeholder="medical specialty" required>
+                                                <input type="text" class="form-control" placeholder="case description" required>
+                                                 
+                                                <textarea class="form-control" placeholder="Extra Description"></textarea>
+                                                </div>
+                                            <div class="form-group" id="mapGroup" style="display:none;">
+                                                <input type="text" id="locationSearcho" class="form-control" placeholder="address" onkeypress="return searchKeyPresso(event)" required>
+                                                <div id="autocompleteDropdown" class="autocomplete-dropdown" style="display: none;"></div>
+                                                <div id="mapo"></div>
+                                            </div>
+
+                                     <div class="form-group checkbox">
+                                         <input type="checkbox">
+                                         <label>Remamber me</label>
+                                     </div>
+                                     <a href="" class="forgot-pass">Forgot Password?</a>
+                                     <button class="btn">Login</button>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="overlay"></div>
+     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUAcaNsoXwgBMK9KjETvpPVaamDHOImHo&libraries=places&callback=initMapo"></script>
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUAcaNsoXwgBMK9KjETvpPVaamDHOImHo&libraries=places&callback=initMapo"></script>
+        <script>
+            $(document).ready(function(){
+// When the login form modal is shown
+$('#myModal').on('show.bs.modal', function () {
+// Add the class to adjust z-index when modal is opened
+$('body').addClass('modal-open');
+});
+// When the login form modal is hidden
+$('#myModal').on('hidden.bs.modal', function () {
+// Remove the class to adjust z-index when modal is closed
+$('body').removeClass('modal-open');
+});
+});
+function toggleFields() {
+var selectedCategory = document.getElementById("cars").value;
+var clothesGroup = document.getElementById("clothesGroup");
+var toysGroup = document.getElementById("toysGroup");
+var foodGroup = document.getElementById("foodGroup");
+var medsGroup = document.getElementById("medsGroup");
+var schoolGroup = document.getElementById("schoolGroup");
+var bloodGroup = document.getElementById("bloodGroup");
+var techGroup = document.getElementById("techGroup");
+var mapGroup = document.getElementById("mapGroup");
+var docGroup = document.getElementById("docGroup");
+
+// Reset the display of all fields
+
+
+clothesGroup.style.display = "none";
+toysGroup.style.display = "none";
+foodGroup.style.display = "none";
+medsGroup.style.display = "none";
+schoolGroup.style.display = "none";
+bloodGroup.style.display = "none";
+techGroup.style.display = "none";
+mapGroup.style.display = "none";
+docGroup.style.display = "none";
+
+if (selectedCategory === "categ") {
+techGroup.style.display = "none";
+docGroup.style.display = "none";
+bloodGroup.style.display = "none";
+clothesGroup.style.display = "none";
+toysGroup.style.display = "none";
+foodGroup.style.display = "none";
+medsGroup.style.display = "none";
+schoolGroup.style.display = "none";
+mapGroup.style.display = "none";
+}
+else if (selectedCategory === "clothes") {
+techGroup.style.display = "none";
+docGroup.style.display = "none";
+bloodGroup.style.display = "none";
+schoolGroup.style.display = "none";
+clothesGroup.style.display = "none";
+medsGroup.style.display = "none";
+foodGroup.style.display = "none";
+mapGroup.style.display = "none";
+clothesGroup.style.display = "block";
+} else if (selectedCategory === "toys") {
+mapGroup.style.display = "none";
+techGroup.style.display = "none";
+docGroup.style.display = "none";
+bloodGroup.style.display = "none";
+schoolGroup.style.display = "none";
+medsGroup.style.display = "none";
+clothesGroup.style.display = "none";
+toysGroup.style.display = "block";
+foodGroup.style.display = "none";
+} else if (selectedCategory === "food") {
+mapGroup.style.display = "none";
+techGroup.style.display = "none";
+docGroup.style.display = "none";
+bloodGroup.style.display = "none";
+schoolGroup.style.display = "none";
+medsGroup.style.display = "none";
+clothesGroup.style.display = "none";
+toysGroup.style.display = "none";
+foodGroup.style.display = "block";
+} else if (selectedCategory === "medical supplies") {
+docGroup.style.display = "none";
+techGroup.style.display = "none";
+mapGroup.style.display = "none";
+bloodGroup.style.display = "none";
+schoolGroup.style.display = "none";
+medsGroup.style.display = "block";
+clothesGroup.style.display = "none";
+toysGroup.style.display = "none";
+foodGroup.style.display = "none";
+} else if (selectedCategory === "school supplies") {
+docGroup.style.display = "none";
+techGroup.style.display = "none";
+mapGroup.style.display = "none";
+bloodGroup.style.display = "none";
+schoolGroup.style.display = "block";
+medsGroup.style.display = "none";
+clothesGroup.style.display = "none";
+toysGroup.style.display = "none";
+foodGroup.style.display = "none";
+} else if (selectedCategory === "blood donations") {
+techGroup.style.display = "none";
+docGroup.style.display = "none";
+bloodGroup.style.display = "block";
+medsGroup.style.display = "none";
+clothesGroup.style.display = "none";
+toysGroup.style.display = "none";
+foodGroup.style.display = "none";
+mapGroup.style.display = "block";
+}
+else if (selectedCategory === "teaching posts") {
+docGroup.style.display = "none";
+techGroup.style.display = "block";
+mapGroup.style.display = "block";
+docGroup.style.display = "none";
+bloodGroup.style.display = "none";
+medsGroup.style.display = "none";
+clothesGroup.style.display = "none";
+toysGroup.style.display = "none";
+foodGroup.style.display = "none";
+
+}
+else if (selectedCategory === "medical cases") {
+mapGroup.style.display = "block";
+techGroup.style.display = "none";
+bloodGroup.style.display = "none";
+medsGroup.style.display = "none";
+clothesGroup.style.display = "none";
+toysGroup.style.display = "none";
+foodGroup.style.display = "none";
+docGroup.style.display = "block"; // Place it here to ensure it's shown
+}
+
+
+}
+function validateFileType(input) {
+var file = input.files[0];
+var fileType = file.type;
+var allowedTypes = ['image/jpeg', 'image/png'];
+
+if (!allowedTypes.includes(fileType)) {
+document.getElementById('file-error-message').textContent = 'Please upload only image files.';
+input.value = ''; // Clear the file input
+} else {
+document.getElementById('file-error-message').textContent = '';
+}
+}
+document.getElementById('typ').addEventListener('change', function() {
+var selectedCategory = this.value;
+var stationaryGroup = document.getElementById('stationaryGroup');
+var booksGroup = document.getElementById('booksGroup');
+
+// Reset the display of the input fields
+stationaryGroup.style.display = 'none';
+booksGroup.style.display = 'none';
+
+// Show/hide the input fields based on selected category
+if (selectedCategory === 'stationary Items') {
+stationaryGroup.style.display = 'block';
+} else if (selectedCategory === 'books') {
+booksGroup.style.display = 'block';
+}
+});
+
+
+document.getElementById('type').addEventListener('change', function() {
+var selectedType = this.value;
+var quantityGroup = document.getElementById('quantityGroup');
+var quantityInput = document.getElementById('quantity');
+var quantityLabel = document.getElementById('quantityLabel');
+
+// Reset the display of the quantity field
+quantityGroup.style.display = 'none';
+quantityInput.value = ''; // Clear the quantity input value
+
+// Show/hide the quantity field based on selected type
+if (selectedType === 'fruits' || selectedType === 'vegetables') {
+quantityGroup.style.display = 'block';
+quantityInput.setAttribute('placeholder', 'Enter quantity in Kg');
+quantityLabel.style.display = 'block'; // Show the label
+quantityInput.setAttribute('required', 'required'); // Make the input required
+} else if (selectedType === 'other') {
+// For other type, show normal number input
+quantityInput.setAttribute('type', 'number');
+quantityInput.setAttribute('placeholder', 'Enter quantity');
+quantityInput.setAttribute('required', 'required'); // Make the input required
+quantityGroup.style.display = 'block';
+quantityLabel.style.display = 'none'; // Hide the label
+} else {
+// For all other types, hide quantity input
+quantityInput.removeAttribute('required'); // Remove the required attribute
+}
+});var map;
+var marker;
+var autocompleteService;
+var dropdown = document.getElementById('autocompleteDropdown');
+
+function initMapo() {
+map = new google.maps.Map(document.getElementById('mapo'), {
+zoom: 10,
+center: { lat: -25.344, lng: 131.031 }
+});
+
+marker = new google.maps.Marker({
+position: { lat: -25.344, lng: 131.031 },
+map: map,
+draggable: true
+});
+
+// Add event listener for marker drag
+google.maps.event.addListener(marker, 'dragend', function () {
+var newLatLng = marker.getPosition();
+map.panTo(newLatLng);
+updateLocationo(newLatLng);
+});
+
+// Autocomplete for location search
+var input = document.getElementById('locationSearcho');
+autocompleteService = new google.maps.places.AutocompleteService();
+
+input.addEventListener('input', function () {
+var inputText = input.value;
+if (inputText.length > 0) {
+autocompleteService.getPlacePredictions({ input: inputText }, function (predictions, status) {
+if (status === google.maps.places.PlacesServiceStatus.OK) {
+    showDropdown(predictions);
+}
+});
+} else {
+hideDropdown();
+}
+});
+
+// Event listener for selecting a suggestion
+dropdown.addEventListener('click', function(event) {
+var selectedOption = event.target;
+if (selectedOption.classList.contains('autocomplete-dropdown-item')) {
+input.value = selectedOption.textContent; // Write the selected option into the text field
+dropdown.style.display = 'none'; // Hide the dropdown
+var request = {
+placeId: selectedOption.dataset.placeId,
+fields: ['geometry']
+};
+var service = new google.maps.places.PlacesService(map);
+service.getDetails(request, function(place, status) {
+if (status === google.maps.places.PlacesServiceStatus.OK) {
+    var newLatLng = place.geometry.location;
+    marker.setPosition(newLatLng);
+    map.setCenter(newLatLng);
+    updateLocationo(newLatLng); // Update location on the map
+}
+});
+}
+});
+}
+
+function showDropdown(predictions) {
+dropdown.innerHTML = '';
+predictions.forEach(function(prediction) {
+var option = document.createElement('div');
+option.classList.add('autocomplete-dropdown-item');
+option.textContent = prediction.description;
+option.dataset.placeId = prediction.place_id; // Store placeId in dataset
+dropdown.appendChild(option);
+});
+dropdown.style.display = 'block';
+}
+
+function hideDropdown() {
+dropdown.innerHTML = '';
+dropdown.style.display = 'none';
+}
+
+function updateLocationo(location) {
+var geocoder = new google.maps.Geocoder();
+geocoder.geocode({ 'location': location }, function (results, status) {
+if (status === 'OK') {
+if (results[0]) {
+document.getElementById('locationSearcho').value = results[0].formatted_address;
+} else {
+console.log('No results found');
+}
+} else {
+console.log('Geocoder failed due to: ' + status);
+}
+});
+}
+
+function searchKeyPresso(e) {
+e = e || window.event;
+if (e.keyCode == 13) {
+var searchLocation = document.getElementById("locationSearcho").value;
+var geocoder = new google.maps.Geocoder();
+geocoder.geocode({ 'address': searchLocation }, function (results, status) {
+if (status == google.maps.GeocoderStatus.OK) {
+var newLatLng = results[0].geometry.location;
+marker.setPosition(newLatLng);
+map.setCenter(newLatLng);
+updateLocationo(newLatLng);
+} else {
+alert('Geocode was not successful for the following reason: ' + status);
+}
+});
+return false;
+}
+return true;
+}
+
+        </script>
+        <div id="random" style="display: block;" >
+        
+         <!-- Causes Start -->
+         <div class="causes">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="causes-item" style="margin-top: 10px;" data-postall="fulfilled" data-doctech="no"> <!--clothes item-->
+                        <div class="causes-img" style="position: relative; width: 100%; padding-top: 80%;">
+                        <img src="img/clothes2gif.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="f">
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: green">
+                                    <span style="background-color: green;color: white;">Fulfilled✅</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Donated:</strong> 10</p>
+                                <p><strong>Goal:</strong> 10</p>
+                            </div>
+                        </div></div>
+                        <div class="causes-text">
+                            <h3>Clothes</h3>
+                            <p>Shirts</p>
+                        </div>
+                        <div class="fulfilled" >
+                        <div class="causes-btn" >
+                            <a class="btn btn-custom" href="clothes3F.html" style="width: 400px;">Learn More</a>
+                            <a class="btn btn-custom-trash" style="background-color: green;color: white;">
+                                <i class="fas fa-trash-alt" style="background-color:green;color:black"  onMouseOver="changeIconColor(this)"  onMouseOut="changeIconColor(this, 'black')" onclick=deletePost()></i></a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="causes-item" data-subj1="math" data-subj2="arabic" data-areat="el-nozha" data-governoratet="cairo" data-postall="unfulfilled" data-doctech="yes" style="margin-top: 10px;"><!--blood item-->
+                        <div class="causes-img" style="position: relative; width: 100%; padding-top: 80%;">
+                            <img src="img/teachergif.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                    <span>50%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Donated:</strong> 8</p>
+                                <p><strong>Goal:</strong> 16</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>Teacher Sessions</h3>
+                            <p>Math and Arabic teacher.</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="teacher1.html" style="width: 400px;">Learn More</a>
+                            <a class="btn btn-custom-trash" style="background-color: #FDBE33;color: white;">
+                                <i class="fas fa-trash-alt" style="background-color:#FDBE33;color:black"  onMouseOver="changeIconColor(this)"  onMouseOut="changeIconColor(this, 'black')" onclick=deletePost() ></i></a>
+                           
+                        </div>
+                    </div>
+          <div class="causes-item" style="margin-top: 10px;" data-speciality="oncology" data-orgname="5-7-3-5-7" data-aread="el-saida" data-governorated="cairo" data-postall="unfulfilled" data-doctech="yes"> <!--medical item -->
+            <div class="causes-img" style="position: relative; width: 100%; padding-top: 80%;">
+           <img src="img/docse.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="causes-progress">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                        <span>60%</span>
+                    </div>
+                </div>
+                <div class="progress-text">
+                    <p><strong>How urgent is the case:</strong> 60%</p>
+                    
+                </div>
+            </div>
+            <div class="causes-text">
+                <h3>Doctor Sessions</h3>
+                <p>Oncologist needed!</p>
+            </div>
+            <div class="causes-btn">
+                <a class="btn btn-custom" href="doc2.html" style="width: 400px;">Learn More</a>
+                <a class="btn btn-custom-trash" style="background-color: #FDBE33;color: white;">
+                    <i class="fas fa-trash-alt" style="background-color:#FDBE33;color:black"  onMouseOver="changeIconColor(this)"  onMouseOut="changeIconColor(this, 'black')" onclick=deletePost() ></i></a>
+            </div>
+        </div>
+
+                <div class="causes-item" style="margin-top: 10px;" data-postall="fulfilled" data-doctech="no"> <!--school item Books-->
+                    <div class="causes-img" style="position: relative; width: 100%; padding-top: 80%;">
+                   <img src="img/schoolgif.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"> 
+                    </div>
+                    <div class="f">
+                    <div class="causes-progress">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: green">
+                                <span style="background-color: green;color: white;">Fulfilled✅</span>
+
+                            </div>
+                        </div>
+                        <div class="progress-text">
+                            <p><strong>Donated:</strong> 2</p>
+                            <p><strong>Goal:</strong> 2</p>
+                        </div>
+                    </div></div>
+                    <div class="causes-text">
+                        <h3>School</h3>
+                        <p>Books</p>
+                    </div> 
+                    <div class="fulfilled" >
+                    <div class="causes-btn">
+                        <a class="btn btn-custom" href="SchoolSup1Full.html" style="width: 400px;">Learn More</a>
+                        <a class="btn btn-custom-trash" style="background-color: green;color: white;">
+                            <i class="fas fa-trash-alt" style="background-color:green;color:black"  onMouseOver="changeIconColor(this)"  onMouseOut="changeIconColor(this, 'black')" onclick=deletePost()></i></a>
+                    </div></div>
+                </div>
+                
+        <!-- Causes End --> 
+         
+         <!-- Causes Start -->
+         
+        
+                    <div class="causes-item" style="margin-top: 10px;" data-postall="unfulfilled" data-doctech="no"> <!--blood item-->
+                        <div class="causes-img" style="position: relative; width: 100%; padding-top: 80%;">
+                       <img src="img/bloodgif.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"> 
+                        </div>
+                        
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                    <span>50%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Donated:</strong> 1</p>
+                                <p><strong>Goal:</strong> 2</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>Blood</h3>
+                            <p>Blood donation</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="bloodDon1.html" style="width: 400px;">Learn More</a>
+                            <a class="btn btn-custom-trash" style="background-color: #FDBE33;color: white;">
+                                <i class="fas fa-trash-alt" style="background-color:#FDBE33;color:black"  onMouseOver="changeIconColor(this)"  onMouseOut="changeIconColor(this, 'black')" onclick=deletePost() ></i></a>
+                        </div>
+                    </div>
+                    <div class="causes-item" style="margin-top: 10px;" data-postall="fulfilled" data-doctech="no"> <!--medical item -->
+                        <div class="causes-img" style="position: relative; width: 100%; padding-top: 80%;">
+                       <img src="img/medicalgif.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="f">
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"style="background-color: green">
+                                    <span style="background-color: green;color: white;">Fulfilled✅</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Donated:</strong> 5</p>
+                                <p><strong>Goal:</strong>5</p>
+                            </div>
+                        </div> </div>
+                        <div class="causes-text">
+                            <h3>Medical</h3>
+                            <p>Medical equipment</p>
+                        </div>
+                        <div class="fulfilled" >
+
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="MedSupp3Full.html" style="width: 400px;">Learn More</a>
+                            <a class="btn btn-custom-trash" style="background-color: green;color: white;">
+                                <i class="fas fa-trash-alt" style="background-color:green;color:black"  onMouseOver="changeIconColor(this)"  onMouseOut="changeIconColor(this, 'black')" onclick=deletePost()></i></a>
+                        </div></div>
+                    </div>
+                    <div class="causes-item" data-subj1="english" data-subj2="physics" data-areat="nasr-city" data-governoratet="cairo" data-postall="fulfilled" data-doctech="yes" style="margin-top: 10px;">
+                        <div class="causes-img" style="position: relative; width: 100%; padding-top: 80%;">
+                            <img src="img/teachergif.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="f">
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: green;">
+                                    <span style="background-color: green;color: white;">Fulfilled✅</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Donated:</strong> 10</p>
+                                <p><strong>Goal:</strong> 10</p>
+                            </div>
+                        </div> </div>
+                        <div class="causes-text">
+                            <h3>Teacher Sessions</h3>
+                            <p>English and Physics teacher.</p>
+                        </div>
+                        <div class="fulfilled" >
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="teacher2Full.html" style="width: 400px;">Learn More</a>
+                            <a class="btn btn-custom-trash" style="background-color: green;color: white;">
+                                <i class="fas fa-trash-alt" style="background-color:green;color:black"  onMouseOver="changeIconColor(this)"  onMouseOut="changeIconColor(this, 'black')" onclick=deletePost()></i></a>
+                           
+                        </div></div>
+                    </div>
+               
+        <!-- Causes End --> 
+         <!-- Causes Start -->
+         
+                    <div class="causes-item" style="margin-top: 10px;" data-postall="unfulfilled" data-doctech="no"> <!--blood item-->
+                        <div class="causes-img" style="position: relative; width: 100%; padding-top: 80%;">
+                       <img src="img/bloodgif.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"> 
+                        </div>
+                        
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                    <span>0%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Donated:</strong> 0</p>
+                                <p><strong>Goal:</strong> 4</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>Blood</h3>
+                            <p>Blood donation</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="bloodDon2.html" style="width: 400px;">Learn More</a>
+                            <a class="btn btn-custom-trash" style="background-color: #FDBE33;color: white;">
+                                <i class="fas fa-trash-alt" style="background-color:#FDBE33;color:black"  onMouseOver="changeIconColor(this)"  onMouseOut="changeIconColor(this, 'black')" onclick=deletePost()></i></a>
+                        </div>
+                    </div>
+                    <div class="causes-item" style="margin-top: 10px;" data-postall="unfulfilled" data-doctech="no"> <!--school item Books-->
+                        <div class="causes-img" style="position: relative; width: 100%; padding-top: 80%;">
+                       <img src="img/schoolgif.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"> 
+                        </div>
+                        
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                    <span>50%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Donated:</strong> 5</p>
+                                <p><strong>Goal:</strong> 10</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>School</h3>
+                            <p>Books</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="SchoolSup2.html" style="width: 400px;">Learn More</a>
+                            <a class="btn btn-custom-trash" style="background-color: #FDBE33;color: white;">
+                                <i class="fas fa-trash-alt" style="background-color:#FDBE33;color:black"  onMouseOver="changeIconColor(this)"  onMouseOut="changeIconColor(this, 'black')" onclick=deletePost() ></i></a>
+                        </div>
+                    </div>
+                    <div class="causes-item" style="margin-top: 10px;" data-postall="fulfilled" data-doctech="no"> <!--toys item-->
+                        <div class="causes-img" style="position: relative; width: 100%; padding-top: 80%;">
+                       <img src="img/toysgif.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                                    </div>
+                                    <div class="f">
+                                    <div class="causes-progress">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="background-color: green">
+                                                <span style="background-color: green;color: white;">Fulfilled✅</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="progress-text">
+                                            <p><strong>Donated:</strong> 15</p>
+                                            <p><strong>Goal:</strong> 15</p>
+                                        </div>
+                                    </div></div>
+                                    <div class="causes-text">
+                                        <h3>Toys</h3>
+                                        <p>Male cars</p>
+                                    </div>
+                                    <div class="fulfilled" >
+
+                                    <div class="causes-btn">
+                                        <a class="btn btn-custom" href="toys4Full.html" style="width: 400px;">Learn More</a>
+                                        
+                            <a class="btn btn-custom-trash" style="background-color: green;color: white;">
+                                <i class="fas fa-trash-alt" style="background-color:green;color:black"  onMouseOver="changeIconColor(this)"  onMouseOut="changeIconColor(this, 'black')" onclick=deletePost() ></i></a>
+
+                                    </div> </div>
+                                </div>
+                      <div class="causes-item" style="margin-top: 10px;" data-food="fresh meals" data-postall="unfulfilled" data-doctech="no"> <!--medical item Medication-->
+                        <div class="causes-img" style="position: relative; width: 100%; padding-top: 80%;">
+                       <img src="img/foodgif.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                    <span>70%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Donated:</strong> 7 </p>
+                                <p><strong>Goal:</strong> 10 </p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>Food</h3>
+                            <p>Fresh Meals</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="food5.html" style="width: 400px;">Learn More</a>
+                            <a class="btn btn-custom-trash" style="background-color: #FDBE33;color: white;">
+                                <i class="fas fa-trash-alt" style="background-color:#FDBE33;color:black"  onMouseOver="changeIconColor(this)"  onMouseOut="changeIconColor(this, 'black')" onclick=deletePost() ></i></a>
+                        </div>
+                    </div>
+                    <div class="causes-item" style="margin-top: 10px;" data-postall="unfulfilled" data-doctech="no"> <!--toys item-->
+                        <div class="causes-img" style="position: relative; width: 100%; padding-top: 80%;">
+                       <img src="img/toysgif.gif" alt="Image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
+                                    <span>33%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Donated:</strong> 3</p>
+                                <p><strong>Goal:</strong> 9</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>Toys</h3>
+                            <p>Stuffed toys</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="toys1.html" style="width: 400px;">Learn More</a>
+                            <a class="btn btn-custom-trash" style="background-color: #FDBE33;color: white;">
+                                <i class="fas fa-trash-alt" style="background-color:#FDBE33;color:black"  onMouseOver="changeIconColor(this)"  onMouseOut="changeIconColor(this, 'black')" onclick=deletePost() ></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Causes End --> 
+         
+       
+    </div>
+        <!---randomend-->
+
+        
+
+   <!--clothesage0to4--->
+
+   <!--clothesage0to4end--->
+
+           
+
+                         
+
+                        
+
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="sidebar">
+                            <!-- <div class="sidebar-widget">
+                                <div class="search-widget">
+                                    <form onsubmit="searchByCategoryOrKeyword(); return false;">
+                                        <input id="searchInput" class="form-control" type="text" placeholder="Search Keyword" oninput="showSuggestions(this.value)">
+                                        <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                                    </form>
+                                    <div id="suggestionBox" style="display: none;"></div> < Suggestion box >
+                                </div>
+                            </div> -->
+                            
+
+                            <br><br><br>
+                            <div class="sidebar-widget">
+                                <br><br><br><br><br><br><br><br>
+                                <h2 class="widget-title">Categories</h2>
+                                <div class="category-widget">
+                                    <ul>
+                                        <!-- Add onclick attribute here -->
+                                        <li> <i style='font-size:12px; color:#FDBE33;cursor: pointer;' class='fas' onclick="toggleDropdown('dropdown1');resetAllFilters();">&#xf054;</i>
+                                            <a href="#" onclick="resetFilters();makeAllVisible(); ">All</a><span>(12)</span> 
+                                            <ul id="dropdown1" class="dropdown1" style="display:none;">
+                                               
+                                                <div class="filter-controls">
+                                                    <label for="typeall">Post Type:</label>
+                                                    <select id="typeall" onchange="filterAll()">
+                                                        <option value="all">All</option>
+                                                        <option value="fulfilled">Fulfilled</option>
+                                                        <option value="unfulfilled">Unfulfilled</option>
+                                                        
+                                                    </select>
+                                                    </div>       
+                                            </ul>
+                                        </li>                                  
+                                            
+                                                
+                                        <li> <i style='font-size:12px; color:#FDBE33;cursor: pointer;' class='fas' onclick="toggleDropdown('dropdown2');resetAllFilters();">&#xf054;</i>
+                                            <a href="#" onclick="resetFilters();filterPosts(); ">School and Medical probono cases</a><span>(3)</span> 
+                                            <ul id="dropdown2" class="dropdown2" style="display:none;">
+                                               
+                                                <div class="filter-controls">
+                                                    <label for="typedt">Post Type:</label>
+                                                    <select id="typedt" onchange="filterDocTech()">
+                                                        <option value="all">All</option>
+                                                        <option value="fulfilled">Fulfilled</option>
+                                                        <option value="unfulfilled">Unfulfilled</option>
+                                                        
+                                                    </select>
+                                                    </div>       
+                                            </ul>
+                                        </li> 
+
+                                    </ul>
+                                </div>
+                            </div>
+                            
+
+                            <div class="sidebar-widget">
+                                <h2 class="widget-title">Urgent Posts</h2>
+                                <div class="black-bg">
+                                <div class="recent-post">
+                                    <div class="post-item">
+                                        <div class="post-img">
+                                            <img src="img/cure.jpeg" height="70px"/>
+                                        </div>
+                                        <div class="post-text">
+                                            <a href="doc3.html"> We need a general surgeon <span style="color: red;">URGENTLY</span>! </a>
+                                            <div class="post-meta">
+                                                <p><a href="cure.html">By: Cure Hospital</a></p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    
+                                
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="sidebar-widget">
+                                
+                            </div>
+
+                            
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Single Post End-->   
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>Egypt</p>
+                            <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                            <p><i class="fa fa-envelope"></i>Helpz@gmail.com</p>
+                            <div class="footer-social">
+                                <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="">About Us</a>
+                            <a href="">Contact Us</a>
+                            <a href="">Popular Causes</a>
+                            <a href="">Upcoming Events</a>
+                            <a href="">Latest Blog</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Useful Links</h2>
+                            <a href="">Terms of use</a>
+                            <a href="">Privacy policy</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-newsletter">
+                            <h2>Newsletter</h2>
+                            <form>
+                                <input class="form-control" placeholder="Email goes here">
+                                <button class="btn btn-custom">Submit</button>
+                                <label>Don't worry, we don't spam!</label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">HELPZ</a>, All Right Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Designed By <a href="https://htmlcodex.com">US</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script>
+          
+function resetAllFilters() {
+    document.getElementById('typeall').value = 'all';
+    document.getElementById('typedt').value = 'all';
+}
+
+function toggleCategVisibility(All,Clothes,Toys,Food,Medical,School,Blood) {
+    var divrandom = document.getElementById('random');
+    var divclothes = document.getElementById('clothes');
+    var divtoys = document.getElementById('toys');
+    var divfood = document.getElementById('food');
+    var divmedical = document.getElementById('medical');
+    var divschool = document.getElementById('school');
+    var divblood = document.getElementById('blood');
+
+        
+    
+    if (All){
+        divrandom.style.display = 'block';
+        divclothes.style.display = 'none';
+        divtoys.style.display = 'none';
+        divfood.style.display = 'none';
+        divmedical.style.display = 'none';
+        divschool.style.display = 'none';
+        divblood.style.display = 'none'; 
+    }
+    else if (Clothes) {
+        divrandom.style.display = 'none';
+        divclothes.style.display = 'block';
+        divtoys.style.display = 'none';
+        divfood.style.display = 'none';
+        divmedical.style.display = 'none';
+        divschool.style.display = 'none';
+        divblood.style.display = 'none'; 
+    } else if(Toys) {
+        divrandom.style.display = 'none';
+        divclothes.style.display = 'none';
+        divtoys.style.display = 'block';
+        divfood.style.display = 'none';
+        divmedical.style.display = 'none';
+        divschool.style.display = 'none';
+        divblood.style.display = 'none'; 
+    }
+    else if(Food) {
+        divrandom.style.display = 'none';
+        divclothes.style.display = 'none';
+        divtoys.style.display = 'none';
+        divfood.style.display = 'block';
+        divmedical.style.display = 'none';
+        divschool.style.display = 'none';
+        divblood.style.display = 'none'; 
+    }
+    else if(Medical) {
+        divrandom.style.display = 'none';
+        divclothes.style.display = 'none';
+        divtoys.style.display = 'none';
+        divfood.style.display = 'none';
+        divmedical.style.display = 'block';
+        divschool.style.display = 'none';
+        divblood.style.display = 'none'; 
+    }
+    else if(School) {
+        divrandom.style.display = 'none';
+        divclothes.style.display = 'none';
+        divtoys.style.display = 'none';
+        divfood.style.display = 'none';
+        divmedical.style.display = 'none';
+        divschool.style.display = 'block';
+        divblood.style.display = 'none'; 
+    }
+    else if(Blood) {
+        divrandom.style.display = 'none';
+        divclothes.style.display = 'none';
+        divtoys.style.display = 'none';
+        divfood.style.display = 'none';
+        divmedical.style.display = 'none';
+        divschool.style.display = 'none';
+        divblood.style.display = 'block'; 
+    }
+   
+}
+
+// JavaScript
+function showSuggestions(keyword) {
+    var suggestionBox = document.getElementById('suggestionBox');
+    var categories = ['clothes', 'toys', 'food', 'medical supplies', 'school supplies', 'blood donations'];
+    suggestionBox.innerHTML = ''; // Clear previous suggestions
+
+    categories.forEach(function(category) {
+        if (category.includes(keyword)) {
+            var suggestionItem = document.createElement('div');
+            suggestionItem.classList.add('suggestion-item');
+            suggestionItem.textContent = category;
+            suggestionItem.addEventListener('click', function() {
+                selectCategory(category);
+            });
+            suggestionBox.appendChild(suggestionItem);
+        }
+    });
+
+    if (keyword.length === 0) {
+        suggestionBox.style.display = 'none'; // Hide suggestion box when no input
+    } else {
+        suggestionBox.style.display = 'block';
+    }
+}
+
+function selectCategory(category) {
+    
+    toggleCategVisibility(false, 
+        category === 'clothes', 
+        category === 'toys', 
+        category === 'food', 
+        category === 'medical supplies', 
+        category === 'school supplies', 
+        category === 'blood donations'
+    );
+    closeDropdown('dropdown1');
+closeDropdown('dropdown12344');
+closeDropdown('dropdown123');
+closeDropdown('dropdown134');
+closeDropdown('dropdown149');
+closeDropdown('dropdown1234');
+    resetFilters();
+
+}
+
+
+function searchByCategoryOrKeyword() {
+    
+    var searchInput = document.getElementById('searchInput').value.toLowerCase();
+    var categories = ['clothes', 'toys', 'food', 'medical supplies', 'school supplies', 'blood donations'];
+
+    // Check if the search input matches any category
+    if (categories.includes(searchInput)) {
+        // Redirect or perform action for the matched category
+        toggleCategVisibility(false, 
+            searchInput === 'clothes', 
+            searchInput === 'toys', 
+            searchInput === 'food', 
+            searchInput === 'medical supplies', 
+            searchInput === 'school supplies', 
+            searchInput === 'blood donations'
+        );
+    } else {
+        // Check if the search input is close to any category
+        var closeCategory = findClosestCategory(searchInput, categories);
+        if (closeCategory) {
+            // Redirect or perform action for the closest category
+            toggleCategVisibility(false, 
+                closeCategory === 'clothes', 
+                closeCategory === 'toys', 
+                closeCategory === 'food', 
+                closeCategory === 'medical supplies', 
+                closeCategory === 'school supplies', 
+                closeCategory === 'blood donations'
+            );
+        } else {
+            // Perform a generic keyword search
+            console.log("Search by keyword: " + searchInput);
+        }
+    }
+}
+
+function findClosestCategory(keyword, categories) {
+    // Function to find the closest category to the keyword
+    // Here, you can implement a method to find the closest category to the keyword
+    // This can be done using algorithms like Levenshtein distance or similarity score
+    // For simplicity, let's just check for substring matches
+    for (var i = 0; i < categories.length; i++) {
+        if (categories[i].includes(keyword)) {
+            return categories[i];
+        }
+    }
+    return null;
+}
+
+function toggleDropdown(id) {
+        var dropdown = document.getElementById(id);
+        if (dropdown.style.display === "none") {
+            dropdown.style.display = "block";
+        } else {
+            dropdown.style.display = "none";
+        }
+    }
+    
+    function closeDropdown(id) {
+        var dropdown = document.getElementById(id);
+        dropdown.style.display = "none";
+    }
+
+
+    function filterAll() { //marinaa
+        let typeAll = document.getElementById('typeall').value;
+        let allItems = document.querySelectorAll('.causes-item');
+
+        allItems.forEach(item => {
+            let itemtypeAll = item.getAttribute('data-postall');
+
+            if (typeAll === 'all' || itemtypeAll === typeAll) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+
+    function filterPosts() {
+        // let doctech = document.getElementById('data-doctech').value;
+        let Items = document.querySelectorAll('.causes-item');
+
+        Items.forEach(item => {
+            let itemdoctech = item.getAttribute('data-doctech');
+
+            if (itemdoctech==='yes') {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    function makeAllVisible() {
+        // let doctech = document.getElementById('data-doctech').value;
+        let Items = document.querySelectorAll('.causes-item');
+
+        Items.forEach(item => {
+            item.style.display = 'block';
+        });
+    }
+
+
+    function filterDocTech() { 
+        let typeAll = document.getElementById('typedt').value;
+        let allItems = document.querySelectorAll('.causes-item');
+
+        allItems.forEach(item => {
+            let itemtypeAll = item.getAttribute('data-postall');
+            let itemdoctech = item.getAttribute('data-doctech');
+
+            if ((typeAll === 'all' || itemtypeAll === typeAll) && itemdoctech==='yes') {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    function filterSchool() {
+        let categorym = document.getElementById('categorys').value;
+        let clothesItems = document.querySelectorAll('.causes-item');
+
+        clothesItems.forEach(item => {
+            let itemcategorym = item.getAttribute('data-school');
+
+            if (categorym === 'all' || itemcategorym === categorym) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+
+
+    function resetFilters() {
+   closeDropdown('dropdown1');
+   closeDropdown('dropdown2');
+
+    document.getElementById('typeall').value = 'all';
+    // if(!blood){closeDropdown('dropdown1234');}
+    filterAll();
+    document.getElementById('typedt').value = 'all';
+    filterDocTech()
+
+
+
+
+// closeDropdown('dropdown12344');
+// closeDropdown('dropdown123');
+// closeDropdown('dropdown134');
+// closeDropdown('dropdown149');
+// closeDropdown('dropdown1234');
+}
+function changeIconColor(element, resetColor = 'black') {
+  // This function assumes the element passed is the `<i>` with the trash icon
+  element.style.color = 'white'; // Change color to white on hover
+  
+  // Optional: Reset color on mouseout (if not provided as argument)
+  element.onmouseout = function() {
+    this.style.color = resetColor;
+  }
+}
+function deletePost() {
+        // Find the parent element of the trash icon
+        var postElement = document.querySelector('.causes-item');
+        
+        // Remove the parent element from the DOM
+        postElement.parentNode.removeChild(postElement);
+    }
+
+
+
+            </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/parallax/parallax.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

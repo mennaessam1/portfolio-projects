@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "output_sound",
+					"strict" : false
+				},
+				{
+					"name" : "output_motion",
+					"strict" : false
+				},
+				{
+					"name" : "servo_move",
+					"strict" : false
+				},
+				{
+					"name" : "servo_default",
+					"strict" : false
+				},
+				{
+					"name" : "output_buzzer",
+					"strict" : false
+				},
+				{
+					"name" : "lightout",
+					"strict" : false
+				},
+				{
+					"name" : "display[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display[7]",
+					"strict" : false
+				},
+				{
+					"name" : "display[8]",
+					"strict" : false
+				},
+				{
+					"name" : "display[10]",
+					"strict" : false
+				},
+				{
+					"name" : "display[11]",
+					"strict" : false
+				},
+				{
+					"name" : "display[13]",
+					"strict" : false
+				},
+				{
+					"name" : "display[14]",
+					"strict" : false
+				},
+				{
+					"name" : "display[15]",
+					"strict" : false
+				},
+				{
+					"name" : "display[16]",
+					"strict" : false
+				},
+				{
+					"name" : "display[20]",
+					"strict" : false
+				},
+				{
+					"name" : "display[21]",
+					"strict" : false
+				},
+				{
+					"name" : "display[23]",
+					"strict" : false
+				},
+				{
+					"name" : "display[24]",
+					"strict" : false
+				},
+				{
+					"name" : "display[26]",
+					"strict" : false
+				},
+				{
+					"name" : "display[27]",
+					"strict" : false
+				},
+				{
+					"name" : "display[28]",
+					"strict" : false
+				},
+				{
+					"name" : "display[30]",
+					"strict" : false
+				},
+				{
+					"name" : "display[31]",
+					"strict" : false
+				},
+				{
+					"name" : "display[33]",
+					"strict" : false
+				},
+				{
+					"name" : "display[34]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "sound_inp",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "motion_inp",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

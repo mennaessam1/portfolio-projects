@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>HELPZ - Free Charity Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Top Bar Start -->
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="fa fa-phone-alt"></i>
+                                <p>+123 456 7890</p>
+                            </div>
+                            <div class="text">
+                                <i class="fa fa-envelope"></i>
+                                <p>Helpz@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <div class="social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a href="index.html">
+                    <img src="img/myLogo3.png" style="height: 70px !important;" alt="Logo">
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="causes.html" class="nav-item nav-link">Causes</a>
+                        <a href="event.html" class="nav-item nav-link">Events</a>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu">
+                                <a href="single.html" class="dropdown-item">Detail Page</a>
+                                <a href="service.html" class="dropdown-item">What We Do</a>
+                                <a href="team.html" class="dropdown-item">Meet The Team</a>
+                                <a href="donate.html" class="dropdown-item">Donate Now</a>
+                                <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Register</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="index.html">Home</a>
+                        <a href="">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+        
+        <!-- Volunteer Start -->
+<div class="container">
+    <div class="volunteer" data-parallax="scroll" data-image-src="img/volunteer.jpg">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="volunteer-form" >
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        
+                        <label class="btn btn-custom active">
+                            <input type="radio" id="orgy" name="options" checked is-org="true" onclick="toggleNameVisibility(true);"> Organization
+                        </label>
+                        <label class="btn btn-custom">
+                            <input type="radio" id="donory" name="options"  onclick="toggleNameVisibility(false);document.getElementById('orgy').setAttribute('is-org', 'false');"> Donor
+                        </label>
+                        
+                    </div>
+                    
+                        
+                        
+                        
+
+
+                        <!--org-->
+                        <div id="org" style="display: block;">
+                            <form id="volunteerForm" >
+                            <div class="control-group" >             
+                                <input type="text" id="fnameo" class="form-control" placeholder="First Name" required="required" />
+                            </div>
+                            <div class="control-group"  >
+                                
+                                <input type="text" id="lnameo" class="form-control" placeholder="Last Name" required="required" />
+                            </div>
+                            <!---->
+                            <div class="control-group" >
+                                
+                                <input type="text" id="gendero" class="form-control" placeholder="Gender" required="required" />
+                            </div>
+                            <div class="control-group">
+                                <input type="email" id="emailo" class="form-control" placeholder="Email" required="required" />
+                            </div>
+                            <div class="control-group" >             
+                                <input type="text" id="uname" class="form-control" placeholder=" username" required="required" />
+                            </div>
+                            <div class="control-group" >
+                                
+                                <input type="number" id="contactnumbero" class="form-control" placeholder="Contact Number" required="required" />
+                            </div>
+                            
+                            <div class="control-group" >
+                                
+                                <input type="password" id="passwordo" class="form-control" placeholder="Password" required="required" />
+                            </div>
+                            
+                            <div class="control-group" >
+                            <input type="text" id="organizationAddress" class="form-control" placeholder="Organization Address" required="required" />
+                            </div>
+                            
+                            <div class="control-group" >
+                                                        
+                                <input type="text" id="areao" class="form-control" placeholder="Area" required="required" />
+                            </div>
+                            <div class="control-group" >
+                                
+                                <input type="text" id="governmento" class="form-control" placeholder="Government" required="required" />
+                            </div>
+                            
+                            <div class="control-group" >             
+                                <input type="text" id="oname" class="form-control" placeholder="Organization Name" required="required" />
+                            </div>
+                            
+                            <div class="control-group" >             
+                                <input type="text" id="otype" class="form-control" placeholder="Organization Type" required="required" />
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                           
+                        </form>
+                            </div>
+                            <!--orgend-->
+                           <!--donor-->
+                        <div id="donor" style="display: none;">
+                            <form id="volunteerForm" >
+                            <div class="control-group" >             
+                                <input type="text" id="fname" class="form-control" placeholder="First Name" required="required" />
+                            </div>
+                            <div class="control-group"  >
+                                
+                                <input type="text" id="lname" class="form-control" placeholder="Last Name" required="required" />
+                            </div>
+                            <!---->
+                            <div class="control-group" >
+                                
+                                <input type="text" id="gender" class="form-control" placeholder="Gender" required="required" />
+                            </div>
+                            <div class="control-group">
+                                <input type="email" id="email" class="form-control" placeholder="Email" required="required" />
+                            </div>
+                            <div class="control-group" >             
+                                <input type="text" id="uname" class="form-control" placeholder=" username" required="required" />
+                            </div>
+                            <div class="control-group" >
+                                
+                                <input type="number" id="contactnumber" class="form-control" placeholder="Contact Number" required="required" />
+                            </div>
+                            
+                            <div class="control-group" >
+                                
+                                <input type="password" id="password" class="form-control" placeholder="Password" required="required" />
+                            </div>
+                            
+                            <div class="control-group" >
+                                <input type="text" id="individualAddress" class="form-control" placeholder="Address" required="required" />
+                                </div>
+                            
+                            <div class="control-group" >
+                                                        
+                                <input type="text" id="area" class="form-control" placeholder="Area" required="required" />
+                            </div>
+                            <div class="control-group" >
+                                
+                                <input type="text" id="government" class="form-control" placeholder="Government" required="required" />
+                            </div>
+
+                            <div class="dropdown">
+                                <button class="btn btn-custom dropdown-toggle" type="button" id="donorDropdown" data-toggle="dropdown">
+                                    <p id="selectype">Select Type otherwise considered Regular Donor<p>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="donorDropdown">
+                                    <a class="dropdown-item"  onclick="showDonorType('Regular Donor')">Regular Donor</a>
+                                    <a class="dropdown-item"  onclick="showDonorType('Teacher')">Teacher</a>
+                                    <a class="dropdown-item"  onclick="showDonorType('Doctor')">Doctor</a>
+                                </div>
+                            </div>
+                            
+                            
+                            <br>
+                           <p style="text-align: center; font-family: 'Times New Roman', Times, serif;">Choose your donor type!</p>
+                            <br>
+                            <br>
+
+                            <div id="optional"  >
+                            <p style="color: brown; font-size: medium; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> optional fields (if regular donor ignore)</p>
+                                <div class="control-group">
+                            <input type="number" id="casesn" class="form-control"  placeholder="Number of Students I can teach (In case of private tutoring)"/>                 
+                        </div>
+                        <div class="control-group">
+                            <input type="number" id="casesnt" class="form-control" placeholder="Number of Pro-Bono Classes I can teach"  />                
+                        </div>
+                        <div class="control-group">
+                            <input type="number" id="casesnd" class="form-control" placeholder="Number of Pro-Bono Medical Cases I can take" />                
+                        </div>
+                        <div class="control-group">
+                            <input type="text" id="clinicaddr" class="form-control" placeholder="Clinic Address" />
+                        </div>
+                        <div class="control-group">
+                            <input type="text" id="clinicarea" class="form-control" placeholder="Clinic Area"  />
+                            
+                        </div>
+                        <div class="control-group">
+                            <input type="text" id="clinicgov" class="form-control" placeholder="Clinic Government"  />
+                        </div>
+                        <div class="control-group">
+                            <input type="text" id="speciality" class="form-control" placeholder="Speciality"  />
+                        </div>
+                            </div>
+                            
+                           
+                        </form>
+                            </div>
+                            <!--donorend-->
+                            <div class="control-group">
+                                <form action="/action_page.php" class="btn btn-custom" style="border: 0px;">
+                                    <label for="myFiles" class="btn btn-custom" >Choose Files</label >
+                                    <input type="file" id="myFiles" name="filename" style="display: none;" multiple onchange=" displayImage(this)">
+                                </form>
+                                <br><br> 
+                                <div id="fileNames" style="margin-top: 5px;"></div>
+                            </div>
+                            <br><br>
+                            
+                            <div class="control-group">
+                            
+                                <input type="text" id="locationSearcho" class="form-control" placeholder="mark location your on the map" onkeypress="return searchKeyPresso(event)"  />
+                            </div>
+                            <div class="control-group" id="mapo" style="height: 400px; "></div>
+                            <div>
+                                <button id="joinCommunityButton" class="btn btn-custom" type="button" onclick="submitcheck();">Press To Join Our Community</button>
+                            
+                            </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="volunteer-content">
+                    <div class="section-header">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Volunteer End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Our Head Office</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>Egypt</p>
+                            <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                            <p><i class="fa fa-envelope"></i>Helpz@gmail.com</p>
+                            <div class="footer-social">
+                                <a class="btn btn-custom" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-custom" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Popular Links</h2>
+                            <a href="">About Us</a>
+                            <a href="">Contact Us</a>
+                            <a href="">Popular Causes</a>
+                            <a href="">Upcoming Events</a>
+                            <a href="">Latest Blog</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Useful Links</h2>
+                            <a href="">Terms of use</a>
+                            <a href="">Privacy policy</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-newsletter">
+                            <h2>Newsletter</h2>
+                            <form>
+                                <input class="form-control" placeholder="Email goes here">
+                                <button class="btn btn-custom">Submit</button>
+                                <label>Don't worry, we don't spam!</label>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">HELPZ</a>, All Right Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Designed By <a href="https://htmlcodex.com">US</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/parallax/parallax.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+       <!-- Google Maps API -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUAcaNsoXwgBMK9KjETvpPVaamDHOImHo&libraries=places&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUAcaNsoXwgBMK9KjETvpPVaamDHOImHo&libraries=places&callback=initMapo"></script>
+
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script>
+            var map;
+    var marker;
+
+    
+
+
+
+    function initMapo() {
+        map = new google.maps.Map(document.getElementById('mapo'), {
+            zoom: 10,
+            center: { lat: -25.344, lng: 131.031 }
+        });
+
+        marker = new google.maps.Marker({
+            position: { lat: -25.344, lng: 131.031 },
+            map: map,
+            draggable: true
+        });
+
+        // Add event listener for marker drag
+        google.maps.event.addListener(marker, 'dragend', function () {
+            var newLatLng = marker.getPosition();
+            map.panTo(newLatLng);
+            updateLocationo(newLatLng);
+        });
+
+        // Autocomplete for location search
+        var input = document.getElementById('locationSearcho');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo('bounds', map);
+    }
+
+    function searchKeyPresso(e) {
+        e = e || window.event;
+        if (e.keyCode == 13) {
+            var searchLocation = document.getElementById("locationSearcho").value;
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'address': searchLocation }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var newLatLng = results[0].geometry.location;
+                    marker.setPosition(newLatLng);
+                    map.setCenter(newLatLng);
+                    updateLocation(newLatLng);
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+            return false;
+        }
+        return true;
+    }
+
+    function updateLocationo(location) {
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode({ 'location': location }, function (results, status) {
+        if (status === 'OK') {
+            if (results[0]) {
+                var formattedAddress = results[0].formatted_address;
+                if (document.getElementById('org').style.display === 'block') {
+                    // Update organization address input field
+                    document.getElementById('organizationAddress').value = formattedAddress;
+                } else if (document.getElementById('donor').style.display === 'block') {
+                    // Update individual address input field
+                    document.getElementById('clinicaddr').value = formattedAddress;
+                }
+                document.getElementById('locationSearcho').value = formattedAddress;
+            } else {
+                console.log('No results found');
+            }
+        } else {
+            console.log('Geocoder failed due to: ' + status);
+        }
+    });
+}
+
+
+   // Array to store selected file names
+var selectedFiles = [];
+function toggleNameVisibility(isOrganization) {
+    var organization = document.getElementById('org');
+    var donor = document.getElementById('donor');
+    var fileNamesDisplay = document.getElementById('fileNames');
+    fileNamesDisplay.style.display = 'none';
+    // Reset selectedFiles array and clear fileNamesDisplay text content
+    selectedFiles = [];
+    
+
+    if (isOrganization) {
+        organization.style.display = 'block';
+        donor.style.display = 'none';
+    } else {
+        organization.style.display = 'none';
+        donor.style.display = 'block';
+    }
+}
+document.addEventListener("DOMContentLoaded", function() {
+    var orgAddressInput = document.getElementById('organizationAddress');
+    var clinicAddressInput = document.getElementById('clinicaddr');
+    var locationSearchInput = document.getElementById('locationSearcho');
+
+    // Initialize Google Places Autocomplete for the location search input field
+    var autocomplete = new google.maps.places.Autocomplete(locationSearchInput);
+
+    // Add event listener for place changed event
+    autocomplete.addListener('place_changed', function() {
+        var place = autocomplete.getPlace();
+        if (!place.geometry) {
+            console.log("No details available for input: '" + place.name + "'");
+            return;
+        }
+        var address = place.formatted_address;
+        // Update the clinic address input field
+        clinicAddressInput.value = address;
+        // Update the organization address input field (if visible)
+        if (document.getElementById('org').style.display === 'block') {
+            orgAddressInput.value = address;
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var orgAddressInput = document.getElementById('organizationAddress');
+    var clinicAddressInput = document.getElementById('clinicaddr');
+    var locationSearchInput = document.getElementById('locationSearcho');
+
+    // Add event listeners to the organization and clinic address input fields
+    orgAddressInput.addEventListener('input', updateLocationOnMap);
+    clinicAddressInput.addEventListener('input', updateLocationOnMap);
+
+    // Function to update the location on the map and in the location search input field
+    function updateLocationOnMap() {
+        var address = this.value;
+        locationSearchInput.value = address; // Update the location search input field
+        // Geocode the address to get the coordinates (you can keep the existing code for this)
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({ 'address': address }, function(results, status) {
+            if (status === 'OK' && results[0]) {
+                var newLatLng = results[0].geometry.location;
+                // Update the marker position and map center (you can keep the existing code for this)
+                marker.setPosition(newLatLng);
+                map.setCenter(newLatLng);
+                // Optionally, you can update other relevant fields here
+            } else {
+                console.log('Geocode was not successful for the following reason: ' + status);
+            }
+        });
+    }
+});
+
+
+
+
+
+
+function displayImage(input) {
+    if (input.files && input.files[0]) {
+        var fileName = input.files[0].name;
+        var link = document.createElement("a");
+        link.innerHTML = fileName;
+        link.href = URL.createObjectURL(input.files[0]);
+        link.target = "_blank"; // Open link in a new window
+        input.parentNode.insertBefore(link, input.nextSibling); // Insert link after the input field
+    }
+}
+
+
+
+function showDonorType(donorType) {
+    var selectedDonorType = document.getElementById('selectype');
+    selectedDonorType.textContent = donorType;
+}
+
+function filterAll() { //marinaa
+        let typeAll = document.getElementById('typeall').value;
+        let allItems = document.querySelectorAll('.causes-item');
+
+        allItems.forEach(item => {
+            let itemtypeAll = item.getAttribute('data-postall');
+
+            if (typeAll === 'all' || itemtypeAll === typeAll) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    }
+
+    function submitcheck() {
+    var volunteerForm = document.getElementById('volunteerForm'); // Select the volunteer form element
+    var joinCommunityButton = document.getElementById('joinCommunityButton'); // Select the join community button
+    var isOrg = document.getElementById('orgy').getAttribute('is-org'); // Get the value of the is-org attribute
+
+    if (isOrg === 'true') {
+        // Perform validation for required fields for organization
+        var fname = document.getElementById('fnameo').value;
+        var lname = document.getElementById('lnameo').value;
+        var email = document.getElementById('emailo').value;
+        var contactnumber = document.getElementById('contactnumbero').value;
+        var password = document.getElementById('passwordo').value;
+        var myFiles = document.getElementById('myFiles').value;
+
+        var gendero = document.getElementById('gendero').value;
+        var organizationAddress = document.getElementById('organizationAddress').value;
+        var areao = document.getElementById('areao').value;
+        var governmento = document.getElementById('governmento').value;
+        var oname = document.getElementById('oname').value;
+        var otype = document.getElementById('otype').value;
+        
+
+        if (!fname || !lname || !email || !contactnumber || !password || !myFiles || !gendero || !organizationAddress || !areao || !governmento  || !oname || !otype ) {
+            alert('Please fill in all required fields.');
+            return; // Stop further execution if any required field is empty
+        }
+
+        // If all required fields are filled, proceed with joining the community
+        // Display a popup alert
+        alert('Thank you for joining our community! Redirecting to Homepage...');
+
+        // Redirect to index.html after a short delay (e.g., 2 seconds)
+        setTimeout(function () {
+            window.location.href = 'index.html';
+        }, 700); // Adjust the delay time as needed (in milliseconds)
+    } else {
+        // Perform validation for required fields for donor
+        var fname = document.getElementById('fname').value;
+        var lname = document.getElementById('lname').value;
+        var email = document.getElementById('email').value;
+        var contactnumber = document.getElementById('contactnumber').value;
+        var password = document.getElementById('password').value;
+
+        var gender = document.getElementById('gender').value;
+        var individualAddress = document.getElementById('individualAddress').value;
+        
+        var area = document.getElementById('area').value;
+        var government = document.getElementById('government').value;
+        
+
+        if (!fname || !lname || !email || !contactnumber || !password || !gender || !individualAddress || !uname || !area || !government) {
+            alert('Please fill in all required fields.');
+            return; // Stop further execution if any required field is empty
+        }
+
+        // If all required fields are filled, proceed with joining the community
+        // Display a popup alert
+        alert('Thank you for joining our community! Redirecting to Homepage...');
+
+        // Redirect to index.html after a short delay (e.g., 2 seconds)
+        setTimeout(function () {
+            window.location.href = 'index.html';
+        }, 700); // Adjust the delay time as needed (in milliseconds)
+    }
+}
+
+
+
+
+
+
+
+
+            </script>
+            <style>
+                a:visited {
+                /* Ensure link remains visible after being clicked */
+                color: darkblue;
+            }
+            </style>
+    </body>
+</html>

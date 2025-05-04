@@ -1,0 +1,81 @@
+<div id="donor">
+<div class="control-group" >             
+    <input type="text" id="fname" class="form-control" placeholder="First Name" required="required" />
+</div>
+<div class="control-group"  >
+    
+    <input type="text" id="lname" class="form-control" placeholder="Last Name" required="required" />
+</div>
+<!---->
+<div class="control-group" >
+    
+    <input type="text" id="gender" class="form-control" placeholder="Gender" required="required" />
+</div>
+<div class="control-group">
+    <input type="email" id="email" class="form-control" placeholder="Email" required="required" />
+</div>
+<div class="control-group" >             
+    <input type="text" id="uname" class="form-control" placeholder=" username" required="required" />
+</div>
+<div class="control-group" >
+    
+    <input type="number" id="contactnumber" class="form-control" placeholder="Contact Number" required="required" />
+</div>
+
+<div class="control-group" >
+    
+    <input type="password" id="password" class="form-control" placeholder="Password" required="required" />
+</div>
+
+<div class="control-group" >
+<input type="text" id="individualAddress" class="form-control" placeholder="Address" required="required" />
+</div>
+
+<div class="control-group" >
+                            
+    <input type="text" id="area" class="form-control" placeholder="Area" required="required" />
+</div>
+<div class="control-group" >
+    
+    <input type="text" id="government" class="form-control" placeholder="Government" required="required" />
+</div>
+
+<div class="control-group" >             
+    <div class="dropdown" >
+        <button class="btn btn-custom dropdown-toggle" type="button" id="donorDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display: none">
+            Select Type
+        </button>
+        <div class="dropdown-menu" aria-labelledby="donorDropdown">
+            <a class="dropdown-item" href="#" onclick="toggleDonorVisibility(false,false)" >Regular Donor</a>
+            <a class="dropdown-item" href="#" onclick="toggleDonorVisibility(false,true)">Teacher</a>
+            <a class="dropdown-item" href="#" onclick="toggleDonorVisibility(true,false)" >Doctor</a>
+        </div>
+    </div> 
+</div>
+
+<div class="control-group" >             
+    <input type="text" id="otype" class="form-control" placeholder="Organization Type" required="required" />
+</div>
+
+<div class="control-group">
+
+    <input type="text" id="locationSearcho" class="form-control" placeholder="mark location your on the map" onkeypress="return searchKeyPresso(event)"  />
+</div>
+<div class="control-group" id="mapo" style="height: 400px; "></div>
+
+<div class="control-group">
+    <form action="/action_page.php" class="btn btn-custom">
+        <label for="myFiles" class="btn btn-custom">Choose Files</label >
+        <input type="file" id="myFiles" name="filename" style="display: none;" multiple onchange="displayFileNames()">
+    </form>
+    <div id="fileNames" style="margin-top: 5px;"></div>
+</div>
+
+
+
+<div>
+    <button id="joinCommunityButton" class="btn btn-custom" type="button">Press To Join Our Community</button>
+
+</div>
+
+</div>
