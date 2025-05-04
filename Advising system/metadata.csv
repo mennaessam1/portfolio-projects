@@ -1,0 +1,10 @@
+Table Name,Column Name,Column Type,ClusteringKey,IndexName,IndexType
+Q,gpa,java.lang.double,false,null,null
+Q,name,java.lang.String,false,NAMEindex,B+ tree
+
+
+
+
+
+
+Q,id,java.lang.Integer,true,null,null
