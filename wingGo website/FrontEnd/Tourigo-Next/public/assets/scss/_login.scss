@@ -1,0 +1,217 @@
+.login-form {
+    width: 460px;
+    background: #ffffff;
+    z-index: 1;
+    border-radius: 8px;
+    text-align: center;
+    padding: 40px 0px;
+    
+    & .input-text {
+        position: relative;
+        overflow: hidden;
+        border: 2px solid #e8ecec;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        & input{
+            float: left;
+            width: 100%;
+            font-size: 13px;
+            color: #474747;
+            padding: 16px 45px 16px 15px;
+            border:none;
+            
+        }
+        &::before{
+            position: absolute;
+            content: '\f007';
+            font-family: 'Font Awesome 5 pro';
+            font-size: 15px;
+            color: #1dbf73;
+            right: 20px;
+            z-index: 1;
+            top: 15px;
+        }
+    }
+    & .input-pass{
+        position: relative;
+        &::before{
+            content: '\f084';
+        }
+    }
+    & .input-email{
+        position: relative;
+        &::before{
+            content: '\f658';
+        }
+    }
+    & .input-phone{
+        position: relative;
+        &::before{
+            content: '\f095';
+        }
+    }
+    & a{
+        float: right;
+        font-size: 13px;
+        text-decoration: underline;
+        line-height: 30px;
+    }
+    & button{
+        float: left;
+        width: 100%;
+        height: 60px;
+        font-size: 17px;
+        font-weight: bold;
+        letter-spacing: 0.3px;
+        margin-top: 20px;
+        border-radius: 8px;
+        background-color: #1dbf73;
+        color: #fff;
+        border: none;
+        transition: .3s;
+        &:hover{
+            background-color: #fe9703;
+            color: #000;
+        }
+    }
+}
+
+// checkbox
+.remember-label {
+    float: left;
+    margin: 0;
+    font-family: Open Sans;
+    font-size: 13px;
+    color: #202020;
+    &  input[type="checkbox"] + label{
+        display: block;
+    }
+    & input[type="checkbox"] {
+        display: none;
+        cursor: pointer;
+    }
+    & input[type="checkbox"] + label:before {
+        content: '\f00c';
+        font-family: "Font Awesome 5 Pro";
+        border: 1px solid #ccc;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        text-align: center;
+        margin-right: 10px;
+        color: transparent;
+        transition: all linear 0.2s;
+        padding: 2px;
+    }
+    & input[type="checkbox"] + label:active:before {
+        transform: scale(0);
+    }
+    & input[type="checkbox"]:checked + label:before {
+        background: #1dbf73;
+        color: #fff;
+        border-color: #1dbf73;
+    }
+    & label {
+        margin-bottom: 15px;
+        color: #5E677C;
+        font-size: 14px;
+        cursor: pointer;
+    }    
+}
+.extra-login {
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 100%;
+        height: 1px;
+        background: #d8dcdc;
+        content: "";
+    }
+    & span{
+        width: auto;
+        float: none;
+        display: inline-block;
+        background: #ffffff;
+        padding: 1px 20px;
+        z-index: 1;
+        position: relative;
+        font-family: Open Sans;
+        font-size: 13px;
+        color: #afafaf;
+        text-transform: capitalize;
+    }
+}
+.login-social {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    & a{
+        float: none;
+        display: inline-block;
+        width: 50px;
+        height: 40px;
+        border: 2px solid;
+        border-radius: 8px;
+        line-height: 36px;
+        font-size: 21px;
+        margin: 0 5px;
+        margin-top: 0px;
+        margin-top: 6px;
+        color: #1dbf73;
+        border-color: #1dbf73;
+        &:hover{
+            background-color: #fe9703;
+            color: #fff;
+            border-color: transparent;
+        }
+    }
+}
+.select-user {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    & span{
+        float: none;
+        display: inline-block;
+        font-family: Open Sans;
+        font-size: 13px;
+        color: #202020;
+        border: 2px solid;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        padding: 9px 29px;
+        margin: 0 5px;
+        margin-top: 0px;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+}
+.signin-popup-box  {
+    & .nav-tabs{
+         border-bottom: none;
+         & .nav-item {
+            margin-bottom: 0px;
+            border: 2px solid #26ae61;
+            margin-right: 10px;
+        }
+        & .nav-link {
+            border: none;
+            font-weight: 600;
+            border-radius: 0px;
+        }
+        & .nav-link.active {
+            background-color:#26ae61 ;
+            color: #fff;
+        }
+    }
+}

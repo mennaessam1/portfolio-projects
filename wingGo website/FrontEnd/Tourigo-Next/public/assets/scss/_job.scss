@@ -1,0 +1,842 @@
+/* 6. Job */
+.job-wrapper {
+	border: 1px solid #ebebeb;
+	padding: 45px 50px;
+	background: #fff;
+	position: relative;
+    @media #{$xs}{
+        padding: 25px 25px;
+    }
+}
+.job-tag {
+	position: relative;
+	z-index: 2;
+}
+.job-instructor-profile {
+	position: relative;
+	z-index: 2;
+}
+.job-content {
+	position: relative;
+	z-index: 2;
+}
+div.job-tag {
+	& span {
+		background: #f5f7fc;
+		margin-right: 10px;
+		padding: 5px 10px;
+		border-radius: 5px;
+		display: inline-block;
+		font-size: 13px;
+		text-transform: uppercase;
+		font-weight: 600;
+		color: #26ae61;
+		line-height: 1;
+		min-height: 25px;
+	}
+}
+.job-tag span.tag-urgent {
+	background: #ff4545;
+	color: #fff;
+}
+.job-tag span.tag-fea {
+	background: #26ae61;
+	color: #fff;
+}
+.job-instructor-img {
+	margin-right: 20px;
+}
+.job-instructor-img-2 {
+	position: relative;
+	z-index:1;
+	@media #{$xs}{
+		float: none;
+		margin-bottom: 20px;
+	}
+}
+.job-instructor-title {
+	overflow: hidden;
+	& h4 {
+		font-size: 18px;
+		font-weight: 700;
+		margin-bottom: 6px;
+		&:hover{
+			color: #26ae61;
+		}
+	}
+	& h5 {
+		&:hover{
+			color: #26ae61;
+		}
+	}
+	& span {
+		color: #667488;
+		font-size: 14px;
+		& i{
+			color: #26ae61;
+			margin-right: 5px;
+			font-size: 18px;
+		}
+	}
+}
+.job-content {
+	& h4 {
+		font-size: 17px;
+		font-weight: 500;
+		margin-bottom: 15px;
+		&:hover{
+			color: #26ae61;
+		}
+	}
+	& p {
+		margin-bottom: 25px;
+	}
+}
+.job-salary {
+	& span {
+		margin-right: 50px;
+		font-weight: 500;
+		font-size: 15px;
+		@media #{$xs}{
+			margin-right: 10px;
+		}
+	}
+    & i{
+		color: #26ae61;
+		margin-right: 5px;
+		font-size: 18px;
+	}
+	& a {
+		font-weight: 700;
+		font-size: 14px;
+		color: #26ae61;
+		&:hover{
+			color: #fe9703;
+		}
+		&:hover i{
+			color: #fe9703;
+		}
+		& i{
+			margin-left: 5px;
+			transform: translateY(0px);
+			display: inline-block;
+			font-size: 13px;
+		}
+	}
+}
+
+.banck-icon {
+	position: absolute;
+	right: 30px;
+	z-index: 1;
+	top: 30px;
+	& i {
+		font-size: 100px;
+		line-height: 1;
+		color: #f7f7f7;
+	}
+}
+// job 2
+.job-meta {
+	& span {
+		margin-right: 15px;
+	}
+
+}
+.job-meta-2 {
+	& span {
+		display: block;
+		margin-bottom: 15px;
+		& i{
+			color: #26ae61;
+		}
+	}
+}
+.job-filter {
+	& .nice-select {
+		border-radius: 0;
+		border: solid 1px #ebebeb;
+		float: none;
+		font-size: 14px;
+		height: 55px;
+		line-height: 52px;
+		width: 100%;
+		color: #1c2733;
+		font-size: 15px;
+		font-weight: 500;
+		&::after {
+			right: 20px;
+		}
+	}
+}
+// job sidebar
+.job-widget {
+	margin-bottom: 10px;
+	border-left: 3px solid #26ae61;
+	& .nice-select {
+		border-radius: 0;
+		border: 0;
+		float: none;
+		font-size: 14px;
+		height: 55px;
+		line-height: 52px;
+		width: 100%;
+		color: #1c2733;
+		font-size: 15px;
+		font-weight: 500;
+		&::after {
+			right: 20px;
+		}
+	}
+}
+.ui-widget.ui-widget-content {
+	border: 0;
+	background: #ddd;
+	margin-bottom: 15px;
+	height: 5px;
+}
+#slider-range span.ui-slider-handle {
+	background: #26ae61;
+	border-radius: 30px;
+	border: 0;
+	height: 15px;
+	width: 15px;
+}
+.ui-slider-horizontal {
+	& .ui-slider-range {
+		top: 0;
+		height: 100%;
+		background: #26ae61;
+	}
+}
+.price-filter {
+	& button {
+		background: #222;
+		color: #fff;
+		border: 0;
+		padding: 11px 18px;
+		line-height: 1;
+		font-size: 12px;
+		float: left;
+	}
+	& input {
+		width: 90px;
+		border: 0;
+		display: inline-block;
+		background: none;
+		margin-left: 5px;
+		color: #1c2733;
+		font-weight: 600;
+	}
+}
+.price-filter span {
+	display: inline-block;
+}
+.price-widget {
+	background: #fff;
+	padding: 30px;
+	margin: 30px 0;
+}
+
+.job-item {
+	background: #fff;
+	padding: 50px;
+	border-bottom: 2px solid #fe9703;
+}
+.job-item-2 {
+	border-top: 5px solid #fe9703;
+	border-bottom: none;
+	position: relative;
+}
+.job-item .job-wrapper {
+	border: 0;
+	padding: 0;
+}
+.job-item .banck-icon {
+	position: absolute;
+	right: 30px;
+	z-index: 1;
+	top: 0;
+}
+.job-item .banck-icon i {
+	font-size: 100px;
+	line-height: 1;
+	color: #f7f7f7;
+}
+.job-item .job-instructor-title {
+	position: relative;
+	z-index: 2;
+}
+.map-area iframe{
+	min-height: 500px;
+	width: 100%;
+	border: 0;
+}
+
+
+.job-details-wrapper{
+	padding: 0px 50px;
+	padding-bottom: 60px;
+	@media #{$xs}{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.job-details-inner{
+	padding-top: 60px;
+	border-top: 1px solid $border-7;
+}
+
+.job-list{
+	& h4{
+		font-size: 22px;
+		margin-bottom: 25px;
+	}
+	& ul{
+		& li{
+			padding-left: 32px;
+			font-size: 15px;
+			font-weight: 500;
+			position: relative;
+			margin-bottom: 16px;
+			&::after{
+				position: absolute;
+				content: '\f058';
+				left: 0;
+				top: 0px;
+				font-family: "Font Awesome 5 Pro";
+				font-size: 15px;
+				color: $theme-color;
+			}
+		}
+	}
+}
+
+.job-details-video{
+	position: relative;
+	& img{
+		width: 100%;
+	}
+}
+
+.job-play{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+	display: inline-block;
+	width: 100px;
+	height: 75px;
+	line-height: 75px;
+	text-align: center;
+	background: #ed1c24;
+	color: $white;
+	border-radius: 7px;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-ms-border-radius: 7px;
+	-o-border-radius: 7px;
+	z-index: 1;
+	&:focus{
+		color: $white;
+	}
+	&:hover{
+		color: $white;
+	}
+}
+
+.job-thumb{
+	& img{
+		width: 100%;
+	}
+}
+
+.job-upload{
+	position: relative;
+	& input{
+		width: 100%;
+		background: $grey;
+		height: 50px;
+		line-height: 50px;
+		border: none;
+		appearance: none;
+		-moz-appearance: none;
+	}
+	& button{
+		position: absolute;
+		top: 10px;
+		right: 20%;
+		border-radius: 5px;
+		padding-top: 7px;
+		padding-bottom: 7px;
+		font-size: 13px;
+		&::before{
+			border-radius: 5px;
+		}
+	}
+}
+
+.job-tags{
+	& span{
+		font-weight: 600;
+		color: $black;
+		font-size: 14px;
+		margin-right: 15px;
+		min-width: 95px;
+	}
+	& ul{
+		display: inline-block;
+		& li{
+			display: inline-block;
+			margin-right: 4px;
+		}
+	}
+	& a{
+		font-size: 14px;
+		font-weight: 500;
+		border: 2px solid $border-9;
+		height: 30px;
+		line-height: 30px;
+		padding: 0 13px;
+		border-radius: 5px;
+		text-transform: uppercase;
+		&:hover{
+			border-color: $theme-color;
+			color: $theme-color;
+		}
+	}
+}
+
+.job-share{
+	& span{
+		font-weight: 600;
+		color: $black;
+		font-size: 14px;
+		margin-right: 15px;
+		min-width: 95px;
+	}
+}
+
+.job-map{
+	height: 380px;
+	width: 100%;
+	& iframe{
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+}
+
+.related-job{
+	& h4{
+		font-size: 24px;
+		margin-bottom: 25px;
+	}
+}
+
+
+.related-job-single{
+	border: 1px solid $border-9;
+}
+
+.related-job-slider{
+	& .owl-nav{
+		display: flex;
+		position: absolute;
+		top: -60px;
+		right: 0;
+		& div{
+			& button{
+				width: 35px;
+				height: 35px;
+				line-height: 32px;
+				color: $black;
+				border: 1px solid $border-9;
+				background: transparent;
+				&:hover{
+					background: $theme-color;
+					color: $white;
+					border-color: $theme-color;
+				}
+			}
+			&.owl-prev{
+				margin-right: 8px;
+			}
+		}
+	}
+	& .job-instructor-img{
+		position: relative;
+		z-index: 1;
+		@media #{$xs}{
+			margin-bottom: 30px;
+			float: none;
+		}
+	}
+	& .job-meta span {
+		@media #{$xs}{
+			display: block;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.job-contact{
+	padding: 35px 40px;
+	border: 1px solid $border-9;
+	@media #{$xs}{
+		padding: 15px;
+	}
+	& h4{
+		font-size: 22px;
+		margin-bottom: 25px;
+	}
+}
+.job-input-2{
+	position: relative;
+	& i{
+		position: absolute;
+		top: 23px;
+		right: 25px;
+		color: $theme-color;
+	}
+	& input,
+	& textarea{
+		width: 100%;
+		background: $grey;
+		border: none;
+		height: 60px;
+		line-height: 60px;
+		padding: 0 25px;
+		padding-right: 45px;
+		margin-bottom: 20px;
+		color: $black;
+		&::placeholder{
+			color: $black;
+			font-weight: 600;
+		}
+		&:focus{
+			border-color: $theme-color;
+			&::placeholder{
+				opacity: 0;
+			}
+		}
+	}
+	& textarea{
+		padding: 15px 20px;
+		padding-right: 40px;
+		height: 190px;
+		resize: none;
+		line-height: 28px;
+	}
+}
+
+
+.job-instructor-img{
+	& img{
+		width: inherit !important;
+		display: inline-block !important;
+	}
+}
+
+.emp-sidebar{
+	box-shadow: 0px 10px 30px 0px rgba(207, 207, 207, 0.25);
+	padding: 30px;
+}
+.emp-sidebar .job-widget {
+	border-left: 0;
+	border: 1px solid #ebebeb;
+}
+.f-btn {
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 15px;
+	background: #26ae61;
+	line-height: 1;
+	display: block;
+	padding: 22px 30px;
+	border-radius: 0;
+	text-align: center;
+	& i{
+		margin-left: 5px;
+		font-size: 14px;
+	}
+}
+.emp-rating i {
+	color: #fe9703;
+	font-size: 12px;
+}
+.employer-item{
+	box-shadow: 0px 10px 30px 0px rgba(207, 207, 207, 0.25);
+	border: 0;
+}
+.empl-btn {
+	position: absolute;
+	top: 16px;
+	right: 0;
+	@media #{$lg}{
+		position: static;
+		margin-top: 20px;
+	}
+	@media #{$md}{
+		position: static;
+		margin-top: 20px;
+	}
+	@media #{$xs}{
+		position: static;
+		margin-top: 20px;
+	}
+}
+.employer-item .banck-icon {
+	right: 31%;
+}
+
+/* sakil css start*/
+
+.job-meta span i {
+	color: $theme-color;
+}
+
+.employer{
+	&__inner{
+		position: relative;
+        z-index: 1;
+        &::after{
+            position: absolute;
+            content: '';
+            left: -115px;
+            top: -65px;
+            height: calc(100% + 110px);
+            width: calc(100% + 230px);
+            background: $white;
+			z-index: -1;
+			border-top: 5px solid $yellow;
+            @media #{$laptop}{
+                left: 0px;
+                width: calc(100% + 0px);
+            }
+            @media #{$lg}{
+                left: -15px;
+                width: calc(100% + 30px);
+            }
+            @media #{$md}{
+                left: -30px;
+                width: calc(100% + 60px);
+            }
+            @media #{$sm}{
+                left: -30px;
+                width: calc(100% + 60px);
+            }
+            @media #{$xs}{
+                left: -15px;
+                width: calc(100% + 30px);
+            }
+		}
+	}
+	&__content{
+		& h5{
+			margin-bottom: 0;
+		}
+	}
+	&__btn{
+		@media #{$sm}{
+			margin-top: 20px;
+		}
+		@media #{$xs}{
+			margin-top: 20px;
+		}
+	}
+	&__list{
+		& ul{
+            & li{
+                font-size: 15px;
+                font-weight: 500;
+                position: relative;
+                padding-left: 50px;
+                margin-bottom: 33px;
+                color: $black;
+                font-weight: 500;
+                &::before{
+                    position: absolute;
+                    content: '\f00c';
+                    left: 0;
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                    color: $theme-color;
+                    width: 35px;
+                    height: 35px;
+                    text-align: center;
+                    line-height: 31px;
+                    border: 2px solid $border-1;
+                    font-family: "Font Awesome 5 Pro";
+                }
+                &:hover{
+                    color: $theme-color;
+                    &::before{
+                        background: $theme-color;
+                        border-color: $theme-color;
+                        color: $white;
+                    }
+                }
+            }
+        }
+	}
+	&__info{
+		&-wrapper{
+			border-top: 1px solid $border-1;
+		}
+		& p{
+			margin-bottom: 15px;
+		}
+	}
+	&__title{
+		& h3{
+			font-size: 22px;
+			position: relative;
+			padding-bottom: 25px;
+			margin-bottom: 20px;
+			&::after{
+				position: absolute;
+				content: '';
+				left: 0;
+				bottom: 0;
+				width: 50px;
+				height: 3px;
+				background: $theme-color;
+			}
+		}
+	}
+	&__thumb{
+		& img{
+			width: 100%;
+		}
+	}
+	&__video{
+		position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba($color: $black, $alpha: .3);
+		}
+		& img{
+			width: 100%;
+		}
+	}
+	&__play{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        display: inline-block;
+        width: 100px;
+        height: 75px;
+        line-height: 75px;
+        text-align: center;
+        background: #ed1c24;
+        color: $white;
+        border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+        z-index: 1;
+        &:focus{
+            color: $white;
+        }
+        &:hover{
+            color: $white;
+        }
+	}
+	&__faq{
+		& .card{
+			@include box-shadow(0px 10px 30px 0px rgba(207, 207, 207, 0.25));
+		}
+	}
+	&__company{
+		padding: 40px;
+		border: 1px solid $border-1;
+		@media #{$lg}{
+			margin-top: 50px;
+		}
+		@media #{$md}{
+			margin-top: 50px;
+		}
+		@media #{$sm}{
+			margin-top: 50px;
+		}
+		@media #{$xs}{
+			margin-top: 50px;
+		}
+		& h4{
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+        & ul{
+            & li{
+                overflow: hidden;
+				margin-bottom: 18px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+                & h5{
+                    width: 50%;
+                    float: left;
+                    font-size: 15px;
+                    color: $body-text-color;
+                    margin-bottom: 0;
+					line-height: 23px;
+					@media #{$xs}{
+						float: none;
+						width: 100%;
+					}
+					& i{
+						color: $theme-color;
+						padding-right: 8px;
+					}
+                }
+                & span{
+                    display: inline-block;
+                    width: 50%;
+                    float: right;
+                    font-weight: 500;
+					color: $black;
+					@media #{$xs}{
+						float: none;
+						width: 100%;
+					}
+                }
+            }
+        }
+	}
+	&__map{
+		height: 420px;
+		width: 100%;
+		& iframe{
+			height: 100%;
+			width: 100%;
+			border: none;
+		}
+	}
+
+}
+
+.job-item-3{
+	border: 1px solid $border-1;
+	@include transition(.3s);
+	&:hover{
+		@include box-shadow(0px 10px 30px 0px rgba(207, 207, 207, 0.25));
+		border-color: $white;
+	}
+	& .job-instructor-img{
+		@media #{$xs}{
+			float: none;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+

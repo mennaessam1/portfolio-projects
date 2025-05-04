@@ -1,0 +1,34 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.1 Header Style 1
+/*----------------------------------------*/
+.header-style-one {
+	.bar-icon span {
+		background: var(--bd-white);
+	}
+}
+.header-style-two {
+	.header-currency-item > span {
+		color: var(--bd-heading);
+		&:hover {
+			color: var(--bd-white);
+		}
+	}
+	.header-btn-wrap {
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 1399px) {
+			display: none;
+		}
+	}
+
+	.header-hamburger {
+		display: none;
+
+		@media (max-width: 1399px) {
+			display: block;
+		}
+	}
+}

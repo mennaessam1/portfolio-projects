@@ -1,0 +1,19 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.4.5 Footer Card
+/*----------------------------------------*/
+// Footer Card style
+.footer-card {
+	@media #{$sm,$xs} {
+		display: block;
+		text-align: center;
+	}
+	ul {
+		display: inline-flex;
+		gap: 10px;
+		li {
+			list-style: none;
+		}
+	}
+}

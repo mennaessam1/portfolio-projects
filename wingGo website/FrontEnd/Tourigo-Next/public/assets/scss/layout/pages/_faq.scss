@@ -1,0 +1,495 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  4.12 Faq css
+/*----------------------------------------*/
+
+// FAQ style
+.accordion-wrapper {
+  .accordion {
+    .accordion-button {
+      font-size: 24px;
+      color: var(--bd-heading);
+      background: transparent;
+      padding: 30px 30px 30px 30px;
+      padding-right: 40px;
+      display: inline-block;
+  
+      @media #{$lg} {
+        font-size: 20px;
+        padding: 30px 20px 24px 80px;
+      }
+      @media #{$xs} {
+        font-size: 20px;
+        padding: 30px 80px 24px 20px;
+      }
+  
+      &:focus {
+        box-shadow: none;
+      }
+  
+      &:not(.collapsed) {
+        border-radius: 6px 6px 0 0;
+        background: rgba(0, 108, 228, 0.1);  
+        color: var(--bd-heading);
+        box-shadow: none;
+        &::after {
+          border-color: transparent;
+          background: var(--bd-primary);
+          color: var(--bd-white);
+          content: "\f106";
+        }
+      }
+  
+      &::after {
+        position: absolute;
+        right: 30px;
+        content: "\f107";
+        background-image: none;
+        font-family: var(--bd-ff-fontawesome);
+        font-size: 18px;
+        font-weight: 400;
+        height: 46px;
+        width: 46px;
+        border: 1px solid var(--bd-border-primary);
+        line-height: 46px;
+        text-align: center;
+        color: var(--bd-heading);
+        top: 50%;
+        @include border-radius(50%);
+        @extend %translateY1_2;
+  
+        @media #{$xs, $lg} {
+          left: 20px;
+        }
+      }
+    }
+    .accordion-body {
+      color: var(--bd-heading);
+      padding-right: 30px;
+      padding-top: 0;
+      padding-bottom: 30px;
+      padding-left: 30px;
+      background: rgba(0, 108, 228, 0.1);
+      border-radius: 0 0 6px 6px;  
+      border-radius: 0 0 6px 6px;
+      @media #{$xs} {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+  
+      >P {
+        margin-bottom: 0;
+      }
+    }
+    .accordion-item {
+      border: 0;
+      border: 0;
+      background: transparent;
+    }
+  }
+&.faq {
+  &-content {
+    padding-right: 65px;
+  
+    @media #{$xs, $sm, $md, $lg} {
+      padding-right: 0;
+    }
+  }
+  &-area {
+    overflow: hidden;
+  }
+  &-title-2 {
+    br {
+      @media #{$md,$sm,$xs} {
+        display: none;
+      }
+    }
+  }
+  &-style {
+    &-2 {
+      margin-right: 30px;
+      @media #{$md,$sm,$xs}{
+        margin-right: 0;
+      }
+      .accordion {
+        .accordion-item {
+          border: 2px solid transparent;
+          border-radius: 10px;
+          overflow: hidden;
+          &:not(:last-child){
+            margin-bottom: 20px;
+          }
+        }
+        .accordion-button {
+          border: none;
+          padding: 30px 30px 30px 30px;
+          color: var(--bd-white);
+          background-color: #232426;
+          font-size: 20px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          @media #{$xs}{
+            font-size: 18px;
+          }
+          @media #{$xl,$lg,$md,$sm} {
+            padding: 20px 20px 20px 20px;
+          }
+          @media #{$xs} {
+            padding: 15px 25px 15px 15px;
+            display: grid;
+            row-gap: 15px;
+          }
+          &:not(.collapsed) {
+            padding: 30px 30px 0 30px;
+            background-color: #232426;
+            @media #{$xs} {
+              padding: 20px 28px 10px 25px;
+            }
+            @media #{$xs} {
+              padding: 15px 25px 15px 15px;
+              display: grid;
+              row-gap: 15px;
+            }
+            &::after {
+              color: var(--bd-primary);
+              top: 68%;
+              @media #{$xs}{
+                top: 38%;
+              }
+            }
+            span {
+              color: var(--bd-white);
+              background-color: var(--bd-primary);
+            }
+          }
+          &::after {
+            left: auto;
+            right: 15px;
+            top: 50%;
+            background-color: transparent;
+            border: none;
+            color: var(--bd-white);
+            @extend %translateY1_2;
+            @media #{$xs} {
+              right: 0px;
+            }
+          }
+          span {
+            color: var(--bd-primary);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--bd-white);
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 15px;
+            @media #{$xs}{
+              width: 45px;
+              height: 45px;
+            }
+            @media #{$xs}{
+              margin-right: 12px;
+            }
+            i{
+              font-size: 24px;
+            }
+          }
+        }
+        .accordion-body {
+          padding: 0px 30px 30px 105px;
+          background-color: #232426;
+          color: #bfbfbf;
+          a {
+            padding-top: 19px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 600;
+            @media #{$xs}{
+              padding-top: 13px;
+            }
+            &:hover{
+              color: var(--bd-primary);
+            }
+            i{
+              position: relative;
+              top: 1px;
+            }
+          }
+          @media #{$xs} {
+            padding: 0px 30px 30px 85px;
+          }
+          @media #{$xs} {
+            padding: 0px 25px 20px;
+          }
+        }
+      }
+    }
+    &-3 {
+      .accordion {
+        .accordion-button {
+          padding: 15px 40px 15px 25px;
+          font-size: 20px;
+          font-weight: var(--bd-fw-sbold);
+          &:not(.collapsed) {
+            background: transparent;
+          }
+          &::after {
+            color: var(--bd-black);
+            border: none;
+            background: transparent;
+            right: 10px;
+            @extend %translateY1_2;
+            @media #{$xs} {
+              right: 0;
+            }
+          }
+          span {
+            color: var(--bd-primary);
+            padding-right: 3px;
+            display: inline-block;
+          }
+        }
+        .accordion-body {
+          padding-left: 25px;
+          padding-right: 25px;
+          background: transparent;
+          .accordion-body-list {
+            margin-top: 14px;
+            ul {
+              li {
+                list-style: none;
+                &:not(:last-child) {
+                  margin-bottom: 7px;
+                }
+              }
+            }
+          }
+        }
+        .accordion-item {
+          border: 1px solid var(--bd-border-primary);
+          border-radius: 8px;
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    &-4 {
+      .accordion {
+        .accordion-button {
+          position: relative;
+          padding: 18px 0px 15px 25px;
+          color: var(--bd-heading);
+          border-radius: 0;
+          font-size: 18px;
+          font-weight: 700;
+          @media #{$xs, $lg} {
+            font-size: 20px;
+          }
+          &:focus {
+            box-shadow: none;
+            border-color: transparent;
+          }
+          &:not(.collapsed) {
+            border-top: 1px solid var(--bd-border-primary);
+            color: var(--bd-heading);
+            background-color: transparent;
+            box-shadow: none;
+            &::after {
+              display: none;
+            }
+            &::before {
+              background-image: none;
+              color: var(--bd-primary);
+              background-color: transparent;
+              left: 0;
+              content: "\f068";
+              font-family: "Font Awesome 6 Pro";
+              position: absolute;
+              font-weight: 700;
+            }
+          }
+          &::after {
+            display: none;
+          }
+          &::before {
+            content: "\2b";
+            font-family: "Font Awesome 6 Pro";
+            position: absolute;
+            color: var(--bd-primary);
+            background-image: none;
+            left: 0px;
+            width: auto;
+            height: auto;
+            font-weight: 700;
+            font-size: 15px;
+            -webkit-transition: all 0.3s ease-out 0s;
+            -moz-transition: all 0.3s ease-out 0s;
+            -ms-transition: all 0.3s ease-out 0s;
+            -o-transition: all 0.3s ease-out 0s;
+            transition: all 0.3s ease-out 0s;
+            top: 50%;
+            transform: translateY(-50%);
+            @include border-radius(50%);
+            @extend %translateY1_2;
+          }
+        }
+        .accordion-body {
+          padding: 0 0 25px 0px;
+          color: #7F8387;
+          background-color: transparent;
+          border-radius: 0;
+          font-size: 18px;
+          @media #{$xs} {
+            padding-left: 25px;
+            padding-right: 25px;
+          }
+          &:not(.collapsed) {
+            border-bottom: 1px solid var(--bd-border-primary);
+            }
+          >P {
+            margin-bottom: 0;
+          }
+        }
+        .accordion-item {
+          background-color: transparent;
+          border-right: none;
+          border-left: none;
+        }
+      }
+    }
+    &-6 {
+      .accordion {
+        .accordion-button {
+          padding: 30px 100px 30px 30px;
+          border-radius: 50px;
+          background: transparent;
+          @media #{$xs} {
+            padding: 25px 75px;
+            padding-left: 25px;
+          }
+          &:not(.collapsed) {
+            &::after {
+              border-color: transparent;
+              background: var(--bd-primary);
+              color: var(--bd-white);
+              content: "\f068";
+            }
+          }
+          &::after {
+            content: "\2b";
+            left: auto;
+            right: 30px;
+            top: 50%;
+            @extend %translateY1_2;
+            @media #{$xs} {
+              right: 25px;
+            }
+          }
+          span {
+            color: var(--bd-primary);
+            padding-right: 3px;
+            display: inline-block;
+          }
+        }
+        .accordion-body {
+          padding-left: 30px;
+          padding-right: 30px;
+          background: transparent;
+          @media #{$xs} {
+            padding: 25px;
+          }
+        }
+        .accordion-item {
+          border: 1px solid var(--bd-border-primary);
+          margin-bottom: 30px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+}
+}
+// faq nav-tabs
+.faq-tab {
+  .nav-tabs {
+    border-bottom: none;
+    }
+  .nav-link {
+    background: transparent;
+    border: 1px solid var(--bd-border-primary);
+    color: var(--bd-heading);
+    padding: 20px 30px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    &.active {
+      background-color: var(--bd-primary);
+      border-color: var(--bd-primary);
+      color: var(--bd-white);
+      span {
+        color: var(--bd-white);
+      }
+    }
+    span {
+      font-size: 16px;
+      display: inline-block;
+      margin-right: 10px;
+      color: var(--bd-heading);
+    }
+  }
+  &.faq-style-2 {
+    .nav-link {
+      border-radius: 8px;
+      &.active {
+        background-color: var(--bd-primary);
+        border-color: var(--bd-primary);
+        color: var(--bd-white);
+        span {
+          color: var(--bd-white);
+        }
+      }
+    }
+  }
+  &-2 {
+    .nav-tabs {
+      border-bottom: 1px solid var(--bd-border-primary);
+    }
+    .nav-link {
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--bd-white);
+      padding: 14px 30px;
+      background-color: var(--bd-primary);
+      position: relative;
+      border-radius: 0;
+      border: 0;
+      &.active {
+        color: var(--bd-white);
+        background-color: var(--bd-tertiary);
+      }
+      span {
+font-size: 16px;
+        display: inline-block;
+        margin-right: 10px;
+        color: var(--bd-white);
+      }
+  
+    }
+  }
+}
+
+// Border Active
+.accordion-border{
+  .accordion-item.active{
+    border: 2px solid var(--bd-primary);
+  }
+}

@@ -1,0 +1,178 @@
+/* 11. price*/
+
+.price{
+    &__item{
+        padding: 75px 0px;
+        padding-bottom: 70px;
+        &-wrapper{
+            padding: 0 70px;
+            @media #{$lg}{
+                padding: 0 35px;
+            }
+            @media #{$md}{
+                padding: 0 55px;
+            }
+            @media #{$xs}{
+                padding: 0 35px;
+            }
+            &-mid{
+                border-left: 1px solid $border-7;
+                border-right: 1px solid $border-7;
+            }
+        }
+    }
+    &__tag{
+        position: absolute;
+        top: 35px;
+        left: 70px;
+        @media #{$lg}{
+            left: 35px;
+        }
+        @media #{$md}{
+            left: 55px;
+        }
+        @media #{$xs}{
+            left: 35px;
+        }
+        & span{
+            font-size: 13px;
+            font-weight: 600;
+            color: $white;
+            background: $theme-color;
+            text-transform: uppercase;
+            padding: 2px 6px;
+            border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            -ms-border-radius: 3px;
+            -o-border-radius: 3px;
+}
+    }
+    &__price{
+        & h4{
+            font-size: 27px;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        & span{
+            font-size: 27px;
+            color: $theme-color;
+            font-weight: 600;
+            & span{
+                font-size: 18px;
+            }
+        }
+    }
+    &__offer{
+        & span{
+            font-weight: 500;
+            & span{
+                color: $yellow;
+            }
+        }
+    }
+    &__list{
+        & ul{
+            & li{
+                margin-bottom: 15px;
+                & span{
+                    font-weight: 500;
+                    padding-left: 25px;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: '\f00c';
+                        top: 50%;
+                        left: 0;
+                        @include transform(translateY(-50%));
+                        font-family: "Font Awesome 5 Pro";
+                        color: $theme-color;
+                        font-size: 15px;
+                    }
+                }
+                &.not-included{
+                    & span{
+                        opacity: .4;
+                        &::after{
+                            opacity: .4;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__tab{
+        & .nav{
+            & .nav-item{
+                & .nav-link{
+                    padding: 0;
+                    padding-right: 90px;
+                    background: transparent;
+                    border-radius: 0;
+                    -webkit-border-radius: 0;
+                    -moz-border-radius: 0;
+                    -ms-border-radius: 0;
+                    -o-border-radius: 0;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    color: $black;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        right: 15px;
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                        background: $white;
+                        width: 60px;
+                        height: 30px;
+                        border-radius:15px;
+                        -webkit-border-radius:15px;
+                        -moz-border-radius:15px;
+                        -ms-border-radius:15px;
+                        -o-border-radius:15px;
+                        -webkit-border-radius:15px;
+                        @include box-shadow(0px 10px 30px 0px rgba(38, 174, 97, 0.35));
+                    }
+                    &::before{
+                        position: absolute;
+                        content: '';
+                        right: 20px;
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -ms-border-radius: 50%;
+                        -o-border-radius: 50%;
+                        background: $theme-color;
+                        z-index: 1;
+                    }
+                    &.active{
+                        color: $theme-color;
+                        &::before{
+                            right: 49px;
+                        }
+                    }
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+                &:last-child{
+                    & .nav-link{
+                        padding-right: 0;
+                        &::after{
+                            display: none;
+                        }
+                        &::before{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

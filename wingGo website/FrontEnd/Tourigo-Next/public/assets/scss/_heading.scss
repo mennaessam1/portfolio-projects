@@ -1,0 +1,44 @@
+/* 4. heading */
+.section-title{
+    @media #{$laptop}{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @media #{$lg}{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @media #{$md}{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    @media #{$xs}{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    & h2{
+        font-size: 27px;
+        line-height: 1;
+        font-weight: 600;
+        margin-bottom: 10px;
+        letter-spacing: -0.3px;
+        @media #{$lg}{
+
+        }
+        @media #{$md}{
+
+        }
+        @media #{$xs}{
+
+        }
+    }
+    & p{
+        margin-bottom: 0;
+    }
+}
+.section-title-white h2{
+    color: #fff;
+}
+.section-title-white p{
+    color: #fff;
+}

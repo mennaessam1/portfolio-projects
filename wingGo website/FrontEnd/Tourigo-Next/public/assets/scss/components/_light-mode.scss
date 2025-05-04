@@ -1,0 +1,20 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.7 Light Mode
+/*----------------------------------------*/
+
+.bd-theme-light:root {
+  --bd-heading: rgba(6, 6, 6, 1);
+  --bd-text-secondary: rgba(255, 255, 255, 1);
+  --bd-text-body: rgb(81, 82, 84);
+  --bd-border-primary: rgba(6, 6, 6, 0.1);
+  --bd-bg-2: rgba(249, 249, 249, 1);
+  --bd-bg-5: rgb(243, 243, 243);
+  body {
+    background: var(--bd-body-secondary);
+  }
+  .theme-bg {
+    background-color: var(--bd-bg-2);
+  }
+}

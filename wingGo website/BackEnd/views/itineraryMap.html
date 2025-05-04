@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itinerary Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <h1>Itinerary Locations</h1>
+    <div id="map" style="height: 500px;"></div>
+
+    <script>
+        // You will replace these static locations with dynamic data from your backend API
+        var locations = [
+            { lat: 29.9792, lng: 31.1342, address: 'Pyramids of Giza' },
+            { lat: 29.9753, lng: 31.1376, address: 'The Sphinx' }
+        ];
+
+        // Initialize the map with the first location's coordinates
+        var map = L.map('map').setView([29.9792, 31.1342], 13);
+
+        // Load the map tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // Add markers to the map for each location
+        locations.forEach(location => {
+            L.marker([location.lat, location.lng]).addTo(map)
+                .bindPopup(location.address)
+                .openPopup();
+        });
+    </script>
+</body>
+</html>

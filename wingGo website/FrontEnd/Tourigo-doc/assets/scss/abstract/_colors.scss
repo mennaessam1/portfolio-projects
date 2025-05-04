@@ -1,0 +1,57 @@
+$colors: (
+    'common':(
+        'white': #F7F7F7,
+        'white-light': #EEEEEE,
+        'white-dark': #C1C1C1,
+        'gray': #909090,
+        'black': #080808,
+        'black-soft': #1F1F1F,
+        'black-light': #2E2E2E,
+        'eerie-black': #1A191C,
+    ),
+    'heading': (
+        'primary': #080F26,
+    ),
+    'text': (
+        'body':#555555,
+        '1':#191919,
+        '2':#BFB8B8,
+    ),
+    'theme': (
+        'primary': #fff,
+        'secondary': #2785ff,
+        'lightBackground': #059dff26,
+        'text': #5b5b62,
+        'link': #2785ff,
+        'tertiary': #ff0000,
+        'quaternary': #EC5132,
+        'quinary': #4e96f5,
+    ),
+    'border': (
+        '1':#E0E0E0,
+        '2':#292828,
+        '3':#080F26,
+        '4':#0b0b0b,
+        '5':#555555,
+        '6':#FFDDBF,
+        '7':#ff7b0048,
+        '8':#C4C1E3,
+    ),
+    'bg': (
+        '1': #080F26,
+        '2': #000000,
+        '3': #FFE8E8,
+        '4': #161616,
+        '5': #F4F8FD,
+        '6': #F9FAFF,
+        '7': #F4F8FD,
+        '8': #1F1F25,
+    ),
+    'gradient': (
+        '1': linear-gradient(165.6deg, #FF0000 -19.35%, #FFB800 89.78%),
+        '2': linear-gradient(180deg, #FF7A00 20.24%, #FF0000 100%),
+        '3': linear-gradient(180deg, #F5FDFF 79.74%, rgba(245, 253, 255, 0) 100%),
+        '4': linear-gradient(90deg, #018786 0%, #00BAB8FF 100%),
+        '5': linear-gradient(165.6deg, #FF0000 -19.35%, #FFB800 89.78%) 30,
+        )
+);

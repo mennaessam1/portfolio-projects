@@ -1,0 +1,167 @@
+/* 14. footer */
+
+.footer{
+    &__area{
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &__widget{
+        @media #{$lg}{
+            padding-left: 0;
+        }
+        @media #{$md}{
+            padding-left: 0;
+        }
+        @media #{$sm}{
+            padding-left: 0;
+        }
+        @media #{$xs}{
+            padding-left: 0;
+        }
+        &-title{
+            & h3{
+                font-size: 18px;
+                color: $white;
+                margin-bottom: 23px;
+            }
+        }
+        &-content{
+            & p{
+                color: $grey-2;
+                padding-right: 35px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &__info{
+        & .icon{
+            & i{
+                color: $yellow;
+                font-size: 35px;
+            }
+        }
+        & .text{
+            & h4{
+                color: $white;
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 2px;
+                & span{
+                    color: $white;
+                }
+            }
+            & span{
+                color: $grey-2;
+            }
+        }
+    }
+    &__link{
+        & ul{
+            & li{
+                margin-bottom: 15px;
+                & a{
+                    color: $grey-2;
+                    position: relative;
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        bottom: -8px;
+                        width: 100%;
+                        height: 1px;
+                        background: $white;
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+                    &:hover{
+                        color: $white;
+                        &::after{
+                            bottom: -4px;
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__subscribe{
+        & p{
+            padding-right: 0;
+        }
+        &-form{
+            & input{
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                border: 2px solid $border-5;
+                border-radius: 25px;
+                -webkit-border-radius: 25px;
+                -moz-border-radius: 25px;
+                -ms-border-radius: 25px;
+                -o-border-radius: 25px;
+                padding: 0 35px;
+                background: transparent;
+                color: $white;
+                margin-bottom: 10px;
+                &::placeholder{
+                    color: $grey-2;
+                    font-size: 14px;
+                }
+                &:focus{
+                    &::placeholder{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    &__copyright{
+        border-top: 1px solid $border-6;
+        padding: 30px 0;
+        padding-bottom: 25px;
+        &-text{
+            & p{
+                margin-bottom: 0;
+                color: $grey-2;
+                & a{
+                    color: $theme-color;
+                    &:hover{
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    &__social{
+        @media #{$sm}{
+            margin-top: 20px;
+            float: left;
+        }
+        @media #{$xs}{
+            margin-top: 20px;
+            float: left;
+        }
+        & ul{
+            & li{
+                & a{
+                    width: 40px;
+                    height: 40px;
+                    background: $black-soft-2;
+                    color: $black-soft;
+                    border: none;
+                }
+            }
+        }
+    }
+}

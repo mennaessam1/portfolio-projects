@@ -1,0 +1,212 @@
+/* 8. testimonial */
+.testimonial-wrapper {
+    position: relative;
+}
+
+.test-img {
+    @media #{$xs} {
+        margin: 0;
+    }
+}
+
+.testimonial-wrapper::before {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 85px 65px 0;
+    border-color: transparent #26ae61 transparent transparent;
+    content: "";
+    position: absolute;
+    top: -12px;
+    right: -14px;
+    z-index: 1;
+}
+
+.inner-test {
+    background: #fff;
+    padding: 50px;
+    position: relative;
+    z-index: 2;
+
+    @media #{$xs} {
+        padding: 27px;
+    }
+}
+
+.inner-test::after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 30px 30px 0;
+    border-color: transparent #fff transparent transparent;
+    content: "";
+    position: absolute;
+    bottom: -30px;
+}
+
+.test-text p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.test-icon.f-left {
+    position: absolute;
+    bottom: 22px;
+    right: 56px;
+    font-size: 63px;
+    line-height: 1;
+    color: #f7f7f7;
+}
+
+.client-say-img {
+    float: left;
+    margin-right: 12px;
+}
+
+.client-say-content {
+    overflow: hidden;
+    margin-top: 6px;
+    float: left;
+}
+
+.client-say-content h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.client-say-content span {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fe9703;
+}
+
+.clientsay-name {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+/* 01. testimonial */
+
+.testimonial {
+    &__area {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__thumb {
+        padding: 50px;
+
+        &-inner {
+            position: relative;
+            display: inline-block;
+
+            &::before {
+                position: absolute;
+                content: '';
+                left: -10px;
+                top: -10px;
+                height: calc(100% + 20px);
+                width: calc(100% + 20px);
+                background: transparent;
+                border: 1px solid rgba($color: $white, $alpha: .12);
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+        }
+
+        & img {
+            margin: auto;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+
+        }
+
+    }
+
+    &__quote {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+
+        & i {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 47px;
+            text-align: center;
+            background: $yellow;
+            color: $white;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            font-size: 24px;
+        }
+    }
+
+    &__item {
+        & p {
+            font-size: 18px;
+            line-height: 32px;
+            color: $white;
+        }
+    }
+
+    &__info {
+        & h4 {
+            display: inline-block;
+            color: $white;
+            font-weight: 600;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        & span {
+            font-weight: 500;
+            color: $theme-color;
+        }
+    }
+
+    &__slider-active {
+        & .slick-dots {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            @include transform(translateX(-50%));
+
+            & li {
+                display: inline-block;
+                margin: 0 5px;
+
+                & button {
+                    font-size: 0;
+                    background: rgba($color: $white, $alpha: .3);
+                    width: 15px;
+                    height: 5px;
+                    border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    -ms-border-radius: 3px;
+                    -o-border-radius: 3px;
+                    border: none;
+                }
+
+                &.slick-active {
+                    & button {
+                        width: 50px;
+                        background: $yellow;
+                    }
+                }
+            }
+        }
+    }
+}

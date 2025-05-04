@@ -1,0 +1,47 @@
+/*----------------------------------------
+	elements item
+----------------------------------------*/
+@use "../abstract" as *;
+
+.bd-doc {
+  &__elements-inner {
+    padding-top: 80px;
+    @media #{$md} {
+      padding-top: 60px;
+    }
+    @media #{$sm,$xs} {
+      padding-top: 40px;
+    }
+    p {
+      margin-bottom: 30px;
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// elements item css
+.bd-doc {
+  &__elements {
+    &-item {
+      padding-top: 50px;
+    }
+    &-inner {
+      h4 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+// alert css
+.alert-info {
+  background: #ddebf4;
+  border-color: #9dc7e1;
+  h5 {
+    color: var(--bd-theme-primary);
+  }
+  i {
+    color: var(--bd-theme-primary);
+  }
+}

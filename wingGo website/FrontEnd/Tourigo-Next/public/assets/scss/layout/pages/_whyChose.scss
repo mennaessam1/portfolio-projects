@@ -1,0 +1,168 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.29 why chose css
+/*----------------------------------------*/
+
+.chose-item {
+	background-color: var(--bd-flash-white);
+	padding: 30px 30px;
+	border-radius: 10px;
+    transition: all 0.5s linear;
+    &:hover{
+        background-color: var(--bd-primary);
+        .chose-icon {
+            color: var(--bd-white);
+            
+            &::before {
+                border-color: var(--bd-white);
+            }
+        }
+        .chose-title {
+            color: var(--bd-white);
+        }
+        .chose-desc {
+            color: var(--bd-white);
+        }
+    }
+}
+.chose-icon {
+	display: flex;
+	width: 70px;
+	height: 70px;
+	background-color: transparent;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	color: var(--bd-primary);
+	font-size: 33px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        border: 1px dashed var(--bd-primary);
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+    }
+}
+.chose-title {
+	margin-bottom: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.choose-list {
+    ul {
+        li {
+            position: relative;
+            margin-left: 30px;
+            list-style: none;
+            &:not(:last-child){
+                margin-bottom: 15px;
+            }
+            &::before {
+                position: absolute;
+                content: "\f00c";
+                font-family: "Font Awesome 6 Pro";
+                left: -30px;
+                top: 50%;
+                width: 20px;
+                height: 20px;
+                background-color: var(--bd-primary);
+                transform: translateY(-50%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                font-size: 12px;
+                color: var(--bd-white);
+            }
+        }
+    }
+}
+.choose-list-box {
+    ul {
+        li {
+            padding: 30px 24px;
+            background-color: var(--bd-white);
+            border: 1px solid rgba(0, 26, 61, 0.15);
+            box-shadow: 0px 4px 10px rgba(160, 160, 160, 0.18);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            font-size: 22px;
+            font-weight: 500;
+            transition: all 0.3s linear;
+            span {
+                font-size: 50px;
+                color: var(--bd-heading);
+            }
+            &:hover {
+                border-color: var(--bd-primary);
+            }
+        }
+    }
+}
+.chose-thumb {
+    img {
+        max-height: 500px;
+        width: auto !important;
+    }
+}
+.choose-feature-list {
+    &.about-list ul li {
+        @media #{$md,$sm,$xs} {
+            max-width: 100%;
+        }
+    }
+}
+
+.choose-thumb-wrapper {
+	margin-left: 35px;
+    @media #{$md,$sm,$xs} {
+        margin-left: 0;
+    }
+}
+.choose-thumb-main {
+    text-align: end;
+    overflow: hidden;
+    z-index: 9;
+    img {
+        max-width: 525px;
+        height: 100%;
+        border-radius: 8px;
+        @media #{$sm,$xs} {
+            max-width: 100%;
+        }
+    }
+    @media #{$sm,$xs} {
+        margin-bottom: 24px;
+    }
+}
+
+.choose-thumb-bordered {
+	position: absolute;
+	left: 0;
+	bottom: -55px;
+    max-width: 365px;
+    overflow: hidden;
+    display: block;
+    border-radius: 230px;
+    @media #{$sm,$xs} {
+        position: initial;
+    }
+    img {
+        border-radius: 230px;
+        border: 10px solid var(--bd-white);
+        @media #{$sm,$xs} {
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@coreui/coreui": "^5.2.0",
+    "@coreui/coreui-pro": "^5.6.0",
+    "@coreui/react": "^5.4.1",
+    "@coreui/react-pro": "^5.8.0",
+    "@fontsource/playfair-display": "^5.1.0",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "mobiscroll": "^3.0.0-beta6",
+    "mobiscroll-react": "^4.0.0",
+    "react-rating-stars-component": "^2.2.0",
+    "react-select": "^5.8.2",
+    "util": "^0.12.5"
+  }
+}

@@ -1,0 +1,88 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.0 Section Title  
+/*----------------------------------------*/
+
+
+// section title 
+.section-title {
+  color: var(--bd-heading);
+  font-weight: var(--bd-fw-sbold);
+  font-family: var(--bd-ff-title);
+}
+
+// Section subtitle
+.section-subtitle {
+  font-size: 18px;
+  font-weight: var(--bd-fw-regular);
+  display: inline-block;
+  text-transform: uppercase;
+  color: var(--bd-primary);
+  letter-spacing: 2.88px;
+  font-family: var(--bd-ff-heading);
+  &.color-warning {
+    color: var(--bd-tertiary);
+  }
+}
+.title-icon {
+  i {
+    color: var(--bd-tertiary);
+  }
+}
+
+.section-subtitle-2 {
+  font-size: 20px;
+  font-weight: var(--bd-fw-regular);
+  text-transform: capitalize;
+  color: var(--bd-tertiary);
+  font-family: var(--bd-ff-animate);
+}
+
+// section color variant
+.section-title-wrapper {
+  &.is-white {
+    .section-title {
+      color: var(--bd-white);
+    }
+    .section-subtitle {
+      color: var(--bd-white);
+    }
+    p {
+      color: var(--bd-text-tertiary);
+    }
+  }
+}
+
+// elements section title
+
+.elements {
+  &-line {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 0 -15px;
+  }
+  &__title {
+    position: relative;
+    padding: 0 15px;
+    width: max-content;
+  }
+}
+
+.separator__line {
+  position: relative;
+  background-image: linear-gradient(90deg, #46494D, rgba(33, 38, 45, 0));
+  width: 100%;
+  height: 1px;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  &.line-left {
+    background-image: linear-gradient(-90deg, #46494D, rgba(33, 38, 45, 0));
+  }
+  &.line-right {
+    background-image: linear-gradient(90deg, #46494D, rgba(33, 38, 45, 0));
+  }
+}

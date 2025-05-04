@@ -1,0 +1,145 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.4 Brand css
+/*----------------------------------------*/
+
+// Brand style
+.brand-inner {
+	padding: 60px 0;
+	border-top: 1px solid var(--bd-border-primary);
+	border-bottom: 1px solid var(--bd-border-primary);
+}
+.brand-thumb {
+	img {
+		height: auto;
+		width: auto;
+		opacity: 30%;
+	}
+	&:hover {
+		img {
+			opacity: 1;
+		}
+	}
+}
+
+.brand {
+	&-style-one {
+		display: flex;
+		gap: 48px;
+		align-content: center;
+		.brand-thumb {
+			&:hover {
+				img {
+					filter: grayscale(0);
+				}
+			}
+			img {
+				filter: grayscale(1);
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+			}
+		}
+	}
+}
+
+
+.brand-style-two {
+	&.brand-wrapper {
+		position: relative;
+		z-index: 5;
+
+		&:before {
+			position: absolute;
+			content: "";
+			width: 472px;
+			height: 100%;
+			background: linear-gradient(90deg, rgb(29, 30, 31) 0%, rgba(29, 30, 31, 0) 100%);
+			opacity: 1;
+			z-index: 2;
+			left: 0;
+			top: 0;
+			@media #{$lg}{
+				width: 300px;
+			}
+			@media #{$md}{
+				width: 250px;
+			}
+			@media #{$sm}{
+				width: 150px;
+			}
+			@media #{$xs}{
+				width: 100px;
+			}
+		}
+		&:after {
+			position: absolute;
+			content: "";
+			width: 472px;
+			height: 100%;
+			background: linear-gradient(90deg, rgb(29, 30, 31) 0%, rgba(29, 30, 31, 0) 100%);
+			opacity: 1;
+			z-index: 2;
+			right: 0;
+			top: 0;
+			transform: rotate(180deg);
+			@media #{$lg}{
+				width: 300px;
+			}
+			@media #{$md}{
+				width: 250px;
+			}
+			@media #{$sm}{
+				width: 150px;
+			}
+			@media #{$xs}{
+				width: 100px;
+			}
+		}
+	}
+	.brand {
+		&-item {
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			border: 1px solid var(--bd-border-primary);
+			min-width: 100px;
+			padding: 51px 20px;
+			border-radius: 8px;
+			&:hover{
+				.brand-thumb{
+					img{
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+.brand-style-three {
+	&.brand-item {
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			border: 1px solid var(--bd-border-secondary);
+			min-width: 100px;
+			padding: 51px 20px;
+			border-radius: 8px;
+			&:hover{
+				.brand-thumb{
+					img{
+						opacity: 1;
+					}
+				}
+			}
+		}
+}

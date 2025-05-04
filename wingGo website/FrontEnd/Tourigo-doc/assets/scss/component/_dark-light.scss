@@ -1,0 +1,87 @@
+/*----------------------------------------
+	dark light
+----------------------------------------*/
+@use "../abstract" as *;
+
+// bg-dark
+
+.doc-theme-dark {
+  background: #060606;
+  // logo
+  .logo__black {
+    display: none;
+  }
+  .logo__white {
+    display: block;
+  }
+}
+
+// light bg
+.bd-theme-light {
+  color: #d3d4d4;
+  .bd-body__wrapper {
+    background: #f9f9f9;
+  }
+  .logo__black {
+    display: block;
+  }
+  .logo__white {
+    display: none;
+  }
+}
+
+// dark light switch
+.bd-doc {
+  &__light {
+    .doc_switch {
+      display: flex;
+      align-items: center;
+      input[type="checkbox"] {
+        width: 50px;
+        height: 22px;
+        border: 1px solid var(--bd-theme-primary);
+        background: transparent;
+        display: block;
+        border-radius: 25px;
+        margin: 0 12px 0 15px;
+        position: relative;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        box-sizing: content-box;
+        &::before {
+          content: "";
+          width: 16px;
+          height: 16px;
+          background: var(--bd-common-white);
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: all 0.2s linear;
+          left: 3px;
+          @include light {
+            background: var(--bd-common-black);
+          }
+        }
+        &:checked {
+          & + .tab-btn {
+            color: var(--bd-theme-primary);
+          }
+          &::before {
+            left: calc(100% - 19px);
+          }
+        }
+      }
+      .tab-btn {
+        font-size: 16px;
+        color: #616161;
+        line-height: 22px;
+        margin-bottom: 0;
+        padding-top: 2px;
+        cursor: pointer;
+        transition: color 0.2s linear;
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+/* 9. services */
+
+.services{
+    &__area{}
+    &__item{
+        padding: 50px 45px;
+        padding-bottom: 40px;
+        position: relative;
+        z-index: 1;
+        @media #{$lg}{
+            padding-left: 19px;
+            padding-right: 19px;
+        }
+        @media #{$md}{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        @media #{$xs}{
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        & a{
+            min-width: 160px;
+        }
+        &:hover{
+            background: $theme-color;
+            & .services__shape{
+                visibility: visible;
+                opacity: 1;
+            }
+            & .services__content{
+                & h2{
+                    color: $white;
+                }
+                & p{
+                    color: $white;
+                }
+                & a{
+                    background: $white;
+                    color: $black;
+                    &:hover{
+                        color: $white;
+                    }
+                }
+            }
+        }
+        &-2{
+            padding: 35px 40px;
+            padding-bottom: 50px;
+            &::after{
+                position: absolute;
+                content: '';
+                top: 0;
+                left: auto;
+                right: 0;
+                width: 0;
+                height: 3px;
+                background: $theme-color;
+            }
+            &:hover{
+                background: $white;
+                &::after{
+                    left: 0;
+                    right: auto;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &__content{
+        & h2{
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        & p{
+            margin-bottom: 20px;
+        }
+        &-2{
+            & h2{
+                font-size: 22px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            & p{
+                margin-bottom: 25px;
+            }
+        }
+    }
+    &__shape{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        visibility: hidden;
+        opacity: 0;
+    }
+    &__icon{
+        & i{
+            font-size: 80px;
+            color: $theme-color;
+        }
+    }
+}

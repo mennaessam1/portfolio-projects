@@ -1,0 +1,240 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.4.7 Footer default Style
+/*----------------------------------------*/
+
+// Footer style default
+
+.footer-grid {
+	display: grid;
+	grid-template-columns: 305px auto auto auto auto;
+	gap: 25px;
+	justify-content: space-between;
+	@media #{$lg} {
+		grid-template-columns: 260px auto auto auto 220px;
+	}
+	@media #{$md} {
+		grid-template-columns: 300px 180px 180px;
+	}
+	@media #{$sm} {
+		grid-template-columns: auto auto;
+	}
+	@media #{$xs} {
+		grid-template-columns: auto;
+	}
+}
+
+.footer-btn {
+	width: 220px;
+}
+
+.footer-bg {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url(../../../images/bg/footer-bg.png);
+		background-size: cover;
+		z-index: -1;
+	}
+}
+
+.footer {
+	&-widget {
+		&-logo {
+			img {
+				max-width: 160px;
+			}
+		}
+		&-title {
+			margin-bottom: 22px;
+			color: var(--bd-heading);
+			font-size: 20px;
+			@media #{$xs} {
+				margin-bottom: 15px;
+			}
+			&.has-white {
+				color: var(--bd-white);
+			}
+		}
+		&-links {
+			ul {
+				li {
+					list-style: none;
+					&:not(:last-child) {
+						margin-bottom: 10px;
+					}
+					a {
+						font-size: 16px;
+						position: relative;
+						color: var(--bd-text-meta);
+						&:hover {
+							color: var(--bd-primary);
+						}
+					}
+					.bd-badge {
+						width: auto;
+						margin-left: 15px;
+					}
+				}
+			}
+			&.has-white {
+				ul li a {
+					color: rgba(255, 255, 255, .7);
+					&:hover {
+						color: var(--bd-tertiary);
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer-social.style-two {
+	background-color: var(--bd-white);
+	display: inline-block;
+	border-radius: 8px;
+	padding: 24px 24px;
+	box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.15);
+	position: relative;
+	&.has-white {
+		background-color: rgba(255, 255, 255, .07);
+		.footer-social-title {
+			color: var(--bd-white);
+		}
+		.theme-social a {
+			color: var(--bd-white);
+		}
+	}
+}
+
+.footer-social-title {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.footer-top {
+	border-bottom: 1px solid var(--bd-border-tertiary);
+}
+.footer-support-thumb img {
+	max-width: 88px;
+	height: auto;
+}
+.footer-support-wrapper {
+	display: flex;
+	margin-right: 35px;
+	align-items: center;
+	gap: 0 25px;
+	@media #{$lg,$md} {
+		margin-right: 0;
+		gap: 0 15px;
+	}
+	@media #{$xs} {
+		margin-right: 0;
+		gap: 25px;
+		flex-wrap: wrap;
+	}
+	&.right-side {
+		margin-right: 0;
+		margin-left: 30px;
+		@media #{$lg,$md,$sm,$xs} {
+			margin-left: 0;
+		}
+		.footer-support-thumb img {
+			max-width: 132px;
+		}
+	}
+}
+
+.footer-subscribe {
+    position: relative;
+    input {
+        background-color: var(--bd-white);
+		padding-inline-start: 25px;
+		padding-inline-end: 85px;
+    }
+    button {
+        position: absolute;
+        background: var(--bd-primary);
+        width: 60px;
+        height: 100%;
+        color: var(--bd-white);
+        right: 0;
+        top: 0;
+        border-radius: 0px 4px 4px 0px;
+        font-size: 24px;
+        &:hover {
+            background: var(--bd-tertiary);
+        }
+    }
+}
+
+.footer-form-check-label {
+    color: rgba($color: #FFFFFF, $alpha: .40);
+    input {
+        display: none;
+        &:checked~svg .path {
+            stroke-dasharray: 70.5096664428711 9999999;
+            stroke-dashoffset: -262.2723388671875;
+        }
+    }
+    svg {
+        overflow: visible;
+        font-size: 10px;
+        transform: translateY(-2px);
+        margin-right: 10px;
+    }
+    .path {
+        fill: none;
+        stroke: rgba($color: #FFFFFF, $alpha: .60);
+        stroke-width: 6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: stroke-dasharray 0.5s ease, stroke-dashoffset 0.5s ease;
+        stroke-dasharray: 241 9999999;
+        stroke-dashoffset: 0;
+    }
+	&.signing-page {
+		color: var(--bd-text-body);
+		.path {
+			stroke: var(--bd-text-body);
+		}
+	}
+	&.has-black {
+		color: var(--bd-black);
+		.path {
+			stroke: var(--bd-black);
+		}
+	}
+}
+
+.footer-shape-three {
+	position: absolute;
+	inset-inline-start: 0;
+	bottom: 0;
+	opacity: 0.08;
+	animation: customAni 40s ease-in 0s infinite normal none;
+	max-width: 120px;
+	img {
+		transform: rotate(15deg);
+		width: 100%;
+		height: 100%;
+	}
+}
+.footer-shape-four {
+	position: absolute;
+	inset-inline-end: 0;
+	bottom: 0;
+	opacity: 0.08;
+	animation: customAni 40s ease-in 0s infinite normal none;
+	max-width: 240px;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}

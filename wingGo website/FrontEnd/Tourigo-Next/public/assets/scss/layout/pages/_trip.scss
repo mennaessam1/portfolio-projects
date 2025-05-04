@@ -1,0 +1,211 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  4.28 Trip css
+/*----------------------------------------*/
+.trip {
+    &-style-one {
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+        &:hover {
+            .trip-location a {
+                background-color: var(--bd-tertiary);
+            }
+            .trip-thumb a {
+                &::before {
+                    opacity: 0;
+                }
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+        &.border-tag {
+            .trip-thumb a {
+                &::before {
+                    background: linear-gradient(180deg, rgba(0, 26, 61, 0) 0%, #000000 100%);
+                }
+            }
+            &:hover {
+                .trip-tag-border {
+                    background-color: var(--bd-tertiary);
+                    border-color: var(--bd-tertiary);
+                    color: var(--bd-heading);
+                }
+            }
+        }
+        .trip-content {
+            position: absolute;
+            inset-inline-start: 24px;
+            bottom: 30px;
+        }
+    }
+    &-thumb {
+        border-radius: 10px;
+        img {
+            width: 100%;
+        }
+    }
+    &-number {
+        position: absolute;
+        top: 18px;
+        right: 16px;
+        span {
+            a {
+                font-size: 16px;
+                font-weight: var(--bd-fw-regular);
+                text-transform: capitalize;
+                padding: 3px 11px;
+                border-radius: 40px;
+                color: var(--bd-heading);
+                background-color: var(--bd-white);
+                &:hover {
+                    color: var(--bd-white);
+                    background-color: var(--bd-tertiary);
+                }
+            }
+        }
+    }
+    &-location {
+        position: absolute;
+        left: -1px;
+        bottom: 0;
+        span {
+            background-color: var(--bd-flash-white);
+            width: 100%;
+            display: inline-flex;
+            height: 40px;
+            border-radius: 0 10px 0 10px;
+        }
+        a {
+            font-size: 18px;
+            font-weight: var(--bd-fw-regular);
+            text-transform: capitalize;
+            padding: 0 21px;
+            border-radius: 0px 10px 0 10px;
+            color: var(--bd-heading);
+            background-color: transparent;
+            transition: all 0.3s ease-in-out;
+            margin-top: 5px;
+            width: 100%;
+            margin-right: 5px;
+            padding-top: 5px;
+            &:hover {
+                color: var(--bd-white);
+            }
+        }
+    }
+    &-tag{
+        &-border {
+            position: absolute;
+            inset-inline-end: 16px;
+            top: 16px;
+            color: var(--bd-white);
+            border: 1px solid var(--bd-white);
+            padding: 3px 11px;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                color: var(--bd-white) !important;
+            }
+        }
+    }
+    &-shape {
+        &-one {
+            position: absolute;
+            top: 102px;
+            left: 102px;
+        }
+        &-two {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        &-three {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    &-style-two {
+        position: relative;
+        margin-bottom: 40px;
+        
+        &:hover {
+            .trip-thumb a {
+                &::before {
+                    opacity: 0;
+                }
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+        .trip-thumb {
+            img {
+                width: auto;
+                border-radius: 10px;
+                min-height: 174px;
+            }
+        }
+        .trip-content {
+            background-color: var(--bd-white);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px 0px rgba(144, 144, 144, 0.25);
+            padding: 5px 10px 8px 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        .trip-content-wrap {
+            position: absolute;
+            left: 0;
+            bottom: -38px;
+            width: 100%;
+            padding: 0 12px;
+        }
+        .trip-btn {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            filter: drop-shadow(0px 4px 4px rgba(131, 131, 131, 0.18));
+        }
+        &:hover {
+            .trip-content {
+                padding: 20px 10px 10px 10px;
+            }
+            .trip-btn {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.trip-row-col {
+    @media #{$md,$sm} {
+        display: flex;
+        gap: 24px;
+        .offer-style-five {
+            margin-top: 0;
+        }
+        .trip-style-one:not(:last-child) {
+            margin-bottom: 0px;
+        }
+    }
+}
+.trip-flex {
+    @media #{$lg,$md,$sm} {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        .trip-wrapper {
+            margin-bottom: 0;
+        }
+        .offer-wrapper {
+            margin-top: 0;
+        }
+    }
+}

@@ -1,0 +1,148 @@
+/* contact area start*/
+
+.contact{
+    &__area{}
+    &__inner{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            top: -85px;
+            left: -120px;
+            width: calc(100% + 240px);
+            height: calc(100% + 145px);
+            background: $white;
+            border-top: 5px solid $yellow;
+            @media #{$laptop}{
+                left: -15px;
+                width: calc(100% + 30px);
+            }
+            @media #{$lg}{
+                left: -30px;
+                width: calc(100% + 60px);
+            }
+            @media #{$md}{
+                left: -30px;
+                width: calc(100% + 60px);
+            }
+            @media #{$sm}{
+                left: -30px;
+                width: calc(100% + 60px);
+            }
+            @media #{$xs}{
+                left: -15px;
+                width: calc(100% + 30px);
+            }
+        }
+    }
+    &__content{
+        & p{
+            margin-bottom: 35px;
+        }
+    }
+    &__info{
+        & ul{
+            & li{
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__item{
+        & .icon{
+            & i{
+                display: inline-block;
+                width: 85px;
+                height: 85px;
+                line-height: 75px;
+                text-align: center;
+                font-size: 40px;
+                color: $white;
+                background: $theme-color;
+                border: 5px solid $border-8;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+        }
+        & .text{
+            & h4{
+                font-size: 18px;
+                margin-bottom: 8px;
+            }
+            & p{
+                margin-bottom: 0;
+                & a{
+                    &:hover{
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+    &__form{
+        & button{
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            -o-border-radius: 0;
+            &::before{
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                -ms-border-radius: 0;
+                -o-border-radius: 0; 
+            }
+        }
+    }
+    &__input{
+        position: relative;
+        & i{
+            position: absolute;
+            top: 23px;
+            right: 25px;
+            color: $theme-color;
+        }
+        & input,
+        & textarea{
+            width: 100%;
+            background: $white;
+            border: 1px solid $border-9;
+            height: 60px;
+            line-height: 60px;
+            padding: 0 25px;
+            padding-right: 45px;
+            margin-bottom: 20px;
+            color: $black;
+            &::placeholder{
+                color: $black;
+                font-weight: 600;
+            }
+            &:focus{
+                border-color: $theme-color;
+                &::placeholder{
+                    opacity: 0;
+                }
+            }
+        }
+        & textarea{
+            padding: 15px 20px;
+            padding-right: 40px;
+            height: 190px;
+            resize: none;
+            line-height: 28px;
+        }
+    }
+    &__map{
+        &-inner{
+            height: 520px;
+            & iframe{
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        }
+    }
+}

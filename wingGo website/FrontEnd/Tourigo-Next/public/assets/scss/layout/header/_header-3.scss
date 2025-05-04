@@ -1,0 +1,22 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.2 Header Style 2
+/*----------------------------------------*/
+
+.header-padding {
+    padding-left: 160px;
+    padding-right: 160px;
+    @media #{$xxl,$xl,$lg,$md} {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media #{$sm,$xs} {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @media #{$xxs} {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

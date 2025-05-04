@@ -1,0 +1,66 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.10 Preloader
+/*----------------------------------------*/
+
+#preloader {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color: var(--bd-bg-cultured);
+	z-index: 9999999;
+}
+.bd-three-bounce {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: var(--bd-bg-cultured);
+}
+.bd-three-bounce .bd-child {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 20px;
+	height: 20px;
+	background-color: var(--bd-primary);
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: bd-three-bounce 1.4s ease-in-out 0s infinite both;
+	animation: bd-three-bounce 1.4s ease-in-out 0s infinite both;
+}
+.bd-three-bounce .bd-bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+.bd-three-bounce .bd-bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+@-webkit-keyframes bd-three-bounce {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@keyframes bd-three-bounce {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}

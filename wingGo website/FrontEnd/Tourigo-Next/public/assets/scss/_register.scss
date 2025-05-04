@@ -1,0 +1,143 @@
+/* register css start */
+
+.register{
+    &__area{}
+    &__modal{
+        &-area{
+            & .modal-dialog{
+                max-width: 770px;
+            }
+            & .modal-body{
+                padding: 0;
+            }
+            & .modal-content {
+                border: 0;
+                border-radius: 0;
+            }
+        }
+    }
+    &__nav{
+        &-content{}
+        & .nav{
+
+        }
+        & .nav-item{
+            width: 50%;
+            text-align: center;
+        }   
+        & .nav-link{
+            display: block;
+            background: $yellow;
+            color: $white;
+            font-size: 20px;
+            text-transform: capitalize;
+            height: 75px;
+            line-height: 75px;
+            text-align: center;
+            border-radius: 0;
+            padding: 0;
+            & i{
+                margin-right: 8px;
+            }
+            &.active{
+                background: $theme-color;
+            }
+        }
+    }
+    &__form{
+        padding: 90px;
+        padding-top: 85px;
+        padding-bottom: 70px;
+    }
+    &__input{
+        position: relative;
+        & i{
+            position: absolute;
+            top: 23px;
+            right: 25px;
+            color: $theme-color;
+        }
+        & input{
+            height: 60px;
+            line-height: 60px;
+            padding: 0 30px;
+            border: 1px solid $border-9;
+            width: 100%;
+            margin-bottom: 10px;
+            &::placeholder{
+                font-weight: 600;
+                color: $black;
+            }
+        }
+    }
+    &__mail{
+        margin-bottom: 27px;
+        margin-top: 10px;
+        & p{
+            font-weight: 600;
+            color: $black;
+            margin-bottom: 10px;
+        }
+        & span{
+            margin-right: 15px;
+        }
+    }
+    &__btn{
+        & button{
+            border-radius: 0;
+            &::before{
+                border-radius: 0;
+            }
+        }
+    }
+    &__or{
+        &-title{
+            position: relative;
+            & h3{
+                font-size: 32px;
+                color: $black;
+                position: relative;
+                background: $white;
+                padding: 0 30px;
+                display: inline-block;
+                z-index: 1;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 50%;
+                @include transform(translateY(-50%));
+                background: $border-12;
+                width: 80%;
+                height: 1px;
+            }
+        }
+    }
+    &__option{
+        & ul{
+            & li{
+                margin: 0 3px;
+                & a{
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    border: none;
+                    color: $white;
+                    &.fb{
+                        background: #0c88ef;
+                    }
+                    &.tw{
+                        background: #1da1f2;
+                    }
+                    &.gp{
+                        background: #d13c31;
+                    }
+                }
+            }
+        }
+    }
+}

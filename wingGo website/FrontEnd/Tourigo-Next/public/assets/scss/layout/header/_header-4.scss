@@ -1,0 +1,54 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.3 Header Style 2
+/*----------------------------------------*/
+
+.header-search {
+    position: relative;
+    button {
+        position: absolute;
+        top: 50%;
+        inset-inline-end: 25px;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: var(--bd-secondary);
+        &:hover {
+            color: var(--bd-primary);
+          }
+    }
+    input {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 25px;
+        background: transparent;
+        border: 1px solid var(--bd-border-primary);
+        outline: none;
+        font-size: 16px;
+        color: var(--bd-black);
+        border-radius: 60px;
+    }
+    @media #{$xxs} {
+        display: none;
+    }
+}
+.header-style-four {
+    .last-children {
+        &.submenu {
+            right: 10px;
+            left: auto;
+            ul {
+                right: calc(100% + 10px);
+                left: auto;
+            }
+        }
+        & .has-arrow:hover a::after {
+            transform: rotate(90deg) !important;
+        }
+    }
+    .main-menu > ul > li:hover > ul.last-children.submenu li:hover > ul {
+        right: 100%;
+        left: auto;
+    }
+}

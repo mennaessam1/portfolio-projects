@@ -1,0 +1,115 @@
+/* 01. starter */
+
+.starter{
+    &__thumb{
+        &-wrapper{
+            position: relative;
+            z-index: 1;
+            @media #{$xs}{
+                padding-left: 0;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                top: 56%;
+                left: 59%;
+                @include transform(translate(-50%, -50%));
+                background: $theme-color;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                z-index: -2;
+                @media #{$md}{
+                    left: 35%;
+                }
+                @media #{$sm}{
+                    left: 50%;
+                }
+                @media #{$xs}{
+                    top: 37%;
+                    left: 50%;
+                }
+            }
+            & img{
+                border-radius: 16px;
+                -webkit-border-radius: 16px;
+                -moz-border-radius: 16px;
+                -ms-border-radius: 16px;
+                -o-border-radius: 16px;
+                @media #{$xs}{
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    &__shape{
+        position: absolute;
+        top: 39%;
+        left: 78%;
+        z-index: -1;
+        @media #{$lg}{
+            left: 73%;
+        }
+        @media #{$md}{
+            left: 44%;
+        }
+        @media #{$sm}{
+            left: 63%;
+        }
+        @media #{$xs}{
+            left: 70%;
+        }
+    }
+    &__content{
+        @media #{$md}{
+            margin-top: 50px;
+        }
+        @media #{$sm}{
+            margin-top: 50px;
+        }
+        @media #{$xs}{
+            margin-top: 50px;
+        }
+    }
+    &__item{}
+    &__icon{
+        & i{
+            font-size: 40px;
+            display: inline-block;
+            height: 65px;
+            width: 65px;
+            line-height: 65px;
+            text-align: center;
+            color: $white;
+            background: $theme-color;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            box-shadow: 1.736px 9.848px 30px 0px rgba(38, 174, 97, 0.4);
+            &.yellow-bg{
+                background: $yellow;
+                box-shadow: 1.736px 9.848px 30px 0px rgba(254, 151, 3, 0.4);
+            }
+            &.black-bg{
+                background: $black;
+                box-shadow: 1.736px 9.848px 30px 0px rgba(28, 39, 51, 0.4);
+            }
+        }
+    }
+    &__text{
+        & h4{
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        & p{
+            margin-bottom: 8px;
+        }
+    }
+}

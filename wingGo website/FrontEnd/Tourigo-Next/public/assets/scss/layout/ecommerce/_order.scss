@@ -1,0 +1,174 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  3.3.3 Order CSS
+/*----------------------------------------*/
+
+.order {
+    &-inner {
+        background-color: var(--bd-white);
+        box-shadow: 0px 4px 7px rgba(162, 162, 162, 0.25);
+        border-radius: 16px;
+    }
+    &-details {
+        $details : &;
+        background-color: var(--bd-flash-white);
+        padding: 70px 100px 55px;
+        border-radius: 16px 16px 0 0;
+        @media #{$xl} {
+            padding: 70px 70px 55px;
+        }
+        @media #{$lg} {
+            padding: 70px 30px 55px;
+        }
+        @media #{$sm} {
+            padding: 70px 50px 55px;
+        }
+        @media #{$xs} {
+            padding: 40px 30px 45px;
+        }
+        &-icon {
+            margin-bottom: 22px;
+            & span {
+                display: inline-block;
+                width: 120px;
+                height: 120px;
+                line-height: 118px;
+                text-align: center;
+                font-size: 55px;
+                color: var(--bd-heading);
+                border: 1px solid var(--bd-border-secondary);
+                border-radius: 50%;
+            }
+        }
+        &-title {
+            font-size: 30px;
+            font-weight: 600;
+            color: var(--bd-heading);
+            margin-bottom: 7px;
+        }
+        &-content {
+            & p {
+                font-size: 16px;
+                color: var(--bd-heading);
+                line-height: 1.38;
+            }
+        }
+        &-item {
+            & h4 {
+                font-size: 18px;
+                color: var(--bd-text-tag);
+                margin-bottom: 0;
+                font-weight: 400;
+            }
+            & p {
+                font-weight: 700;
+                font-size: 18px;
+                color: var(--bd-heading);
+                margin-bottom: 0;
+            }
+        }
+    }
+    &-info {
+        &-wrapper {
+            padding: 42px 50px;
+            @media #{$lg} {
+                padding: 42px 40px;
+            }
+            @media #{$xs} {
+                padding: 42px 30px;
+            }
+        }
+        &-title {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+        &-list {
+            $list : &;
+            & ul {
+                & li {
+                    list-style: none;
+                    padding: 15px 0;
+                    @include flexbox();
+                    align-items: center;
+                    justify-content: space-between;
+                    &:not(:last-child) {
+                        border-bottom: 1px solid var(--bd-border-secondary);
+                    }
+                    & span {
+                        font-size: 15px;
+                        color: var(--bd-black);
+                    }
+                    &#{$list} {
+                        &-header {
+                            padding-top: 0;
+                            padding-bottom: 12px;
+                            & h4 {
+                                font-size: 16px;
+                                    font-weight: var(--bd-fw-medium);
+                                margin-bottom: 0;
+                                font-family: var(--bd-ff-body);
+                                color: var(--bd-black);
+                            }
+                        }
+                        &-desc {
+                            & p {
+                                font-size: 15px;
+                                margin-bottom: 0;
+                                & span {
+                                    font-size: 15px;
+                                        font-weight: var(--bd-fw-medium);
+                                }
+                            }
+                        }
+                        &-subtotal {
+                            & span {
+                                &:last-child {
+                                    color: var(--bd-primary);
+                                }
+                            }
+                        }
+                        &-shipping {
+                            & span {
+                                & input {
+                                    display: none;
+                                    &:checked {
+                                        &~label {
+                                            &::after {
+                                                border-color: var(--bd-primary);
+                                            }
+                                            &::before {
+                                                opacity: 1;
+                                                visibility: visible;
+                                            }
+                                        }
+                                    }
+                                }
+                                & label {
+                                    font-size: 14px;
+                                    position: relative;
+                                    padding-right: 27px;
+                                    & span {
+                                        color: var(--bd-primary);
+                                    }
+                                    &:hover {
+                                        cursor: pointer;
+                                    }
+
+                                }
+                            }
+                        }
+                        &-total {
+                            padding: 14px 0;
+                            & span {
+                                font-size: 22px;
+                                font-weight: var(--bd-fw-sbold);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

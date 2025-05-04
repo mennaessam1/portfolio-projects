@@ -1,0 +1,212 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  4.27 Travel css
+/*----------------------------------------*/
+
+.travel {
+    &-wrapper {
+        &.style-two {
+            .travel-item {
+                border: 2px dashed var(--bd-primary);
+                &:hover {
+                    .travel-title {
+                        color: var(--bd-white);
+                    }
+                }
+            }
+        }
+    }
+    &-section {
+        max-width: 600px;
+    }
+    &-item {
+        border-radius: 8px;
+        border: 2px dashed rgba(255, 255, 255, 0.20);
+        padding: 57px 84px;
+        text-align: center;
+        background-color: transparent;
+        @include bd-transition();
+        position: relative;
+        z-index: 5;
+        @media #{$xl} {
+            padding: 60px 30px;
+        }
+        @media #{$lg} {
+            padding: 50px 35px;
+        }
+        @media #{$md,$sm,$xs} {
+            padding: 50px 50px;
+        }
+        &:hover {
+            background-color: var(--bd-primary);
+            border-color: var(--bd-primary);
+            .travel-icon {
+                animation: iconBounce 3s cubic-bezier(0.37, 0, 0.63, 1) 0s 1 normal both;
+                span i {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-icon {
+        margin-bottom: 25px;
+        span {
+            i {
+                font-size: 60px;
+                color: var(--bd-tertiary);
+                opacity: .7;
+            }
+        }
+    }
+    &-title {
+        line-height: 30px;
+        transition: all 0.3s ease-in-out;
+    }
+    &-shape {
+        &-one {
+            position: absolute;
+            left: 15px;
+            bottom: -5px;
+            opacity: .3;
+            @media #{$md,$sm,$xs} {
+                display: none;
+            }
+        }
+        &-two {
+            position: absolute;
+            left: 55px;
+            bottom: 140px;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-name: palneRight;
+            @media #{$xxl} {
+                left: 180px;
+                bottom: 160px;
+            }
+            @media #{$lg} {
+                left: 160px;
+                bottom: 125px;
+            }
+            @media #{$md,$sm,$xs} {
+                display: none;
+            }
+        }
+        &-three {
+            position: absolute;
+            right: 126px;
+            top: 169px;
+            animation: cameraScale 3s cubic-bezier(0.12, 0, 0.39, 0) 0s infinite alternate both;
+            @media #{$lg} {
+                right: 110px;
+                top: 15px;
+            }
+            @media #{$md,$sm,$xs} {
+                display: none;
+            }
+        }
+        &-four {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @media #{$lg,$md,$sm,$xs} {
+                display: none;
+            }
+        }
+        &-five {
+            position: absolute;
+            right: 129px;
+            bottom: 310px;
+            @media #{$xl,$lg,$md,$sm,$xs} {
+                display: none;
+            }
+        }
+        &-six {
+            position: absolute;
+            right: 0;
+            bottom: 117px;
+            animation: stoneSlide 5s cubic-bezier(0.12, 0, 0.39, 0) 0s infinite alternate both;
+            @media #{$lg} {
+                bottom: 15px;
+            }
+            @media #{$md,$sm,$xs} {
+                display: none;
+            }
+        }
+        &-seven {
+            position: absolute;
+            top: 375px;
+            left: 605px;
+            @media #{$xl} {
+                left: 420px;
+            }
+            @media #{$lg} {
+                left: 340px;
+            }
+            @media #{$md,$sm,$xs} {
+                display: none;
+            }
+        }
+        &-eight {
+            position: absolute;
+            top: 425px;
+            left: 445px;
+            @media #{$xl} {
+                left: 230px;
+            }
+            @media #{$lg} {
+                left: 180px;
+            }
+            @media #{$md,$sm,$xs} {
+                display: none;
+            }
+        }
+        &-nine {
+            position: absolute;
+            bottom: -10px;
+            inset-inline-start: -30px;
+            max-width: 300px;
+            img {
+                animation: customAni 35s ease-in 0s infinite normal none;
+                width: 100%;
+                height: 100%;
+            }
+            @media #{$md,$sm,$xs} {
+                display: none;
+            }
+        }
+    }
+}
+
+@keyframes customAni {
+    0%,
+    100% {
+      transform: rotate(0deg);
+      transform-origin: 50% 100%;
+    }
+  
+    10% {
+      transform: rotate(1deg);
+    }
+  
+    20%,
+    40%,
+    60% {
+      transform: rotate(-2deg);
+    }
+  
+    30%,
+    50%,
+    70% {
+      transform: rotate(2deg);
+    }
+  
+    80% {
+      transform: rotate(-1deg);
+    }
+  
+    90% {
+      transform: rotate(1deg);
+    }
+  }

@@ -1,0 +1,47 @@
+.custom-file-input {
+  display: none;
+}
+
+.custom-file-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.custom-file-label:hover {
+  background-color: #e9ecef;
+  border-color: #adb5bd;
+}
+
+.custom-file-label svg {
+  margin-right: 0.5rem;
+}
+
+.full-width {
+    width: 100%;
+  }
+  
+  .nice-select {
+    width: 100%;
+  }
+  
+  .nice-select .list {
+    width: 100%;
+  }
+
+  .file-name {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #495057;
+  }

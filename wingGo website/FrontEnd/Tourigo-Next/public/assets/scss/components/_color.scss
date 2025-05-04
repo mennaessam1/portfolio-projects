@@ -1,0 +1,42 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.4 Background
+/*----------------------------------------*/
+
+.muted-text {
+    color: var(--bd-text-muted);
+}
+.text-primary {
+    color: var(--bd-heading);
+}
+.white-text {
+    color: var(--bd-white) !important;
+}
+.black-text {
+    color: var(--bd-black);
+}
+.theme-text {
+    color: var(--bd-bg-primary);
+}
+.theme-text-two {
+    color: var(--bd-text-secondary);
+}
+.theme-text-secondary {
+    color: var(--bd-bg-secondary);
+}
+.theme-text-tertiary {
+    color: var(--bd-text-tertiary);
+}
+.warning-text {
+    color: var(--bd-tertiary);
+}
+.rating-color {
+    color: var(--bd-rating-color);
+}
+.primary-border-bottom {
+    border-bottom: 1px solid var(--bd-border-primary);
+}
+.meta-text {
+    color: var(--bd-text-meta);
+}

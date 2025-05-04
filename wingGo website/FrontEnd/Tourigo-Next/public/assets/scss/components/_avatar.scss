@@ -1,0 +1,22 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.2 Avatar
+/*----------------------------------------*/
+
+
+.avatar{
+    &-meta-title {
+        line-height: 1;
+    }
+    &-thumb {
+        max-width: 60px;
+        img {
+            border-radius: 50%;
+        }
+        &.border-thumb {
+            border: 2px solid var(--bd-primary);
+            border-radius: 50%;
+        }
+    }
+}

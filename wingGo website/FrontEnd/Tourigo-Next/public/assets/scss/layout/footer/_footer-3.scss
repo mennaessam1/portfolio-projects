@@ -1,0 +1,47 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.4.3 Footer Style 3
+/*----------------------------------------*/
+
+
+.footer-3-col-1 {
+    .footer-widget-content {
+        p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        &.style-two p {
+            color: var(--bd-text-meta);
+        }
+    }
+}
+
+.footer-3-col-2 {
+    margin-left: 120px;
+    @media #{$xl} {
+        margin-left: 60px;
+    }
+    @media #{$lg,$md,$sm,$xs} {
+        margin-left: 0px;
+    }
+}
+
+.footer-3-col-3 {
+    margin-left: 50px;
+    @media #{$xl} {
+        margin-left: 30px;
+    }
+    @media #{$lg,$md,$sm,$xs} {
+        margin-left: 0px;
+    }
+}
+
+.footer-3-col-4 {
+    margin-left: 35px;
+    @media #{$xl} {
+        margin-left: 00px;
+    }
+    @media #{$lg,$md,$sm,$xs} {
+        margin-left: 0px;
+    }
+}

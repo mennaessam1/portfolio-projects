@@ -1,0 +1,42 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.4.4 Footer Style 4
+/*----------------------------------------*/
+.footer-4-col-1 {
+    margin-right: 35px;
+	.footer-widget-content p {
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+.footer-4-col-3 {
+	margin-right: 65px;
+}
+.footer-widget-list-icon {
+	font-size: 16px;
+	color: var(--bd-white);
+}
+.footer-widget-list-single-item {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 40px auto;
+    &:not(:last-child) {
+        margin-bottom: 25px;
+    }
+}
+.footer-widget-list-text-top {
+	color: rgba($color: #FFFFFF, $alpha: .60);
+	display: block;
+}
+.footer-widget-list-text a {
+	font-size: 18px;
+	color: var(--bd-white);
+	font-weight: var(--bd-fw-medium);
+    &:hover {
+        color: var(--bd-primary);
+    }
+}
+.footer-widget-content p {
+	color: rgba(255, 255, 255, .7);
+}

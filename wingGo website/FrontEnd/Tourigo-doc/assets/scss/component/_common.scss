@@ -1,0 +1,522 @@
+/*----------------------------------------
+    01. common css
+----------------------------------------*/
+@use "../abstract" as *;
+
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Yoshi - Creative Agency & Portfolio HTML5 Template
+    Author: Bdevs
+    Support: https://support.bdevs.net/
+    Description: Yoshi - Creative Agency & Portfolio HTML5 Template
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: var(--tpl-ff-body);
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--bd-text-body);
+  line-height: 28px;
+}
+main {
+  overflow: hidden;
+}
+section {
+  position: relative;
+  z-index: 2;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+a,
+.btn,
+button,
+span,
+p,
+input,
+select,
+textarea,
+li,
+img,
+svg path,
+*::after,
+*::before,
+.transition-3,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include transition(0.3s);
+}
+a:focus,
+.button:focus {
+  text-decoration: none;
+  outline: none;
+}
+// a:focus,
+// a:visited {
+//   color: var(--bd-common-white);
+//   text-decoration: none;
+// }
+b,
+strong {
+  font-weight: bolder;
+  color: var(--bd-common-black);
+}
+a,
+button {
+  color: var(--bd-theme-quinary);
+
+  &:hover {
+    color: var(--bd-common-black);
+  }
+  outline: none;
+  border: none;
+  background: transparent;
+}
+button:hover {
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+  border: 0;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--tpl-ff-heading);
+  color: var(--bd-common-black);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  @include transition(0.3s);
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--tpl-ff-heading);
+  color: var(--bd-common-black);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  @include transition(0.3s);
+}
+
+h1 {
+  font-size: 100px;
+
+  @media #{$xl} {
+    font-size: 90px;
+  }
+
+  @media #{$lg} {
+    font-size: 60px;
+  }
+
+  @media #{$md} {
+    font-size: 80px;
+  }
+
+  @media #{$sm} {
+    font-size: 56px;
+  }
+
+  @media #{$xs} {
+    font-size: 50px;
+  }
+
+  @media #{$xxs} {
+    font-size: 38px;
+  }
+}
+h2 {
+  font-size: 60px;
+
+  @media #{$xl} {
+    font-size: 54px;
+  }
+
+  @media #{$lg} {
+    font-size: 50px;
+  }
+
+  @media #{$md} {
+    font-size: 46px;
+  }
+
+  @media #{$sm,$xs} {
+    font-size: 42px;
+  }
+
+  @media #{$xxs} {
+    font-size: 36px;
+  }
+}
+h3 {
+  font-size: 48px;
+}
+h4 {
+  font-size: 34px;
+}
+h5 {
+  font-size: 24px;
+}
+h6 {
+  font-size: 20px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+p {
+  font-family: var(--tpl-ff-body);
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--bd-text-body);
+  margin-bottom: 15px;
+  line-height: 25px;
+}
+// scrollbar
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bd-theme-primary);
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+*::-moz-selection {
+  background: var(--bd-common-black);
+  color: var(--bd-common-white);
+  text-shadow: none;
+}
+::-moz-selection {
+  background: var(--bd-common-black);
+  color: var(--bd-common-white);
+  text-shadow: none;
+}
+::selection {
+  background: var(--bd-theme-primary);
+  color: var(--bd-common-white);
+  text-shadow: none;
+}
+/*--------------------------------------
+    - Input Placeholder
+-----------------------------------------*/
+*::-moz-placeholder {
+  color: var(--bd-common-placeholder);
+  font-size: 16px;
+  opacity: 1;
+}
+*::placeholder {
+  color: var(--bd-common-placeholder);
+  font-size: 16px;
+  opacity: 1;
+}
+/*---------------------------------------
+    - Common Classes
+-----------------------------------------*/
+.fix {
+  overflow: hidden;
+}
+.x-clip {
+  overflow-x: clip;
+}
+.y-clip {
+  overflow-y: clip;
+}
+.clear {
+  clear: both;
+}
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+.include-bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.z-index-0 {
+  z-index: 0 !important;
+}
+.z-index-1 {
+  z-index: 1;
+}
+.z-index-2 {
+  z-index: 2;
+}
+.z-index-3 {
+  z-index: 3;
+}
+.z-index-4 {
+  z-index: 4;
+}
+.z-index-5 {
+  z-index: 5;
+}
+.z-index--1 {
+  z-index: -1;
+}
+.z-index--2 {
+  z-index: -2;
+}
+.z-index--3 {
+  z-index: -3;
+}
+.z-index--4 {
+  z-index: -4;
+}
+.z-index--5 {
+  z-index: -5;
+}
+// bootstrap css
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  width: 100%;
+  padding-inline-end: var(--bs-gutter-x, 15px);
+  padding-inline-start: var(--bs-gutter-x, 15px);
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+}
+.row {
+  --bs-gutter-x: 30px;
+}
+.g-40,
+.gx-40 {
+  --bs-gutter-x: 40px;
+}
+.g-40,
+.gy-40 {
+  --bs-gutter-y: 40px;
+}
+.g-50,
+.gx-50 {
+  --bs-gutter-x: 50px;
+}
+.g-50,
+.gy-50 {
+  --bs-gutter-y: 50px;
+}
+@media (min-width: 1400px) {
+  .container-fluid {
+    max-width: 1810px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-small {
+    max-width: 1200px;
+  }
+}
+// button css
+.bd-theme-btn-5 {
+	position: relative;
+	border-radius: 10px;
+	text-align: center;
+	display: inline-flex;
+	padding: 15px 40px;
+	font-size: 18px;
+	text-transform: capitalize;
+	font-weight: 400;
+	line-height: 28px;
+  color: var(--bd-heading-quinary);
+  border: 1px solid var(--bd-theme-quinary);
+	background-color: transparent;
+	align-items: center;
+	transition: .3s ease-in-out;
+	@media #{$xl} {
+		padding: 15px 20px;
+	}
+	@media #{$xxs,$xs,$sm,$md} {
+		padding: 10px 30px;
+	}
+	& .btn-5-icon {
+		transform: rotate(-45deg);
+		margin-inline-start: 15px;
+		margin-bottom: -5px;
+		i {
+			color: var(--bd-heading-primary);
+			display: inline-block;
+			transition: 0.3s ease-in-out;
+		}
+	}
+  &:hover {
+    background-color: var(--bd-theme-quinary);
+    color: var(--bd-common-white);
+    border-color: transparent;
+    i {
+			animation: iconltr 0.5s forwards;
+		}
+    .btn-5-icon {
+      i {
+        color: var(--bd-common-white);
+      }
+    }
+  }
+}
+
+// icon animation 
+@keyframes iconltr {
+  49% {
+      transform: translateX(30%);
+  }
+
+  50% {
+      opacity: 0;
+      transform: translateX(-30%);
+  }
+
+  51% {
+      opacity: 1;
+  }
+}
+
+@keyframes iconrtl {
+  49% {
+      transform: translateX(-30%);
+  }
+
+  50% {
+      opacity: 0;
+      transform: translateX(30%);
+  }
+
+  51% {
+      opacity: 1;
+  }
+}
+
+// icon__box
+.icon__box {
+  position: relative;
+  display: inline-flex;
+  overflow: hidden;
+  padding: 0 4px;
+  &:hover {
+    .icon__first {
+      transform: translateX(150%);
+    }
+    .icon__second {
+      transform: translateX(0%);
+    }
+  }
+  .icon__second {
+    position: absolute;
+    transform: translateX(-150%);
+  }
+  .icon__second {
+    position: absolute;
+    transform: translateX(-150%);
+  }
+}
+// btn css end
+.pr-60 {
+  padding-right: 60px;
+}
+.pl-60 {
+  padding-left: 60px;
+}
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-25 {
+  margin-bottom: 25px;
+}
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mb-35 {
+  margin-bottom: 35px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+.mb-50 {
+  margin-bottom: 50px;
+}
+.mt-5 {
+  margin-top: 5px !important;
+}
+/* Firefox */
+.bd-doc-sidebar-menu {
+  .nav-doc-sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: #a4a4a4 #c6c6c6;
+  }
+}
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #fff;
+}
+*::-webkit-scrollbar-track:hover {
+  background-color: #fff;
+}
+*::-webkit-scrollbar-track:active {
+  background-color: #fff;
+}

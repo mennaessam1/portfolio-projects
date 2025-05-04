@@ -1,0 +1,94 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  4.5 Contact css
+/*----------------------------------------*/
+
+.contact-box {
+  background-color: var(--bd-white);
+  box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.12);
+  padding: 50px 40px 45px 40px;
+  border-radius: 10px;
+  text-align: center;
+  @media #{$md,$sm,$xs} {
+    padding: 20px 20px;
+  }
+  &:hover {
+    .contact-icon {
+      background-color: var(--bd-primary);
+      color: var(--bd-white);
+    }
+  }
+}
+
+.contact-icon {
+  display: inline-flex;
+  width: 90px;
+  height: 90px;
+  background-color: rgba(0, 108, 228, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  color: var(--bd-primary);
+  font-size: 30px;
+  transition: all 0.3s linear;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content a {
+  display: block;
+  &:hover {
+    color: var(--bd-primary);
+  }
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+
+.contact-form {
+  border: 1px solid var(--bd-border-primary);
+  border-radius: 8px;
+  padding: 30px 30px;
+  margin-left: 85px;
+  @media #{$lg,$md,$sm,$xs} {
+    margin-left: 0;
+  }
+  @media #{$sm,$xs} {
+    padding: 15px 15px;
+  }
+  .input-box-select {
+    width: 100%;
+    height: 56px;
+    border: none;
+    border: 1px solid var(--bd-border-primary);
+    border-radius: 4px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    color: var(--bd-placeholder);
+    .nice-select{
+      width: 100%;
+      height: 100%;
+      border: none;
+      line-height: 55px;
+      font-size: 16px;
+    }
+    .nice-select::after{
+      width:9px;
+      height: 9px;
+      right: 25px;
+      top: 48%;
+    }
+  }
+}
+
+
+.google-map {
+  iframe {
+    width: 100%;
+    height: 500px;
+    filter: grayscale(.8);
+    border-radius: 8px;
+  }
+}

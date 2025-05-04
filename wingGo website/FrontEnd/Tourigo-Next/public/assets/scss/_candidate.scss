@@ -1,0 +1,142 @@
+/* candidate css start */
+
+.candidate{
+    &__item{
+        padding: 70px 50px;
+        padding-top: 50px;
+        border: 1px solid $border-9;
+        position: relative;
+        z-index: 1;
+        @media #{$lg}{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        @media #{$md}{
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        /* new css added*/
+        &-2{
+            padding: 30px 50px;
+            padding-top: 30px;
+            @media #{$lg}{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            @media #{$sm}{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            @media #{$xs}{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+    &__inner{
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            left: -115px;
+            top: -60px;
+            height: calc(100% + 120px);
+            width: calc(100% + 230px);
+            background: $white;
+            border-top: 5px solid $yellow;
+            @media #{$laptop}{
+                left: -15px;
+                width: calc(100% + 30px);
+            }
+            @media #{$lg}{
+                left: -30px;
+                width: calc(100% + 60px);
+            }
+            @media #{$md}{
+                left: -30px;
+                width: calc(100% + 60px);
+            }
+            @media #{$sm}{
+                left: -30px;
+                width: calc(100% + 60px);
+            }
+            @media #{$xs}{
+                left: -15px;
+                width: calc(100% + 30px);
+            }
+        }
+    }
+    &__content{
+        & h5{
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        & > span{
+            color: $yellow;
+            font-weight: 500;
+        }
+    }
+    &__info{
+        & span{
+            display: block;
+            margin-bottom: 5px;
+            & i{
+                color: $theme-color;
+                margin-right: 4px;
+            }
+        }
+        /* new css added*/
+        &-2{
+            @media #{$lg}{
+                margin-right: 0;
+            }
+            @media #{$sm}{
+                margin-right: 15px;
+            }
+            @media #{$xs}{
+                margin-right: 15px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__skill{
+        & a{
+            display: inline-block;
+            height: 35px;
+            line-height: 31px;
+            padding: 0 20px;
+            border: 2px solid $border-9;
+            border-radius: 18px;
+            font-weight: 500;
+            margin: 0 5px;
+        }
+        /* new css added*/
+        &-2{
+            & a{
+                margin: 0;
+                margin-right: 10px;
+                @media #{$xs}{
+                   margin-right: 5px;
+                }
+            }
+        }
+    }
+    &__btn{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        @include transform(translate(-50%, 50%));
+        width: 100%;
+    }
+    &__thumb{
+        /* new css added*/
+        &-2{
+            @media #{$lg}{
+                margin-right: 15px;
+            }
+            @media #{$xs}{
+                margin-top: 20px;
+            }
+        }
+    }
+}

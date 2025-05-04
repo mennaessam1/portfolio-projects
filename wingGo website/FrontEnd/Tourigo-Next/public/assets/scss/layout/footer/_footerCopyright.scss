@@ -1,0 +1,38 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.4.6 Copyright Style 1
+/*----------------------------------------*/
+
+// Footer copyright style
+.footer-copyright {
+	p {
+		margin-bottom: 0;
+		line-height: 36px;
+		a {
+			color: var(--bd-heading);
+			&:hover {
+				color: var(--bd-primary);
+			}
+		}
+	}
+	@media #{$sm,$xs} {
+		text-align: center;
+	}
+	&.has-white {
+		p {
+			color: var(--bd-white);
+			a {
+				color: var(--bd-primary);
+			}
+		}
+	}
+
+}
+.footer-copyright-area {
+	border-top: 1px solid var(--bd-border-secondary);
+	padding: 24px 0;
+	&.border-two {
+		border-top: 1px solid var(--bd-border-tertiary)
+	}
+}

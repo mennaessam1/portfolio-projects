@@ -1,0 +1,482 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.6 Banner Common Style
+/*----------------------------------------*/
+
+.banner-subtitle {
+    display: inline-block;
+    color: var(--bd-white);
+    background-color: var(--bd-tertiary);
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+.banner {
+    &-search {
+        &-wrapper {
+            position: relative;
+            z-index: 9;
+            width: 855px;
+
+            @media #{$md,$sm,$xs} {
+                width: 100%
+            }
+        }
+
+        &-box {
+            display: flex;
+            background-color: var(--bd-white);
+            padding: 10px;
+            border-radius: 8px;
+            height: 80px;
+            align-items: center;
+
+            @media #{$md,$sm,$xs} {
+                flex-direction: column;
+                height: auto;
+            }
+        }
+
+        &-form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            width: 100%;
+            padding: 5px 10px;
+            gap: 0 40px;
+
+            @media #{$md} {
+                margin-bottom: 20px;
+            }
+
+            @media #{$sm,$xs} {
+                grid-template-columns: 1fr;
+                padding: 0;
+                gap: 20px 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        &-button {
+            @media #{$md,$sm,$xs} {
+                width: 100%;
+            }
+
+            .banner-btn {
+                @media #{$md,$sm,$xs} {
+                    width: 100%;
+                }
+
+                &.banner-square-btn {
+                    span i {
+                        margin-inline-start: 0;
+                        margin-inline-end: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-form-input {
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 0 0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--bd-black);
+            background-color: var(--bd-white);
+            background-clip: padding-box;
+            border-color: transparent;
+            border-radius: 0;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+            &:focus {
+                color: #6f6b7d;
+                background-color: var(--bd-white);
+                border-color: var(--bd-white);
+                outline: 0;
+                box-shadow: none;
+            }
+        }
+
+        input[type="text"] {
+            outline: none;
+            background-color: transparent;
+            height: 18px;
+            width: 150px;
+            font-size: 16px;
+            border-radius: 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0 0;
+            color: var(--bd-black);
+            cursor: pointer;
+        }
+    }
+}
+
+.banner-search-style-three {
+    .banner-search-box {
+        padding: 0 50px;
+        height: 128px;
+        box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.15);
+        position: relative;
+
+        @media #{$lg} {
+            padding: 0 20px;
+        }
+
+        @media #{$md} {
+            padding: 20px;
+            flex-direction: row;
+        }
+
+        @media #{$sm,$xs} {
+            padding: 30px 30px;
+            height: 100%;
+        }
+
+        &.has-bg {
+            background-color: var(--bd-flash-white);
+            border: none;
+            box-shadow: none;
+
+            input[type="text"] {
+                &:focus {
+                    color: #6f6b7d;
+                    background-color: transparent;
+                    border-color: transparent;
+                    outline: 0;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    .banner-search-form {
+        padding: 0 0;
+        align-content: center;
+        align-items: center;
+        grid-gap: 110px;
+
+        @media #{$lg} {
+            grid-gap: 40px;
+        }
+
+        @media #{$md} {
+            grid-template-columns: 160px 200px 80px;
+            gap: 40px;
+        }
+
+        @media #{$sm,$xs} {
+            gap: 20px;
+        }
+
+        .icon-bg-search span {
+            width: 57px;
+            height: 57px;
+
+            @media #{$md} {
+                width: 38px;
+                height: 38px;
+            }
+        }
+    }
+
+    .banner-search-field {
+        &.has-separator {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: " ";
+                width: 1px;
+                height: 80px;
+                inset-inline-end: -10px;
+                top: 50%;
+                background: linear-gradient(360deg, rgba(0, 108, 228, 0) 0%, rgba(0, 108, 228, 1) 50%, rgba(0, 108, 228, 0) 100%);
+                transform: translateY(-50%);
+
+                @media #{$xl} {
+                    inset-inline-end: -50px;
+                }
+
+                @media #{$lg} {
+                    inset-inline-end: -20px;
+                }
+
+                @media #{$md,$sm,$xs} {
+                    display: none;
+                }
+            }
+        }
+
+        .banner-search-select.nice-select::after {
+            @media #{$md} {
+                inset-inline-end: 15px;
+            }
+        }
+    }
+
+    .banner-search-button {
+        width: inherit;
+
+        .bd-play-btn {
+            @media #{$md,$xs,$xs} {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+    &.border-radius {
+        .banner-search-box {
+            padding: 0 50px;
+            height: 128px;
+            border: none;
+            box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.15);
+            border-radius: 87px;
+        }
+    }
+}
+
+.banner-booking-form-select {
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.banner-booking-form-select {
+    &.style-two {
+        .nice-select {
+            border: solid 1px var(--bd-border-secondary);
+            box-sizing: border-box;
+            font-size: 16px;
+            font-weight: normal;
+            height: 56px;
+            line-height: 54px;
+            width: 100%;
+            border-radius: 5px;
+            color: gray;
+        }
+    }
+
+}
+
+.banner-search-select {
+    .nice-select {
+        position: relative;
+        border: none;
+        padding-inline-start: 0;
+        color: var(--bd-text-meta);
+        font-size: 16px;
+        height: 0;
+        line-height: 0;
+        margin-top: 10px;
+
+        &::after {
+            inset-inline-end: 0;
+            color: var(--bd-text-meta);
+            font-size: 16px;
+        }
+
+        .list {
+            margin-top: 25px;
+            min-width: 200px;
+        }
+    }
+
+    &.large-arrow-button {
+        .nice-select {
+            &::after {
+                height: 9px;
+                width: 9px;
+                margin-top: -6px;
+            }
+        }
+    }
+}
+
+.nice-select {
+    &.banner-booking-form-input {
+        border: 1px solid var(--bd-border-secondary);
+        width: 100%;
+        color: var(--bd-text-body);
+    }
+
+    .banner-booking-form-icon {
+        margin-inline-end: 5px;
+        color: var(--bd-placeholder);
+    }
+
+    .list {
+        width: 100%;
+    }
+
+    &::after {
+        color: var(--bd-text-meta);
+    }
+
+    &.style-two {
+        display: flex;
+        align-items: center;
+        height: 56px;
+    }
+}
+
+.booking-search {
+    position: absolute;
+    inset-inline-end: 305px;
+    z-index: 99;
+    width: 360px;
+    top: 235px;
+    height: 100%;
+
+    @media #{$xxl} {
+        inset-inline-end: 105px;
+    }
+
+    @media #{$xl} {
+        inset-inline-end: 42px;
+    }
+
+    @media #{$lg} {
+        inset-inline-end: 20px;
+    }
+
+    @media #{$md} {
+        inset-inline-end: 36px;
+        width: 695px;
+        top: 500px;
+    }
+
+    @media #{$sm,$xs} {
+        inset-inline-end: 0;
+        padding: 0 10px;
+        width: 100%;
+        top: 500px;
+        height: auto;
+    }
+}
+
+.banner-booking-wrapper {
+    background-color: var(--bd-white);
+    padding: 30px 30px;
+    border-radius: 8px;
+}
+
+.banner-form-input-select {
+    position: relative;
+
+    input[type="text"] {
+        outline: none;
+        background-color: var(--bd-white);
+        height: 42px;
+        width: 150px;
+        font-size: 16px;
+        border-radius: 0;
+        border: 1px solid var(--bd-border-secondary);
+        padding: 0 0;
+        color: var(--bd-black);
+        width: 100%;
+        border-radius: 4px;
+        padding-inline-start: 40px;
+        cursor: pointer;
+
+        &:focus {
+            color: var(--bd-black);
+            background-color: transparent;
+            outline: 0;
+            box-shadow: none;
+        }
+    }
+
+    &.style-two {
+        input[type="text"] {
+            height: 56px;
+        }
+
+        .banner-booking-form-date-icon {
+            top: 16px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "\f107";
+            font-family: "Font Awesome 6 Pro";
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--bd-text-meta);
+        }
+    }
+}
+
+.banner-form-input {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "\f107";
+        font-family: "Font Awesome 6 Pro";
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--bd-text-meta);
+    }
+}
+
+.banner-booking-form-date-icon {
+    position: absolute;
+    top: 9px;
+    inset-inline-start: 21px;
+    color: var(--bd-placeholder);
+}
+
+.box-shadow {
+    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.15);
+}
+
+.banner-select {
+    margin-top: -10px;
+}
+
+.listing-search {
+    &.banner-search-wrapper {
+        @media #{$lg} {
+            width: 100%
+        }
+    }
+
+    .banner-search-button {
+        @media #{$lg} {
+            width: 100%;
+        }
+
+        button {
+            @media #{$lg} {
+                width: 100%;
+            }
+        }
+    }
+
+    .banner-search-form {
+        @media #{$lg} {
+            grid-template-columns: 1fr;
+            padding: 0;
+            gap: 20px 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    .banner-search-box {
+        @media #{$lg} {
+            flex-direction: column;
+            height: auto;
+        }
+    }
+}

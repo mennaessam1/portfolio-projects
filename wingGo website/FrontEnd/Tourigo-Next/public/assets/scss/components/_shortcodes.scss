@@ -1,0 +1,277 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.12 Shortcodes
+/*----------------------------------------*/
+
+.cursor {
+    cursor: pointer;
+}
+.text-primary {
+	color: var(--bd-primary);
+}
+.text-secondary {
+	color: var(--bd-secondary);
+}
+.text-quaternary {
+	color: var(--bd-tertiary);
+}
+.text-body {
+	color: var(--bd-heading);
+}
+.text-white {
+	color: var(--bd-white);
+}
+.text-black {
+	color: var(--bd-black);
+}
+
+// Rounded Style
+.s-rounded-20 {
+	border-radius: 20px;
+	@media #{$xs, $sm, $md} {
+		border-radius: 0;
+	}
+}
+
+// Small badge
+.bd-badge {
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 5px 5px;
+	border-radius: 4px;
+	color: var(--bd-heading);
+	line-height: 1;
+	text-align: center;
+	&.theme-bg {
+		background: var(--bd-primary);
+	}
+	&.warning {
+		background: var(--bd-tertiary);
+	}
+	&.danger {
+		color: var(--bd-white);
+		background: var(--bd-bg-danger);
+	}
+	&.success {
+		color: var(--bd-white);
+		background: var(--bd-bg-success);
+	}
+}
+
+// Section rounded
+.section-rounded-100 {
+	margin: 0 100px;
+	border-radius: 45px;
+	@media #{$xl, $xxl} {
+		margin: 0 30px;
+	}
+	@media #{$xs, $sm, $md, $lg} {
+		margin: 0px;
+		border-radius: 0px;
+	}
+}
+
+// Border radius
+.radius-4 {
+	@include border-radius(4px);
+}
+.radius-5 {
+	@include border-radius(5px);
+}
+.radius-8 {
+	@include border-radius(8px);
+}
+.radius-10 {
+	@include border-radius(10px);
+}
+.radius-20 {
+	@include border-radius(20px);
+}
+.radius-30 {
+	@include border-radius(30px);
+}
+.radius-40 {
+	@include border-radius(40px);
+}
+.radius-45 {
+	@include border-radius(45px);
+}
+.radius-50 {
+	@include border-radius(50px);
+}
+.radius-60 {
+	@include border-radius(60px);
+}
+
+// custom-width
+.max-500 {
+	max-width: 500px;
+}
+.w-100 {
+	width: 100px;
+}
+
+// margin
+.mb-24 {
+	margin-bottom: 24px;
+}
+.mt-24 {
+	margin-top: 24px;
+}
+.margin-auto {
+	margin: 0 auto;
+}
+
+// Font Family 
+.title-font {
+	font-family: var(--bd-ff-title);
+}
+// font weight
+.fw-3 {
+	font-weight: var(--bd-fw-light);
+}
+.fw-4 {
+	font-weight: var(--bd-fw-regular);
+}
+.fw-5 {
+	font-weight: var(--bd-fw-medium);
+}
+.fw-6 {
+	font-weight: var(--bd-fw-sbold);
+}
+.fw-7 {
+	font-weight: var(--bd-fw-bold);
+}
+.fw-8 {
+	font-weight: var(--bd-fw-ebold);
+}
+.fw-9 {
+	font-weight: var(--bd-fw-black);
+}
+
+// Font Size
+.fs-14 {
+	font-size: 14px;
+}
+.fs-16 {
+	font-size: 16px;
+}
+
+// gap 
+.gap--5{
+	gap: 5px;
+}
+.gap-10 {
+	gap: 10px;
+}
+.gap-15 {
+	gap: 15px;
+}
+.gap-24 {
+	gap: 24px;
+}
+
+// background img class
+.section-divider {
+	border-bottom: 1px solid #E3E1E1;
+}
+.pos-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+}
+// rating badge
+.rating-badge  {
+	background-color: var(--bd-white);
+	padding: 6px 10px;
+	border-radius: 20px;
+	display: inline-block;
+	i {
+		color: var(--bd-rating-color);
+		margin-right: 5px;
+	}
+	&.border-badge {
+		background-color: transparent;
+		border: 1px solid var(--bd-border-primary);
+	}
+}
+
+// Icon bg
+.search-icon-bg {
+    span {
+        display: flex;
+        width: 38px;
+        height: 38px;
+        background-color: var(--bd-bg-light);
+        border-radius: 50%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: var(--bd-primary);
+        font-size: 20px;
+    }
+	&.is-big {
+		span {
+			width: 50px;
+			height: 50px;
+		}
+	}
+}
+
+.list-icon {
+	width: 22px;
+	height: 22px;
+	min-width: 22px;
+	background: var(--bd-primary);
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+	border-radius: 50%;
+	color: var(--bd-white);
+	&.has-big {
+		width: 30px;
+		height: 30px;
+		font-size: 16px;
+	}
+	&.secondary {
+		background: var(--bd-secondary);
+	}
+	&.success {
+		color: #06E775;
+		background: rgba($color: #06E775, $alpha: .20);
+	}
+	&.danger {
+		color: var(--bd-bg-danger);
+		background: rgba($color: #EB001B, $alpha: .20);
+	}
+}
+
+// z -index
+
+.z-index-3 {
+	z-index: 3 !important;
+}
+.z-index-5 {
+	z-index: 5;
+}
+
+@media (min-width: 451px) {
+	.d-xs-inline-flex {
+		display: -webkit-inline-box !important;
+		display: -webkit-inline-flex !important;
+		display: -ms-inline-flexbox !important;
+		display: inline-flex !important;
+	}
+}
+
+.d-xxs-none {
+	@media (max-width: 400px) {
+		display: none;
+	}
+}

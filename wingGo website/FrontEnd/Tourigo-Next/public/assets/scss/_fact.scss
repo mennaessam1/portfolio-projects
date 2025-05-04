@@ -1,0 +1,47 @@
+/* 7. Fact */
+.single-fact {
+  & i {
+    color: #fe9703;
+    font-size: 55px;
+    float: left;
+    margin-right: 15px;
+  }
+}
+.fact-text {
+  overflow: hidden;
+  & h2 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 4px;
+  }
+  & span {
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+  }
+}
+.hero-fact {
+  padding: 0 140px;
+	@media #{$lg}{
+		padding: 0 0px;
+  }
+  & .single-fact i {
+    font-size: 40px;
+    margin-right: 12px;
+  }
+  & .fact-text h2 {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+  & .fact-text span {
+    font-size: 14px;
+  }
+}
+.single-fact {
+	@media #{$md}{
+		margin-left: 0;
+	}
+	@media #{$xs}{
+		margin-left: 0;
+	}
+}

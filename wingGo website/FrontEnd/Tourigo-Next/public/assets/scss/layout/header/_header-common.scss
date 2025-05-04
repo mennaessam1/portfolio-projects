@@ -1,0 +1,296 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.5.4 Header Common Style 
+/*----------------------------------------*/
+
+
+.header {
+	&-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		z-index: 55;
+	}
+
+	&-menu {
+		text-align: center;
+
+		ul {
+			li {
+				&:hover {
+					.mega-menu {
+						opacity: 1;
+						visibility: visible;
+						top: 99px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1199px) {
+	.header-menu {
+		display: none;
+	}
+}
+
+.bd-sticky {
+	position: fixed !important;
+	top: 0;
+	z-index: 55;
+	inset-inline-end: 0;
+	inset-inline-start: 0;
+	width: 100%;
+	-webkit-animation: 500ms ease-in-out 0s normal none 1 running bdFadeInDown;
+	animation: 500ms ease-in-out 0s normal none 1 running bdFadeInDown;
+	background: var(--bd-white);
+	border-top: 0;
+	box-shadow: 0px 1px 28px 0px rgba(0, 0, 0, 0.12);
+}
+
+.header-style {
+	position: absolute;
+	inset-inline-start: 0;
+	margin: auto;
+	width: 100%;
+	z-index: 99;
+}
+
+.header--transparent {
+	background-color: transparent;
+}
+
+.header--transparent {
+	position: absolute;
+	inset-inline-start: 0;
+	margin: auto;
+	width: 100%;
+	z-index: 99;
+}
+
+.header {
+	&-area {
+		@media #{$lg} {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+
+		@media #{$md,$sm,$xs} {
+			padding-top: 20px;
+			padding-bottom: 20px;
+		}
+
+		.header-btn-wrap {
+			.bd-gradient-btn {
+				height: 50px;
+				padding: 0 25px;
+			}
+		}
+
+		&.bd-sticky {
+			.logo-primary {
+				display: none;
+			}
+
+			.logo-secondary {
+				display: block;
+			}
+
+			.bd-btn.text-btn {
+				color: var(--bd-heading);
+
+				&:hover {
+					color: var(--bd-white);
+				}
+			}
+
+			.header-currency-item>span {
+				color: var(--bd-heading);
+
+				&:hover {
+					color: var(--bd-white);
+				}
+			}
+
+			.bar-icon span {
+				background: var(--bd-black);
+			}
+		}
+
+		&.header-fullwidth {
+			padding-left: 45px;
+			padding-right: 45px;
+
+			@media #{$xl} {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
+			@media #{$sm,$xs} {
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	}
+
+	&-logo {
+		max-width: 162px;
+
+		@media #{$md,$lg,$xs, $sm} {
+			max-width: 130px;
+
+		}
+
+		@media #{$xs} {
+			max-width: 112px;
+		}
+
+		.logo-secondary {
+			display: none;
+		}
+	}
+
+	&-main {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-left {
+		display: flex;
+		align-items: center;
+		gap: 36px;
+
+		@media #{$xl} {
+			gap: 20px;
+		}
+	}
+
+	&-contact {
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	&-contact {
+		display: flex;
+		gap: 8px;
+	}
+
+	&-btn-wrap {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+}
+
+// Header Bar icon
+.bar-icon {
+	width: 28px;
+	height: 20px;
+	@include flexbox();
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	transition: color .2s ease-out;
+
+	span {
+		width: 100%;
+		height: 2px;
+		background: var(--bd-heading);
+		display: inline-block;
+		transition: color .2s ease-out;
+
+		&:nth-child(2) {
+			margin-left: 0px;
+		}
+	}
+
+	&:hover {
+		span {
+			animation: qode-draw .8s cubic-bezier(.44, 1.1, .53, .99) 1 forwards;
+
+			&:nth-child(2) {
+				margin-left: 0px;
+				animation-delay: .1s;
+			}
+
+			&:nth-child(3) {
+				animation-delay: .2s;
+			}
+		}
+	}
+
+	&.is-black {
+		span {
+			background: var(--bd-black);
+		}
+	}
+
+	&.is-white {
+		span {
+			background: var(--bd-white);
+		}
+	}
+
+	&.style-two {
+		span {
+			transition: all 0.3s ease-in;
+
+			&:nth-child(2) {
+				width: 85%;
+			}
+
+			&:nth-child(3) {
+				width: 75%;
+			}
+		}
+
+		&:hover {
+			span {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.header-common {
+	background: var(--bd-bg-primary);
+}
+
+.h-gap-5 {
+	gap: 5;
+
+	@media #{$sm} {
+		gap: 0;
+	}
+}
+
+// border header
+.has-border {
+	border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.bar-icon-square {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 4px;
+
+	span {
+		transition: 0.3s;
+		display: block;
+		width: 6px;
+		height: 6px;
+		background-color: var(--bd-heading);
+		transition: all 0.3s ease-in-out;
+	}
+
+	&:hover {
+		span {
+			background-color: var(--bd-primary);
+		}
+	}
+}

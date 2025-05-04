@@ -1,0 +1,87 @@
+/*----------------------------------------
+	doc footer
+----------------------------------------*/
+@use "../abstract" as *;
+
+.bd-doc {
+  &__footer-inner {
+    // padding-top: 80px;
+    @media #{$sm,$xs} {
+      padding-top: 50px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    p {
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// footer item css
+.bd-doc {
+  &__footer {
+    &-item {
+      padding-top: 50px;
+    }
+    &-inner {
+      h4 {
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+// footer
+
+.bd-footer {
+  background-color: rgb(14, 10, 36);
+  padding: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.079);
+  @include light {
+    background-color: #141515;
+  }
+}
+.page-footer {
+  position: relative;
+  p {
+    color: #fff;
+    margin: 0;
+    font-weight: 600;
+  }
+  a {
+    color: var(--bd-theme-primary);
+    &:hover {
+      text-decoration: underline;
+      color: var(--bd-common-white);
+    }
+  }
+}
+
+.bd-social-footer {
+  @media #{$sm,$xs} {
+    margin-top: 20px;
+  }
+  a {
+    color: #8d93a4;
+    border: 2px solid #8d93a4;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 42px;
+    border-radius: 50%;
+    text-decoration: none;
+    &:hover {
+      color: #fff;
+      border-color: var(--bd-theme-primary);
+      background-color: var(--bd-theme-primary);
+    }
+  }
+}

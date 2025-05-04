@@ -1,0 +1,236 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  4.17 Offer
+/*----------------------------------------*/
+
+.offer-mb {
+    margin-bottom: 40px;
+    @media #{$sm,$xs} {
+        margin-bottom: 20px;
+    }
+}
+
+.offer {
+    &-thumb-bg {
+        height: 366px;
+        border-radius: 10px;
+        width: 100%;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+            background: linear-gradient(90deg, rgba(0, 108, 228, 0.79) 50.02%, rgba(0, 26, 61, 0.00) 99.82%);
+        }
+
+        &.style-two {
+            .left-content {
+                inset-inline-end: 0;
+                top: 0;
+                .offer-content {
+                    text-align: right;
+                  }
+            }
+            &::before {
+                background: linear-gradient(-90deg, rgba(0, 108, 228, 0.69) 50.02%, rgba(0, 26, 61, 0.00) 99.82%);
+            }
+        }
+    }
+    &-content {
+        &-wrap {
+            padding: 50px 40px;
+            width: 430px;
+            height: 100%;
+            position: absolute;
+
+            @media #{$xs} {
+                width: 100%;
+                height: 100%;
+                padding: 50px 20px;
+            }
+
+            &.clip-path-left {
+                left: 0;
+                top: 0;
+                clip-path: polygon(90% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+                border-radius: 10px 0 0 10px;
+                background-color: var(--bd-primary);
+                @media #{$xs} {
+                    bottom: 0;
+                    top: inherit;
+                    clip-path: none;
+                    border-radius: 10px;
+                }
+            }
+
+            &.clip-path-right {
+                right: 0;
+                top: 0;
+                clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0 0);
+                border-radius: 0 10px 10px 0;
+                background-color: var(--bd-primary);
+                @media #{$xs} {
+                    clip-path: none;
+                    border-radius: 10px;
+                }
+
+                & .offer-content {
+                    text-align: right;
+
+                    @media #{$xs} {
+                        text-align: start;
+                    }
+                }
+            }
+        }
+
+        p {
+            color: var(--bd-text-secondary);
+        }
+    }
+    &-style-three {
+        &.offer-thumb-bg {
+            height: 516px;
+
+            &::before {
+                border-radius: 8px;
+                background: linear-gradient(90deg, #006CE4 0.33%, rgba(0, 108, 228, 0.92) 36.22%, rgba(0, 108, 228, 0.09) 99.53%);
+            }
+        }
+        .offer-content-wrap {
+            background-color: transparent;
+            padding: 50px 63px;
+            width: 100%;
+            @media #{$xs} {
+                padding: 30px 30px;
+            }
+        }
+        .offer-mask {
+            img {
+                position: absolute;
+                z-index: 9;
+                width: 100%;
+                left: 0;
+                bottom: -1px;
+            }
+        }
+        .offer-shape {
+            img {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+    &-style-four {
+        position: relative;
+        padding: 38px 50px 55px 50px;
+        border-radius: 16px;
+        height: 370px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        @media #{$lg} {
+            padding: 20px 50px 55px 20px;
+        }
+        @media #{$xxs} {
+            height: 630px;
+            flex-direction: column;
+        }
+        &:hover {
+            .offer-image img {
+                transform: scale(1.05);
+            }
+        }
+        .offer-content {
+            p {
+                max-width: 268px;
+                color: rgba($color: #FFFFFF, $alpha: .70);
+            }
+            span {
+                color: rgba($color: #001A3D, $alpha: .70);
+            }
+        }
+        .offer-subtitle {
+            color: var(--bd-tertiary);
+        }
+        .offer-image {
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+            @media #{$xxs} {
+                bottom: 50px;
+                right: 60px;
+            }
+        }
+    }
+    &-style-five {
+        .offer-title {
+            font-size: 32px;
+        }
+        position: relative;
+        &:hover {
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                opacity: 1;
+            }
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #006CE4, $alpha: .80);
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #001A3D, $alpha: .80);
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+            z-index: 1;
+            opacity: 0;
+        }
+        .offer-thumb {
+            border-radius: 8px;
+            img {
+                border-radius: 8px;
+                width: 100%;
+            }
+        }
+        .offer-content {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 40px 30px;
+            z-index: 5;
+            @media #{$sm} {
+                padding: 15px 15px;
+            }
+            p {
+                font-size: 18px;
+                color: var(--bd-tertiary);
+                font-weight: 600;
+            }
+        }
+        .offer-mb {
+            @media #{$xl} {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

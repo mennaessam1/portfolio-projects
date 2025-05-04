@@ -1,0 +1,92 @@
+
+:root {
+    /**
+    @font family declaration
+    */
+    --bd-ff-body: 'Roboto', sans-serif;
+    --bd-ff-heading: 'Roboto', sans-serif;
+    --bd-ff-title: 'Oswald', sans-serif;
+    --bd-ff-p: 'Roboto', sans-serif;
+    --bd-ff-fontawesome: "Font Awesome 6 Pro";
+    --bd-ff-icomoon: "icomoon";
+
+    /**
+    @color declaration
+    */
+
+    // Common Color
+    --bd-white: #ffffff;
+    --bd-black: #001229;
+    --bd-placeholder: #828282;
+    --bd-selection: #262626;
+    --bd-gray: #828282;
+
+    // Body Color
+    --bd-body-primary: #FFFFFF;
+    --bd-body-secondary: #ffffff;
+
+    // Heading Color
+    --bd-heading: #001A3D;
+
+    // Theme Color
+    --bd-primary: #006CE4;
+    --bd-secondary: #001A3D;
+    --bd-tertiary: #FFB700;
+    --bd-quaternary: #003B95;
+
+    // Text Color
+    --bd-text-body: #4D5B68;
+    --bd-text-secondary: #CCE2FA;
+    --bd-text-tertiary: #B2BAC5;
+    --bd-text-tag: #4A5C74;
+    --bd-text-meta: #808581;
+    --bd-rating-color: #FEC300;
+    --bd-text-muted: #6c757d;
+
+    // Background Color
+    --bd-bg-primary: #006CE4;
+    --bd-bg-secondary: #032040;
+    --bd-flash-white: #F2F2F2;
+    --bd-bg-cultured: #F5F5F5;
+    --bd-bg-success: #198754;
+    --bd-bg-danger: #EB001B;
+    --bd-bg-light: #CCE2FA;
+
+    // Border Color
+    --bd-border-primary: rgba(226, 228, 231, 1);
+    --bd-border-secondary: rgba(220, 220, 220, 1);
+    --bd-border-tertiary: rgb(75, 78, 82);
+
+    // Gradient Color
+    --bd-gradient-1: linear-gradient(90deg, #096BD8 0%, #6409D8 100%);
+
+    /**
+    @font weight declaration
+    */
+    --bd-fw-normal: normal;
+    --bd-fw-thin: 100;
+    --bd-fw-elight: 200;
+    --bd-fw-light: 300;
+    --bd-fw-regular: 400;
+    --bd-fw-medium: 500;
+    --bd-fw-sbold: 600;
+    --bd-fw-bold: 700;
+    --bd-fw-ebold: 800;
+    --bd-fw-black: 900;
+
+    /**
+    @font size declaration
+    */
+    --bd-fs-body: 16px;
+    --bd-fs-p: 16px;
+    --bd-fs-h1: 64px;
+    --bd-fs-h2: 48px;
+    --bd-fs-h3: 40px;
+    --bd-fs-h4: 32px;
+    --bd-fs-h5: 22px;
+    --bd-fs-h6: 20px;
+    --bd-fs-b1: 14px;
+    --bd-fs-b2: 16px;
+    --bd-fs-b3: 18px;
+    --bd-fs-b4: 22px;
+  }

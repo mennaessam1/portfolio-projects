@@ -1,0 +1,169 @@
+@use "../utils" as *;
+
+/*----------------------------------------*/
+/*  2.6 Breadcrumb
+/*----------------------------------------*/
+.theme {
+    &-social {
+        @include flexbox();
+        gap: 10px;
+        a {
+            color: var(--bd-heading);
+            @include flexbox();
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background: transparent;
+            font-size: 16px;
+            @include border-radius(50%);
+            border: 1px solid var(--bd-border-primary);
+            &:hover {
+                color: var(--bd-white);
+                background-color: var(--bd-primary);
+                border-color: var(--bd-primary);
+            }
+        }
+        &.has-big {
+            a {
+                width: 56px;
+                height: 56px;
+                font-size: 18px;
+            }
+        }
+
+        &.has-white-bg {
+            a {
+                color: var(--bd-primary);
+                background: var(--bd-white);
+                border: none;
+                &:hover {
+                    color: var(--bd-white);
+                    background-color: var(--bd-primary);
+                }
+            }
+        }
+        &.is-white-color {
+            a {
+                color: var(--bd-white);
+                border: 1px solid var(--bd-border-tertiary);
+                &:hover {
+                    border-color: transparent;
+                }
+            }
+        }
+        &.style-two {
+            a {
+                border: none;
+                font-size: 20px;
+                &:hover {
+                    color: var(--bd-primary);
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+.social-menu ul {
+    display: flex;
+    li {
+        list-style: none;
+        margin-right: 12px;
+        a{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 38px;
+            height: 38px;
+            font-size: 18px;
+            border-radius: 50%;
+            background-color: var(--bd-white);
+            text-align: center;
+            transition: all 0.3s linear;
+            &.facebook{
+                background-color:#316FF6;
+                color: var(--bd-white);
+            }
+            &.twitter{
+                background-color: var(--bd-black);
+                color: var(--bd-white);
+            }
+            &.instagram{
+                background-color:#E1306C;
+                color: var(--bd-white);
+            }
+            &.linkedin{
+                background-color:#0077B5;
+                color: var(--bd-white);
+            }
+            &.youtube{
+                background-color: #FF0000;
+                color: var(--bd-white);
+            }
+            &:hover{
+                transform: translate(0, -8%);
+            }
+        }
+    }
+}
+
+
+.instagram {
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 24px;
+    }
+    &-image {
+        position: relative;
+        overflow: hidden;
+        max-width: 300px;
+        border-radius: 8px;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        &:hover{
+            &::before {
+                opacity: 1;
+                z-index: 2;
+              }
+              .instagram-icon {
+                opacity: 1;
+              }
+        }
+    
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 26, 61, 0.7);
+            z-index: -1;
+            opacity: 0;
+            transition: all 0.3s linear;
+            border-radius: 8px;
+          }
+    }
+    &-icon {
+        font-size: 30px;
+        color: var(--bd-white);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: 0.5s;
+        z-index: 22;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s linear;
+        &:hover {
+            color: var(--bd-tertiary);
+        }
+      }
+}

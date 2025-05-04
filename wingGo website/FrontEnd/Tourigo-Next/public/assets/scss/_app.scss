@@ -1,0 +1,74 @@
+/* app css start */
+
+.app{
+    &__area{}
+    &__content{
+        & h3{
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+        & p{
+            margin-bottom: 30px;
+        }
+    }
+    &__counter{}
+    &__counter{
+        
+        &-item{
+            & .icon{
+                & i{
+                    font-size: 35px;
+                    color: $theme-color;
+                }
+            }
+            & .text{
+                & h5{
+                    font-size: 20px;
+                    margin-bottom: 0;
+                }
+                & p{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &__img{
+        position: relative;
+        z-index: 1;
+        @media #{$md}{
+            margin-top: 90px;
+        }
+        @media #{$sm}{
+            margin-top: 90px;
+        }
+        @media #{$xs}{
+            margin-top: 90px;
+        }
+        &::after{
+            position: absolute;
+            content: '';
+            top: 39%;
+            left: 43%;
+            @include transform(translate(-50%, -50%));
+            background: $theme-color;
+            width: 380px;
+            height: 380px;
+            @include border-radius(50%);
+            z-index: -1;
+            @media #{$lg}{
+                left: 50%;
+            }
+            @media #{$md}{
+                left: 50%;
+            }
+            @media #{$sm}{
+                left: 50%;
+            }
+            @media #{$xs}{
+                left: 50%;
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+/*----------------------------------------
+	hero item
+----------------------------------------*/
+@use "../abstract" as *;
+
+.bd-doc__header-inner {
+ 
+  @media #{$md} {
+    padding-top: 60px;
+  }
+  @media #{$sm,$xs} {
+    padding-top: 50px;
+  }
+  p {
+    margin-bottom: 18px;
+    span {
+      font-weight: 500;
+    }
+  }
+}
+
+// default-header
+.bd-doc {
+  &__header-default {
+    @media #{$md} {
+      padding-top: 50px;
+    }
+    @media #{$sm,$xs} {
+      padding-top: 40px;
+    }
+    &-inner {
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+// transparent-header
+.bd-doc {
+  &__header-transparent {
+    padding-top: 60px;
+    @media #{$md} {
+      padding-top: 50px;
+    }
+    @media #{$sm,$xs} {
+      padding-top: 40px;
+    }
+    &-inner {
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+// topbar-header
+.bd-doc {
+  &__header-topbar {
+    padding-top: 60px;
+    @media #{$md} {
+      padding-top: 50px;
+    }
+    @media #{$sm,$xs} {
+      padding-top: 40px;
+    }
+    &-inner {
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+// center-header
+.bd-doc {
+  &__header-center {
+    padding-top: 60px;
+    @media #{$md} {
+      padding-top: 50px;
+    }
+    @media #{$sm,$xs} {
+      padding-top: 40px;
+    }
+    &-inner {
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

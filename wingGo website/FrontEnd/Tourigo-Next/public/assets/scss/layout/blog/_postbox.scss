@@ -1,0 +1,255 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  3.2.3 Postbox css
+/*----------------------------------------*/
+
+.details-slide {
+    img {
+        border-radius: 8px;
+    }
+	&-navigation {
+		&.btn-navigation {
+			button {
+				left: 24px;
+				color: var(--bd-white);
+				box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.05);
+				border: none;
+				background-color: rgba(255, 255, 255, .3);
+	
+				&:hover {
+					background-color: var(--bd-primary);
+				}
+			}
+	
+			.tourigo-navigation-next {
+				left: auto !important;
+				right: 24px;
+			}
+		}
+	}
+}
+.details-slide-full {
+    img {
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+.post {
+    &-details {
+        &-thumb img {
+            @include border-radius(8px);
+        }
+        &-meta ul {
+            display: inline-flex;
+            align-items: center;
+        
+            @media #{$xs} {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+        
+            li {
+                list-style: none;
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+        
+                a {
+                    color: var(--bd-text-tag);
+                }
+        
+                img {
+                    width: 40px;
+                    height: auto;
+                    border-radius: 139px;
+                    margin-right: 10px;
+                }
+        
+                span {
+                    color: var(--bd-gray);
+                }
+        
+                i {
+                    color: var(--bd-primary);
+                    margin-right: 2px;
+                }
+            }
+        }
+        &-blockquote {
+            background-color: var(--bd-flash-white);
+            padding: 30px 30px;
+            border-radius: 8px;
+            position: relative;
+        
+            &::before {
+                position: absolute;
+                content: "";
+                width: 4px;
+                height: 100%;
+                top: 0;
+                inset-inline-start: 0;
+                background: var(--bd-primary);
+                border-radius: 8px 0 0 8px;
+            }
+            blockquote {
+                position: relative;
+            
+                &::before {
+                    content: "\22";
+                    position: static;
+                    font-family: "Font Awesome 6 Pro";
+                    font-size: 70px;
+                    color: var(--bd-primary);
+                    line-height: 1;
+                    display: inline-block;
+                }
+            
+                .blockquote-title {
+                    margin-bottom: 15px;
+                }
+            
+                span {
+                    position: relative;
+            
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        width: 30px;
+                        height: 2px;
+                        background-color: #C6C2C4;
+                        left: -35px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+        &-video {
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #4F4F4F;
+                opacity: 0.45;
+                left: 0;
+                top: 0;
+                border-radius: 10px;
+            }
+            img {
+                width: 100%;
+                border-radius: 8px;
+            }
+        }
+        &-list {
+            ul {
+                li {
+                    @include flexbox();
+                    align-items: center;
+                    gap: 12px;
+                    font-weight: var(--bd-fw-medium);
+                    list-style: none;
+                    &:not(:last-child) {
+                        margin-bottom: 17px;
+                    }
+        
+                    .list-icon {
+                        width: 22px;
+                        height: 22px;
+                        background: var(--bd-primary);
+                        display: inline-flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 12px;
+                        border-radius: 50%;
+                        color: var(--bd-white);
+                    }
+                }
+            }
+        }
+        &-tag {
+            .tagcloud a {
+                margin-bottom: 0;
+            }
+        
+            .theme-social a {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+        }
+    }
+    &-avatar {
+        padding: 30px 30px;
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: flex-start;
+        gap: 20px 30px;
+        background-color: var(--bd-flash-white);
+        @include border-radius(8px);
+        @media #{$xs} {
+            grid-template-columns: auto;
+        }
+        &-img {
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            border-radius: 50%;
+            border: 2px solid var(--bd-primary);
+        }
+        &-digi {
+            color: var(--bd-gray);
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+    }
+    &-comment-form {
+        border: 1px solid var(--bd-border-primary);
+        border-radius: 8px;
+        padding: 30px 30px 40px 30px;
+        margin-top: 30px;
+    
+        textarea {
+            height: 270px;
+            padding: 24px 24px;
+        }
+    }
+}
+
+.blog-list-single-wrapper {
+    overflow: hidden;
+    &:not(:last-child) {
+        margin-bottom: 50px;
+    }
+    &:hover {
+        .blog-list-thumb {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    .blog-list-thumb {
+        border-radius: 8px;
+        overflow: hidden;
+        img {
+            transition: transform 0.4s ease;
+            display: block;
+            position: relative;
+            border-radius: 8px;
+            z-index: 1;
+            width: 100%;
+        }
+    }
+}
+
+.blog-postbox-audio {
+    height: 490px;
+
+    & iframe {
+        width: 100%;
+        height: 100%;
+    }
+}

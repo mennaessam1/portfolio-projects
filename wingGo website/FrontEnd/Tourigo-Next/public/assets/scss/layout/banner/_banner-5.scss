@@ -1,0 +1,136 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  3.1.5 Banner Style 5
+/*----------------------------------------*/
+
+// Banner style 5
+
+.banner {
+	&-style-five {
+		position: relative;
+		z-index: 1;
+	}
+	&-bg-image {
+		position: absolute;
+		top: 0;
+		inset-inline-start: 0;
+		height: 100%;
+		width: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: -2;
+		transition: transform 7000ms ease, opacity 1500ms ease-in, -webkit-transform 7000ms ease;
+		&::before {
+			position: absolute;
+			content: "";
+			inset-inline-start: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, #000C1C 41.15%, rgba(0, 12, 28, 0) 99.17%);
+			opacity: 0.6;
+		}
+	}
+	&-five-content {
+		padding-top: 235px;
+		padding-bottom: 255px;
+		@media #{$md} {
+			padding-top: 150px;
+    		padding-bottom: 500px;
+		}
+		@media #{$sm,$xs} {
+			padding-top: 150px;
+    		padding-bottom: 500px;
+		}
+		@media #{$xxs} {
+			padding-top: 150px;
+    		padding-bottom: 450px;
+		}
+	}
+}
+
+.bd-slider-active .swiper-slide-active {
+	& .banner-subtitle,
+	& .banner-title,
+	& .banner-description,
+	& .banner-btn {
+		animation-fill-mode: both;
+		animation-name: bdFadeInUp;
+	}
+}
+
+.bd-slider-active {
+	& .swiper-slide-active {
+		& .banner-subtitle {
+			animation-delay: 1s;
+			animation-duration: 0.5s;
+		}
+		& .banner-title {
+			animation-delay: 1.2s;
+			animation-duration: 0.7s;
+		}
+		& .banner-description {
+			animation-delay: 1.3s;
+			animation-duration: 0.8s;
+		}
+		& .banner-btn {
+			animation-delay: 1.4s;
+			animation-duration: 0.9s;
+		}
+		& .banner-bg-image {
+			transform: scale(1.15);
+		}
+	}
+}
+
+.banner-five-navigation {
+	.banner-navigation-btn {
+		button {
+			color: var(--bd-white);
+			background-color: rgba($color: #FFFFFF, $alpha: .20);
+			&:hover {
+				background-color: var(--bd-primary);
+			}
+
+			@media #{$xxl} {
+				top: 80%;
+				inset-inline-start: 45px;
+			}
+			@media #{$xl,$lg,$md} {
+				top: 80%;
+				inset-inline-start: 83px;
+			}
+			@media #{$sm,$xs} {
+				width: 42px;
+				height: 42px;
+				font-size: 16px;
+				margin-top: 30px;
+				top: 80%;
+				inset-inline-start: 10px;
+			}
+			@media #{$sm} {
+				inset-inline-start: 40px;
+			}
+		}
+		.banner-navigation-next {
+
+			@media #{$xxl} {
+				inset-inline-end: auto;
+				left: 140px !important;
+			}
+			@media #{$xl,$lg,$md} {
+				inset-inline-end: auto;
+				left: 170px !important;
+			}
+			@media #{$sm} {
+				inset-inline-end: auto;
+				inset-inline-start: 90px !important;
+			}
+			@media #{$xs} {
+				inset-inline-end: auto;
+				inset-inline-start: 62px !important;
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  3.2.5 Sidebar css
+/*----------------------------------------*/
+
+.tagcloud a {
+	font-size: 16px;
+	color: #4D5F77;
+	font-weight: 500;
+	border: 1px solid var(--bd-border-primary);
+	border-radius: 30px;
+	display: inline-block;
+	padding: 2px 12px;
+	margin-bottom: 10px;
+	margin-inline-end: 5px;
+	position: relative;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		color: var(--bd-white);
+		background-color: var(--bd-primary);
+        border-color: var(--bd-primary);
+	}
+}

@@ -1,0 +1,33 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.4.1 Footer Style 1
+/*----------------------------------------*/
+
+// Footer Widget 1
+.footer-1-col-1 {
+	.footer-widget-content p {
+        color: var(--bd-text-meta);
+    }
+}
+.footer-app-item {
+	text-align: center;
+	padding: 10px 20px;
+	border: 1px solid var(--bd-border-tertiary);
+	max-width: 152px;
+	display: block;
+	@include border-radius(10px);
+
+	&:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	img {
+		max-width: 110px;
+	}
+
+	&:hover {
+		background: var(--bd-tertiary);
+		border-color: transparent;
+	}
+}

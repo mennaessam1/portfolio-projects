@@ -1,0 +1,320 @@
+@use "../../utils" as *;
+
+/*----------------------------------------*/
+/*  4.6 Counter css
+/*----------------------------------------*/
+
+.counter {
+    &-bg {
+        text-align: center;
+    }
+
+    &-top {
+        margin-top: -135px !important;
+
+        @media #{$md,$sm,$xs,$xxs} {
+            margin-top: -100px !important;
+        }
+    }
+
+    &-icon {
+        display: inline-flex;
+        width: 70px;
+        height: 70px;
+        background-color: var(--bd-tertiary);
+        border-radius: 50%;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        margin-bottom: 25px;
+
+        &.bg-two {
+            color: var(--bd-primary);
+            background-color: rgba($color: #006CE4, $alpha: .10);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &-style-one {
+        .counter-content-wrapper {
+            margin: 23px 0;
+            display: inline-flex;
+            background-clip: var(--bd-white);
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            box-shadow: 0 4px 70px 0 rgba(0, 0, 0, 0.15);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            transition: all 0.3s linear;
+
+            &::before {
+                position: absolute;
+                content: "";
+                border: 2px solid var(--bd-border-secondary);
+                border-radius: 50%;
+                height: 210px;
+                width: 210px;
+                transition: all 0.3s linear;
+            }
+
+            .counter-text-title span {
+                transition: none;
+            }
+
+            &:hover {
+                background-color: var(--bd-primary);
+
+                .counter-text-title,
+                p {
+                    color: var(--bd-white);
+                }
+
+                &::before {
+                    border-color: var(--bd-primary);
+                }
+            }
+        }
+    }
+
+    &-style-two {
+        max-width: 1170px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0 89px;
+
+        @media #{$xl} {
+            max-width: 1000px;
+            grid-gap: 0 50px;
+        }
+
+        @media #{$lg} {
+            max-width: 850px;
+            grid-gap: 0 30px;
+        }
+
+        @media #{$md} {
+            max-width: 615px;
+            grid-gap: 0 20px;
+        }
+
+        @media #{$sm} {
+            max-width: 415px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+
+        @media #{$xs} {
+            max-width: 415px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+        }
+
+        @media #{$xxs} {
+            max-width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        .counter-item {
+            &:hover {
+                .counter-content::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .counter-content {
+            position: relative;
+            padding: 52px 20px 57px 20px;
+            text-align: center;
+            border-radius: 12px;
+            background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.65) 100%);
+            box-shadow: 0px 4px 10px 0px rgba(131, 131, 131, 0.10);
+
+            @media #{$lg} {
+                padding: 50px 25px;
+            }
+
+            @media #{$md} {
+                padding: 25px 20px;
+            }
+
+            @media #{$sm,$xs} {
+                padding: 35px 10px;
+            }
+
+            @media #{$xxs} {
+                padding: 20px 10px;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                border: 1.5px solid #003672;
+                width: 90%;
+                height: 90%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 12px;
+                opacity: 0;
+                @extend %bd-transition-3;
+            }
+        }
+    }
+
+    &-style-three {
+        margin: 0 auto;
+        position: relative;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        gap: 0 80px;
+
+        @media #{$xl} {
+            gap: 0 50px;
+        }
+
+        @media #{$lg} {
+            gap: 0 30px;
+        }
+
+        @media #{$md} {
+            gap: 0 20px;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @media #{$xxs} {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .counter-item {
+            &:hover {
+                .counter-content::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .counter-content {
+            position: relative;
+            padding: 30px 50px;
+            text-align: center;
+            border-radius: 12px;
+            background: var(--bd-white);
+            box-shadow: 0px 4px 10px 0px rgba(131, 131, 131, 0.10);
+
+            @media #{$lg} {
+                padding: 50px 25px;
+            }
+
+            @media #{$md} {
+                padding: 15px 10px !important;
+            }
+
+            @media #{$sm,$xs} {
+                padding: 35px 10px;
+            }
+
+            @media #{$xxs} {
+                padding: 20px 10px;
+            }
+        }
+
+        &.has-transparent {
+            .counter-content {
+                background: transparent;
+                box-shadow: none;
+                padding: 0 0;
+            }
+        }
+    }
+
+    &-style-four {
+        box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+
+        &:hover {
+            .counter-icon {
+                &.bg-two {
+                    color: var(--bd-white);
+                    background-color: var(--bd-primary);
+                }
+            }
+        }
+
+        .counter-item {
+            &:hover {
+                .counter-content::after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .counter-content {
+            &.counter-less-padding {
+                padding: 50px 78px;
+            }
+
+            position: relative;
+            padding: 50px 80px;
+            text-align: center;
+            border-radius: 12px;
+            background: var(--bd-white);
+            box-shadow: 0px 4px 10px 0px rgba(131, 131, 131, 0.10);
+
+            @media #{$xl} {
+                padding: 50px 30px !important;
+            }
+
+            @media #{$lg} {
+                padding: 50px 25px !important;
+            }
+
+            @media #{$md} {
+                padding: 15px 10px !important;
+            }
+
+            @media #{$sm,$xs} {
+                padding: 35px 10px !important;
+            }
+
+            @media #{$xxs} {
+                padding: 20px 10px !important;
+            }
+        }
+
+        &.has-transparent {
+            .counter-content {
+                background: transparent;
+                box-shadow: none;
+                padding: 0 0;
+            }
+        }
+    }
+}
+
+.counter-bottom {
+    position: relative;
+    z-index: 1;
+    margin-bottom: -100px;
+}

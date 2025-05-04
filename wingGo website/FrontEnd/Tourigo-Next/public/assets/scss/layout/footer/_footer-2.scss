@@ -1,0 +1,51 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.4.2 Footer Style 2
+/*----------------------------------------*/
+
+
+// Footer Widget 2
+.footer-2-col-1 {
+	.footer-widget-content p {
+        color: var(--bd-text-meta);
+    }
+}
+.footer-bg-two {
+	position: relative;
+	&::before {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-color: var(--bd-tertiary);
+		opacity: 0.2;
+		mix-blend-mode: luminosity;
+		z-index: -1;
+	}
+}
+
+.footer-2-col-2 {
+	padding-inline-start: 124px;
+	@media #{$lg,$md,$sm,$xs} {
+		padding-inline-start: 0;
+	}
+}
+
+.footer-2-col-3 {
+	padding-inline-start: 89px;
+	@media #{$lg,$md,$sm,$xs} {
+		padding-inline-start: 0;
+	}
+}
+.footer-call-icon {
+	font-size: 40px;
+	color: var(--bd-primary);
+}
+.footer-call-number {
+	color: var(--bd-primary);
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		color: var(--bd-tertiary);
+	}
+}

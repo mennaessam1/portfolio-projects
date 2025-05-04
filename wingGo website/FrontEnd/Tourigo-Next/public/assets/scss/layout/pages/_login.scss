@@ -1,0 +1,62 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  4.15 Login css
+/*----------------------------------------*/
+
+.sign {
+	&-form-wrapper {
+		background-color: var(--bd-white);
+		box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.12);
+		border-radius: 8px;
+		padding: 30px 30px;
+		max-width: 650px;
+		margin: 0 auto;
+	}
+
+	&-link {
+		color: var(--bd-primary);
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			color: var(--bd-tertiary);
+		}
+	}
+	&-forgot {
+		.sign-link {
+			color: var(--bd-text-body);
+		}
+	}
+}
+.sign-btn {
+	& .bd-primary-btn {
+		min-width: 180px;
+	}
+}
+.sign-meta-divider-wrapper {
+	display: flex;
+	position: relative;
+	align-items: center;
+	margin: 0 -15px;
+	margin-top: 30px;
+}
+.sign-meta-divider-title {
+	position: relative;
+	padding: 0 15px;
+	width: max-content;
+}
+.sign-meta-divider-line {
+	position: relative;
+	background-image: linear-gradient(90deg, #46494D, rgba(33, 38, 45, 0));
+	width: 100%;
+	height: 1px;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: auto;
+	&.left-line {
+	  background-image: linear-gradient(-90deg, #46494D, rgba(33, 38, 45, 0));
+	}
+	&.right-line {
+	  background-image: linear-gradient(90deg, #46494D, rgba(33, 38, 45, 0));
+	}
+}

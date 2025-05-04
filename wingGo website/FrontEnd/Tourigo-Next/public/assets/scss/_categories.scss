@@ -1,0 +1,116 @@
+/* 5. categories */
+.categories-wrapper{
+    background: $white;
+    padding: 30px 30px 26px;
+    position: relative;
+    transition: .3s;
+    &::before{
+        background-image: url("../img/bg/shape.png");
+        background-repeat: repeat;
+        content: "";
+        height: 100%;
+        position: absolute;
+        transition: all 0.3s ease 0s;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        opacity:0;
+    }
+}
+.categories-wrapper:hover::before {opacity:1;}
+.categories-wrapper.active::before {opacity:1;}
+.categories-icon{
+    margin-right: 25px;
+    margin-top: 3px;
+    position: relative;
+    z-index: 2;
+    & i{
+        font-size: 35px;
+        color: $theme-color;
+        transition: .3s;
+    }
+}
+.categories-wrapper:hover{
+    & .categories-icon{
+        & i{
+            color: $white;
+        }
+    }
+}
+.categories-wrapper.active{
+    & .categories-icon{
+        & i{
+            color: $white;
+        }
+    }
+}
+.categories-text{
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    & h4{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        letter-spacing: -0.3px;
+        transition: .3s;
+    }
+    & span{
+        color: $body-text-color;
+        font-weight: 400;
+        font-size: 14px;
+        transition: .3s;
+    }
+}
+.categories-wrapper:hover .categories-text{
+    & h4{color: $white;}
+    & span{color: $white;}
+}
+.categories-wrapper.active .categories-text{
+    & h4{color: $white;}
+    & span{color: $white;}
+}
+.cat-button{
+    position: absolute;
+    right: 35px;
+    top:32px;
+    z-index: 2;
+    & a{
+        font-size: 13px;
+        line-height: 36px;
+        display: inline-block;
+        height: 38px;
+        width: 40px;
+        border: 2px solid #dfdfdf;
+        text-align: center;
+        color: $theme-color;
+        transition: .3s;
+    }
+    @media #{$xs}{
+        position: relative;
+        margin-top: 15px;
+        margin-left: 69px;
+        z-index: 99;
+        top: inherit;
+        right: inherit;
+    }
+}
+.categories-wrapper:hover .cat-button{
+    & a{
+        border-color:$white;
+        background: $white;
+        &:hover{
+            background: #fe9703;
+            color: #fff;
+            border-color:#fe9703 ;
+        }
+    }
+}
+.categories-wrapper.active .cat-button{
+    & a{
+        border-color:$white;
+        background: $white;
+    }
+}

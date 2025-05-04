@@ -1,0 +1,110 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.2 Buttons
+/*----------------------------------------*/
+
+.client-thumb {
+	a {
+		&:not(:first-child) {
+			margin-left: -20px;
+		}
+	}
+
+	img {
+		max-width: 56px;
+		border-radius: 50%;
+		border: 2px solid var(--bd-primary);
+		transition: all 0.3s linear;
+
+		&:hover {
+			transform: translateY(-5px);
+		}
+	}
+
+	.arrow {
+		width: 56px;
+		height: 56px;
+		background-color: var(--bd-primary);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+
+		span {
+			font-size: 16px;
+			font-weight: 600;
+			color: var(--bd-white);
+		}
+	}
+}
+
+.bd-avatars {
+	img {
+		border-radius: 100%;
+		padding: 5px;
+		border: 2px solid var(--bd-border-primary);
+		width: 100%;
+	}
+}
+
+.bd-avatars {
+	max-width: 80px;
+
+	&.size-lg {
+		max-width: 110px;
+	}
+
+	&.size-sm {
+		max-width: 60px;
+	}
+}
+
+// alert 
+.alert {
+	padding: 0;
+	padding-right: 20px;
+}
+
+.alert-left-content {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+
+	i {
+		border-radius: 4px 0 0 4px;
+		font-size: 20px;
+		color: var(--bd-white);
+		padding: 35px 15px;
+		width: 50px;
+		text-align: center;
+	}
+
+	&.alert-confirm i {
+		background-color: var(--bd-bg-success);
+	}
+
+	&.alert-danger i {
+		background-color: var(--bd-bg-danger);
+	}
+}
+
+.alert-close-btn {
+	color: var(--bd-white);
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	transition: all 0.3s ease-in-out;
+	&.alert-confirm {
+		background-color: rgba(25, 135, 84, 0.6);
+		&:hover {
+			background-color: rgba(25, 135, 84, 1);
+		}
+	}
+	&.alert-danger {
+		background-color: rgba(235, 0, 27, .6);
+		&:hover {
+			background-color: rgba(235, 0, 27, 1);
+		}
+	}
+}
